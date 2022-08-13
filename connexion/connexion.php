@@ -1,3 +1,9 @@
+<?php 
+require_once '../bdd/connect.php';
+$database = new Database();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +37,10 @@
         <form method="POST" class="form">
             <h1>Se connecter</h1>
             <div>
-                <input type="text" class="input" placeholder="Email"><br><br>
-                <input type="text" class="input" placeholder="Mot de passe"><br><br>
+                <input type="text" class="input" placeholder="Email" name="email"><br><br>
+                <input type="text" class="input" placeholder="Mot de passe" name="password"><br><br>
             </div>
-            <input class="valider" type="submit" value="Continuer">
+            <input class="valider" name="send" type="submit" value="Continuer">
             <a href="#" class="lien">
                 Inscription
             </a>
@@ -42,10 +48,33 @@
                 <a href="">
                     <button>Se connecter avec google</button>
                 </a>
-                
-                
             </div>
         </form>
+
+        <?php 
+        
+        if(!empty($_POST['send'])){
+            $email = htmlentities($_POST['email']);
+            $password = htmlentities($_POST['password']);
+            $query = "SELECT * FROM utilisateur WHERE BINARY email='".$email."' AND BINARY password='".$password."' ";
+            $data = $database->read($query);
+            if(!empty($data[0])){
+                echo "ok";
+                session_start();
+                $_SESSION['email'] = $data[0]["email"];
+                $_SESSION['id'] = $data[0]["IdUtilisateur"];
+                header("location:confirmer/panel.php");
+                die();
+            }else{
+                echo "rien";
+                ?>
+                <script>
+                    location.replace("connexion");
+                </script>
+                <?php
+            }
+        }
+        ?>
     </div>
 </body>
 </html>
