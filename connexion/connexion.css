@@ -204,6 +204,78 @@ body{
 
 .formulaire{
     position: relative;
-    top: -500px;
-    text-align: center;
+    top: -800px;
+    right: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.formulaire .form .input{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: none;
+    padding: 1rem;
+}
+
+
+
+.formulaire .form{
+    position: relative;
+    top: 100px;
+}
+
+
+
+.valider{
+    border-radius: 30px;
+    background-color: aqua;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: all 0.35s ease-in-out 0s;
+   
+
+}
+
+.valider:hover{
+    background-color: #fff;
+    color: black;
+}
+
+
+.lien{
+    text-decoration: none; 
+    color: black; 
+    position: relative; 
+    left: 20px;
+}
+
+.lien:hover{
+    color: #fff;
+}
+
+.reseaux button{
+    position: relative;
+    top: 15px;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.reseaux button:hover{
+    background-color: black;
+    color: #fff;
 }
