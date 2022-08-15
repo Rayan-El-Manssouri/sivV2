@@ -2,6 +2,12 @@
 require_once '../bdd/connect.php';
 $database = new Database();
 
+require_once 'auth.php';
+session_start();
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +39,10 @@ $database = new Database();
             </header>
         </section>
     </div>
+
+
+
+    
     <div class="formulaire">
         <h1>Connecter vous.</h1>
         <form method="POST">
@@ -43,36 +53,29 @@ $database = new Database();
                 <input type="submit"  name="send" class="btn_envoyer"> <br>
             </div>
         </form>
-
-
-
-
-
         <?php 
-        
-        if(!empty($_POST['send'])){
-            $email = htmlentities($_POST['email']);
-            $password = htmlentities($_POST['password']);
-            $query = "SELECT * FROM utilisateur WHERE BINARY email='".$email."' AND BINARY password='".$password."' ";
-            $data = $database->read($query);
-            if(!empty($data[0])){
-                echo "ok";
-                session_start();
-                $_SESSION['email'] = $data[0]["email"];
-                $_SESSION['id'] = $data[0]["IdUtilisateur"];
-                header("location:confirmer/panel.php");
-                die();
-            }else{
-                ?>
-                <script>
-                    alert("Email ou le mot de passe est incorect.")
-                    location.replace("connexion");
-                </script>
-                
-                <?php
+            if(!empty($_POST['send'])){
+                $email = htmlentities($_POST['email']);
+                $password = htmlentities($_POST['password']);
+                $query = "SELECT * FROM utilisateur WHERE BINARY email='".$email."' AND BINARY password='".$password."' ";
+                $data = $database->read($query);
+                if(!empty($data[0])){
+                    $_SESSION['email'] = $data[0]["email"];
+                    $_SESSION['id'] = $data[0]["IdUtilisateur"];
+                    $_SESSION['connecte'] = 1;
+                    header("location:confirmer/panel.php");
+                    die();
+                }else{
+                    ?>
+                    <script>
+                        alert("Email ou le mot de passe est incorect.")
+                        location.replace("connexion");
+                    </script>
+                    
+                    <?php
 
-        }
-        }
+            }
+            }
         ?>
     </div>
 </body>

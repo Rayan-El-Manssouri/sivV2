@@ -1,3 +1,11 @@
+<?php 
+require_once 'connexion/auth.php';
+session_start();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,18 +38,40 @@
                             <li><a href="#">Nous contacter</a></li>
                             <li><a href="#">Partenaire</a></li>
                         </nav>
-                        <a href="connexion/connect" style="text-decoration : none;" class="Connection">
-                            Se connecter
-                        </a>
+
+                             <?php 
+                             if(est_connecter()){
+                                ?>
+                                    <a href="connexion/logout.php" style="text-decoration : none;" class="Connection">Se déconnecter</a>
+                                <?php
+                             }else{
+                                ?>
+                                  <a href="connexion/connexion.php" style="text-decoration : none;" class="Connection">Se connecter</a>
+                                <?php
+                             }
+                             
+                             ?>
+                             
+                             
+
+                    
+                            
                     </div>
                 </header>
                 <div class="Text_Acceuille">
                     <h1 font-weight="bold" >Bienvenue sur le <br> site web siv</h1>
                     <p class="unederline">Site simple pour gérer les déclarations.</p>
-                    <a href="connexion/connect" class="button">
-                        se connecter !
-                        <svg class="fleche" fill="currentColor" style="display:inline-block;vertical-align:middle" height="18" width="18" viewBox="0 0 512 512"><g id="Icon_8_"><g><g><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"></path></path></g></g></g></svg>
-                    </a>
+                        <?php 
+                          if(est_connecter()){
+                            ?>
+                                <a href="connexion/confirmer/panel.php" style="text-decoration : none;" class="button">Aller aux panel</a>
+                            <?php
+                         }else{
+                            ?>
+                              <a href="connexion/connexion.php" style="text-decoration : none;" class="button">Se connecter</a>
+                            <?php
+                         }                        
+                        ?>
                 </div>
             </section>
     
