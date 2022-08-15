@@ -88,7 +88,7 @@
             </div>
 
             <div class="bloc footer-contact">
-                <h3>Restons on contact</h3>
+                <h3>Restons en contact</h3>
                 <p>55-55-55-55-55</p>
                 <p>support@contact.com</p>
            </div>

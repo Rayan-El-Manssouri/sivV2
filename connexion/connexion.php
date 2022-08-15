@@ -66,9 +66,9 @@ $database = new Database();
                 header("location:confirmer/panel.php");
                 die();
             }else{
-                echo "rien";
                 ?>
                 <script>
+                    alert("Email ou le mot de passe est incorect.")
                     location.replace("connexion");
                 </script>
                 <?php
