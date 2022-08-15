@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Siv</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 </head>
 <body>
 
@@ -75,6 +77,28 @@
                 })
         });
     </script>
+
+
+        <div class="btn">
+            <span class="material-symbols-outlined">
+              arrow_upward
+            </span>
+        </div>
+
+
+
+    <script>
+        const btn = document.querySelector('.btn');
+        btn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+
+        })
+    </script>    
+
   <!-- Footer -->
     <footer>
        <div class="contenu-footer">
@@ -99,37 +123,16 @@
            <div class="bloc footer-reseaux">
                 <h3>Nos réseaux</h3>
                 <ul class="listes-services">
-                <li><a href="">Facebook </a></li>
-                <li><a href="">Instagram </a></li>
-                <li><a href="">Youtube </a></li>
+                <li><a href=""><img src="src/fb.png" style="width: 30px; position: relative; top: 5px;"> Facebook </a></li>
+                <li><a href=""><img src="src/insta.png" style="width: 30px; position: relative; top: 5px;"> Instagram </a></li>
+                <li><a href=""><img src="src/tw.png" style="width: 30px; position: relative; top: 5px;"> Tweeter </a></li>
                 </ul>
             </div>
-
-            <div class="bloc footer-reseaux">
-                <h3>Signaler</h3>
-                <form method="post">
-                    <input type="text"  placeholder="Message">
-                    <input type="submit" name="send">
-                </form>
-                <p>Signaler un bug.</p>
-                </ul>
-            </div>
-            <?php 
-            
-            if(isset($_POST['send'])){
-                ?>
-                <script>
-                    location.replace("")
-                </script>
-                <?php
-            }
-            
-            ?>
        </div>
        </div>
-       <div class="copyright" style="text-align: center;">
-        <p>© Copyright 2022 sinara</p>
-    </div>
+       <div class="copyright" style="text-align: center; font-size: 20px; position: relative; top: -20px; left: -20px;">
+            <p>© Copyright 2022 sinara</p>
+        </div>
 
     </footer>
 

@@ -281,10 +281,9 @@ body{
 
 footer{
     flex-shrink: 0;
-    border-top: 1px dashed black;
     width: 100%;
-    background: #f1f1f1;
-    color: #333;
+    background: rgb(16, 137, 255);
+    color: #fff;
     position: relative;
     top: 100px;
 }
@@ -322,15 +321,44 @@ footer{
 
 .listes-services a{
     text-decoration: none;
-    color: #333;
+    color: #fff;
 }
 
-.listes-services a:hover{
-    color: rgb(3,3,3);
-}
+
 
 
 .listes-services{
     position: relative;
     right: 40px;
+}
+
+.listes-services li{
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    left: -10px;
+}
+
+
+
+
+.btn{
+    background-color: rgb(16, 137, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 20;
+    color: #fff;
+    transition: all 0.35s ease-in-out;
+}
+
+.btn:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #333;
 }
