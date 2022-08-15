@@ -34,22 +34,19 @@ $database = new Database();
         </section>
     </div>
     <div class="formulaire">
-        <form method="POST" class="form">
-            <h1>Se connecter</h1>
+        <h1>Connecter vous.</h1>
+        <form method="POST">
             <div>
-                <input type="text" class="input" placeholder="Email" name="email"><br><br>
-                <input type="text" class="input" placeholder="Mot de passe" name="password"><br><br>
-            </div>
-            <input class="valider" name="send" type="submit" value="Continuer">
-            <a href="#" class="lien">
-                Inscription
-            </a>
-            <div class="reseaux">
-                <a href="">
-                    <button>Se connecter avec google</button>
-                </a>
+               <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span><br> <br>
+               <span>Mot de passe : <input type="text" class="password" name="password" placeholder="password" required></span>
+                 <br> <br>
+                <input type="submit"  name="send" class="btn_envoyer"> <br>
             </div>
         </form>
+
+
+
+
 
         <?php 
         
@@ -71,8 +68,10 @@ $database = new Database();
                     alert("Email ou le mot de passe est incorect.")
                     location.replace("connexion");
                 </script>
+                
                 <?php
-            }
+
+        }
         }
         ?>
     </div>
