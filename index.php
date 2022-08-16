@@ -51,11 +51,6 @@ session_start();
                              }
                              
                              ?>
-                             
-                             
-
-                    
-                            
                     </div>
                 </header>
                 <div class="Text_Acceuille">
