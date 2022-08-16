@@ -3,7 +3,6 @@
 <img src="private/src/README/acceuil.png"></img>
 <h1>Matiére du projet</h1>
 <a href="#start">Commencer</a>
-
 <div id="start">
     <h1>Installer sous widows</h1>
     <h2>Etape 1</h2>
