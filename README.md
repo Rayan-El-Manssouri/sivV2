@@ -1,1 +1,2 @@
-<h1>Bienvenue sur le site web de siv.</h1>
+<h2>Siv V2</h2>
+<p>Siv V2 est la deuxiéme version de siv. Elle consiste a avoir un meilleur style est une meilleur sécurisation + structure. </p>
