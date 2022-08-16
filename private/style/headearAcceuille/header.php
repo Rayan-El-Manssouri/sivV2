@@ -68,7 +68,7 @@
                              <?php 
                              if(est_connecter()){
                                 ?>
-                                    <a href="connexion/logout.php" style="text-decoration : none;" class="Connection">Se déconnecter</a>
+                                    <a href="http://localhost/sivV2/private/GestionSession/logout.php" style="text-decoration : none;" class="Connection">Se déconnecter</a>
                                 <?php
                              }else{
                                 ?>
