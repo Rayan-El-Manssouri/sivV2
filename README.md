@@ -6,11 +6,11 @@
 
 <div id="start">
     <h1>Installer sous widows</h1>
-    <p>Etape 1</p>
+    <h2>Etape 1</h2>
     <ul>
         <li>Installer wamp via ce lien : <a href="https://www.wampserver.com/">Wammp</a></li>
         <li>Lancer wamp.exe pour activer le serveur en local.</li>
-        <li>cloner le projet : ```https://github.com/Rayan-El-Manssouri/sivV2/tree/main```</li>
+        <li>cloner le projet : [Managed Disks](#managed-disks)https://github.com/Rayan-El-Manssouri/sivV2/tree/main```</li>
         <li>Déplacer le dans C:wamp64\www</li>
     </ul>
 </div>
