@@ -2,4 +2,5 @@
 
 Siv V2 est tous simplement un site web pour gérer les délcrations de véhicules. 
 
-<img src="private/src/fond.png">
+<img src="private/src/sivV2.png">
+
