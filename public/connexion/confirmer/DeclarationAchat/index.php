@@ -11,9 +11,7 @@
 </head>
 <body>
     <div class="contenue">
-    <?php 
-        require_once '../../../../private/style/headerFormaliter/header.php';
-    ?>
+    <?php require_once '../../../../private/style/headerFormaliter/header.php';?>
         <div class="global">
             <span style="position: relative; left: -300px; text-align: left; color: #fff;">Bievenue sur le panel de la déclaration d'achat !</span>
             <div class="acheteur">

@@ -5,11 +5,15 @@ $(document).ready(function(){
         var text = document.querySelector(".navigation")
         var hover = document.querySelector(".hover")
         var logo = document.querySelector(".logo")
+        var btn = document.querySelector(".btn")
         header.classList.toggle("sticky", window.scrollY > 0)
         text.classList.toggle("text", window.scrollY > 0)
         hover.classList.toggle("active", window.scrollY > 0)
         logo.classList.toggle("active", window.scrollY > 0)
+        btn.classList.toggle("bloc", window.scrollY > 0)
     })
+
+    
 
     //Fléche pour remonter en haute de page.
     const btn = document.querySelector('.btn');

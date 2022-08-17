@@ -1,3 +1,9 @@
+<?php 
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +16,8 @@
 </head>
 <body>
     <?php 
-    require_once(realpath(dirname(__FILE__) . '../../../../../style/header.php'));
+     require_once dirname( __DIR__ ) . '../../../../../private/style/headerFormaliter/header.php';
     ?>
-
-
         <div class="global">
             <h1>Bievenue sur la page personne.</h1>
             <div class="button">
@@ -24,9 +28,7 @@
                 </div>
             </div>
         </div>
-
         <script>
-
             function Physique(){
                 location.replace("physique/Ajouter.php")
             }
