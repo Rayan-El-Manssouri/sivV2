@@ -32,3 +32,25 @@ Gestion de session => tous les fichiers qui gérer la connexion/déconnection.
 javascript => tous les codes javascript du site.
 
 src => Contient tous les images utiliser.
+
+## Installation du projet
+
+### Etape 1 - Installer un serveur local
+Vous-pouvez installer un serveur en local. 
+
+Je vous conseille wamp pour window. Voila le  lien ```https://www.wampserver.com/```
+
+Ensuite démarrer le .exe est fait l'installation classique.
+
+### Etape 2 - Installation du projet dans wamp
+En premiet tant cloner le dépots. 
+
+```git clone https://github.com/Rayan-El-Manssouri/sivV2 ```
+
+Déplacer le aller dans le l'exporateur de fichier ou alor petit racourci : ```Win + E ```
+
+Aller dans Disque Local => wamp64 (Si vous êtes en 64 bits.) => www => Déposer le fichier sivV2 ici.
+
+
+Est voila ! maintenant faite un simple localhost/sivV2 est vous aurez acces aux fichier.
+
