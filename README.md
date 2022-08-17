@@ -21,11 +21,6 @@ objectif : faciliter les déclaration. (Déclaration achat, déclaration de cess
 - [Version](#Version)
 - [Nous contacter](#nous-contacter)
 
-
-
-
-
-
 ## Structure 
 
 Un fichier public est private.
@@ -124,4 +119,3 @@ Vous pourer nous contacter sur les réseaux comme instagram :
 Ou alor gmail : 
 
 ```liviackerman69@gmail.com```
-
