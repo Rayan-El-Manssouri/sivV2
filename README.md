@@ -17,6 +17,7 @@ objectif : faciliter les déclaration. (Déclaration achat, déclaration de cess
 Un fichier public est private.
 
 Public => Fichier qu'on peut y acceder on moidifiant l'url.
+
 Private => Fichier qu'on ne peut pas y acceder on moidifiant l'url.
 
 ### Public
