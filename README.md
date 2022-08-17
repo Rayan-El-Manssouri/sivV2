@@ -44,6 +44,13 @@ Je vous conseille wamp pour window. Voila le  lien
 
 Ensuite démarrer le .exe est fait l'installation classique.
 
+
+### Gérer l'erreur MSCVR110.dll
+
+A la fin de l'installation vous pourrez trés bien tomber sur cette erreur. pour palier a ça voici une vidéo sur youtube
+
+qui montre comment faire : ```https://www.youtube.com/watch?v=XoCV1ANmRrw&```
+
 ### Etape 2 - Installation du projet dans wamp
 En premiet tant cloner le dépots. 
 
