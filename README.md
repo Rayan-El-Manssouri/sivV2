@@ -38,7 +38,9 @@ src => Contient tous les images utiliser.
 ### Etape 1 - Installer un serveur local
 Vous-pouvez installer un serveur en local. 
 
-Je vous conseille wamp pour window. Voila le  lien ```https://www.wampserver.com/```
+Je vous conseille wamp pour window. Voila le  lien 
+
+```https://www.wampserver.com/```
 
 Ensuite démarrer le .exe est fait l'installation classique.
 
@@ -53,4 +55,16 @@ Aller dans Disque Local => wamp64 (Si vous êtes en 64 bits.) => www => Déposer
 
 
 Est voila ! maintenant faite un simple localhost/sivV2 est vous aurez acces aux fichier.
+
+## Contribuer aux projet.
+
+Pour ceux qui aimeront contribuer aux projet , ne pourront pas. Seuls les amis les plus proches ou alors des professionelle que je connais aurons acces.
+
+Mais **Personne d'autre.**
+
+## Nous contacter
+
+Vous pourer nous contacter sur les réseaux comme instagram : ```https://instagram.com/rayan_el_man``` 
+
+Ou alor gmail : ```liviackerman69@gmail.com```
 
