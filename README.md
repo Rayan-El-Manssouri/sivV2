@@ -63,6 +63,32 @@ Aller dans Disque Local => wamp64 (Si vous êtes en 64 bits.) => www => Déposer
 
 Est voila ! maintenant faite un simple localhost/sivV2 est vous aurez acces aux fichier.
 
+
+### Installation de l'utilisateur pour que tous fonctionne.
+
+Pour être sûre que tous fonctionne, faut rajouter un utilisateur dans la bdd.
+
+Rendez vous sur le panel phpmydamin :
+
+<img src="private/src/panel.png">
+
+Cliquer sur le bouton Compte utilisateur => ajouter un compte utilisateur. alors copier juste ce lien :
+
+
+```http://localhost/phpmyadmin/index.php?route=/server/privileges&adduser=1```
+
+Vous êtes censer arriver ici :
+
+<img src="private/src/utilisateur.png">
+
+Les information du compte utilister :
+
+Identifiant: ```test```
+
+Mot de passe : ```root```
+
+
+
 ## Contribuer aux projet.
 
 Pour ceux qui aimeront contribuer aux projet , ne pourront pas. Seuls les amis les plus proches ou alors des professionelle que je connais aurons acces.
