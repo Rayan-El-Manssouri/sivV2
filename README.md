@@ -71,7 +71,11 @@ Mais **Personne d'autre.**
 
 ## Nous contacter
 
-Vous pourer nous contacter sur les réseaux comme instagram : ```https://instagram.com/rayan_el_man``` 
+Vous pourer nous contacter sur les réseaux comme instagram : 
 
-Ou alor gmail : ```liviackerman69@gmail.com```
+```https://instagram.com/rayan_el_man``` 
+
+Ou alor gmail : 
+
+```liviackerman69@gmail.com```
 
