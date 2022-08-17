@@ -23,4 +23,12 @@ Private => Fichier qu'on ne peut pas y acceder on moidifiant l'url.
 Vous trouverais tous les fichiers de connexion , fichier de la page d'acceuille.. est les différente formalité.
 
 ### Private
-A l'intérieur du fichier private vous trouverer les élémoment les plus importants.
+A l'intérieur du fichier private vous trouverer les élémoment les plus importants. 
+
+bdd => Gestion de connexion a la base.
+
+Gestion de session => tous les fichiers qui gérer la connexion/déconnection.
+
+javascript => tous les codes javascript du site.
+
+src => Contient tous les images utiliser.
