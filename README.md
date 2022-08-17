@@ -17,9 +17,9 @@ objectif : faciliter les déclaration. (Déclaration achat, déclaration de cess
 
 - [Structure](#structure)
 - [Installation du projet](#installation-du-projet)
+- [Contribuer aux projet](#contribuer-aux-projet)
 - [Version](#Version)
 - [Nous contacter](#nous-contacter)
-- [Contribuer aux projet](#contribuer-aux-projet)
 
 
 
