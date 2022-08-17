@@ -27,6 +27,11 @@ SET time_zone = "+00:00";
 -- Structure de la table `acheteur`
 --
 
+CREATE DATABASE siv;
+
+USE siv;
+
+
 DROP TABLE IF EXISTS `acheteur`;
 CREATE TABLE IF NOT EXISTS `acheteur` (
   `IdAcheteur` int(10) NOT NULL AUTO_INCREMENT,

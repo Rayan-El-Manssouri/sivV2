@@ -63,7 +63,7 @@
             <li class="hover"><a href="#">Home</a></li>
             <li><a href="#">Signaler</a></li>
             <li><a href="#">Nous contacter</a></li>
-            <li><a href="#">Partenaire</a></li>
+            <li><a href="#">Partenaires</a></li>
         </nav>
                              <?php 
                              if(est_connecter()){
