@@ -13,15 +13,27 @@ body{
 
 .global{
     color: #fff;
-
+   width: 600px;
+   position: relative;
+   left: 800px;
+   height: 700px;
+   text-align: center;
 }
 
+.global h1{
+    position: relative;
+    text-align: center;
+    top: 100px;
+    left: 20px;
+}
 
 
 .button{
     position: relative;
     text-align: center;
     top: 300px;
+    height: 250px;
+    
 }
 
 .BtnPrincipal{
@@ -37,13 +49,6 @@ body{
 
 
 
-.global h1{
-    position: relative;
-    left: 550px;
-    text-align: center;
-    top: 100px;
-    width: 800px;
-}
 
 .button button{
     background-color: #fff;
