@@ -17,9 +17,6 @@
         justify-content: center;
         align-items: center;
         color: #fff;
-        
-        
-
     }
 
     .formulaire input{
@@ -31,7 +28,6 @@
         position: relative;
         left: 93px;
     }
-
 
     .formulaire .btn_envoyer{
         background-color: #fff;
@@ -45,14 +41,17 @@
         cursor: pointer;
         transition: all 0.35s ease-in-out;
     }
+
     .formulaire .btn_envoyer:hover{
         background-color: black;
         color: #fff;
     }
+
     .formulaire .password{
         position: relative;
         left: 20px;
     }
+
     .formulaire .form .input{
         position: relative;
         top: 0;
@@ -65,6 +64,7 @@
         background-color: none;
         padding: 1rem;
     }
+
     .formulaire .form{
         position: relative;
         top: 100px;
@@ -72,11 +72,11 @@
 </style>
 
 <div class="formulaire">
-        <h1>Connecter vous.</h1>
+        <h1>Connectez-vous</h1>
         <form method="POST">
             <div>
-               <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span><br> <br>
-               <span>Mot de passe : <input type="text" class="password" name="password" placeholder="password" required></span>
+               <span>Email : <input type="text" class="email" name="email" placeholder="Email" required> </span><br> <br>
+               <span>Mot de passe : <input type="text" class="password" name="password" placeholder="Mot de passe" required></span>
                  <br> <br>
                 <input type="submit"  name="send" class="btn_envoyer"> <br>
             </div>
@@ -100,7 +100,7 @@
                 }else{
                     ?>
                     <script>
-                        alert("Email ou le mot de passe est incorect.")
+                        alert("L'email ou le mot de passe est incorrect.")
                         location.replace("")
                     </script>
                     

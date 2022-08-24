@@ -5,11 +5,11 @@
             <h1>Website Logo</h1>
             <nav>
                 <ul>
-                    <li><a href="http://localhost/sivV2/public"> <button>Acceuil</button> </a></li>
-                    <li><a href="http://localhost/sivV2/connexion/confirmer/DeclarationAchat/personne/"> <button>Personne</button> </a></li>
-                    <li><a href=""><button>Véhicule</button> </a></li>
-                    <li><a href=""><button>Opération</button> </a></li>
-                    <li><a href=""><button>Générer les pdf</button> </a></li>
+                    <li><a href="http://localhost/sivV2/public"> <button>Accueil</button> </a></li>
+                    <li><a href="http://localhost/sivV2/connexion/confirmer/DeclarationAchat/personne/"> <button>Personnes</button> </a></li>
+                    <li><a href=""><button>Véhicules</button> </a></li>
+                    <li><a href=""><button>Opérations</button> </a></li>
+                    <li><a href=""><button>Générer les PDF</button> </a></li>
                 </ul>
             </nav>
         </div>

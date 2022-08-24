@@ -33,7 +33,7 @@ body{
 }
 
 
-.Text_Acceuille{
+.Text_Accueil{
     position: relative;
     color: aliceblue;
     font-weight: 500;
@@ -43,7 +43,7 @@ body{
     left: 350px;
 }
 
-.unederline{
+.underline{
     font-weight: normal;
     font-size: 18px;
     line-height: 2.11;
@@ -61,7 +61,7 @@ body{
     top: -20px;
     
 }
-.Text_Acceuille a{
+.Text_Accueil a{
     text-decoration: none; 
     outline: none 
 }
@@ -85,7 +85,7 @@ body{
     cursor: pointer;
 }
 
-.Connection{
+.connexion{
     display: inline-flex;
     -moz-box-pack: center;
     justify-content: center;
@@ -125,7 +125,7 @@ body{
 }
 
 
-.Connection:hover{
+.connexion:hover{
     color: #fff;
     background-color: black;
 }

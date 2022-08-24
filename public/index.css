@@ -8,38 +8,33 @@ body{
     flex-direction: column;
 }
 
-
 .contenu{
     flex: 1 0 auto;
 }
 
-
 .background{
-    background-image: url(../private/src/fond.png);
+    /*background-image: url(../private/src/fond.png);*/
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 260px;
-    padding-bottom: 235px;
-    position: relative;
-    height: 348px;
     background-color: rgb(16, 137, 255);
+    padding : 260px 0 235px 0;
+    position: relative;
+    /*height: 348px;*/
     overflow-x: hidden;
     box-sizing: border-box;
     height: 1100px;
 }
 
-
-.Text_Acceuille{
+.Text_Accueil{
     position: relative;
     color: aliceblue;
     font-weight: 500;
     font-family: 'DM Sans', sans-serif;
     font-size: 40px;
-    position: relative;
     left: 350px;
 }
 
-.unederline{
+.underline{
     font-weight: normal;
     font-size: 18px;
     line-height: 2.11;
@@ -57,11 +52,10 @@ body{
     top: -20px;
     
 }
-.Text_Acceuille a{
+.Text_Accueil a{
     text-decoration: none; 
-    outline: none 
+    outline: none;
 }
-
 
 .button{
     display: inline-flex;
@@ -81,18 +75,17 @@ body{
     cursor: pointer;
 }
 
-.Connection{
+.connexion{
     display: inline-flex;
-    -moz-box-pack: center;
+    /*-moz-box-pack: center;*/
     justify-content: center;
-    -moz-box-align: center;
+    /*-moz-box-align: center;*/
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
     font-size: 16px;
     text-align: center;
     line-height: 1;
-    color: rgb(255, 255, 255);
     padding: 21px 29px;
     background-color: aliceblue;
     transition: all 500ms ease 0s;
@@ -102,15 +95,11 @@ body{
     color: rgb(16, 137, 255);
 }
 
-
 .header.sticky{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.header.sticky .navigation.text .hover.active a{
-    color: rgb(16, 137, 255);
-}
-
+.header.sticky .navigation.text .hover.active a
 .header.sticky .navigation.text a:hover{
     color: rgb(16, 137, 255);
 
@@ -119,10 +108,6 @@ body{
 .header.sticky .navigation.text .logo.active{
     color: black;
 }
-
-
-
-
 
 .button:hover{
     background-color: aliceblue;

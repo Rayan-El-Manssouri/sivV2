@@ -1,19 +1,18 @@
 # Siv V2
 
-Siv V2 est tous simplement un site web pour gérer les délcrations de véhicules. 
+Siv V2 est tout simplement un site web pour gérer les déclarations de véhicules. 
 
 <img src="private/src/sivV2.png">
 
 ## Description
 
-Créé en 2022
+Créé en 2022.
 
-actuellement a la 2 version du siv , il rajouter une meilleur sécurisation est structure du projet. 
+Actuellement à la version 2 du siv, il rajoute une meilleure sécurisation et une meilleure structure du projet. 
 
-objectif : faciliter les déclaration. (Déclaration achat, déclaration de cession, demande d'immatriculation.)
+Objectif : faciliter les déclarations (Déclaration d'achat, déclaration de session, demande d'immatriculation).
 
-## Table des matiére.
-
+## Table des matières.
 
 - [Structure](#structure)
 - [Installation du projet](#installation-du-projet)
@@ -23,99 +22,41 @@ objectif : faciliter les déclaration. (Déclaration achat, déclaration de cess
 
 ## Structure 
 
-Un fichier public est private.
+Dossier public => Fichier qu'on peut y accéder on modifiant l'url.
 
-Public => Fichier qu'on peut y acceder on moidifiant l'url.
-
-Private => Fichier qu'on ne peut pas y acceder on moidifiant l'url.
+Dossier private => Fichier qu'on ne peut pas y accéder on modifiant l'url.
 
 ### Public
-Vous trouverais tous les fichiers de connexion , fichier de la page d'acceuille.. est les différente formalité.
+Vous trouverez tout les fichiers de connexion, fichier de la page d'Accueil.. et les différentes formalités.
 
 ### Private
-A l'intérieur du fichier private vous trouverer les élémoment les plus importants. 
+A l'intérieur du fichier private vous trouverez les éléments les plus importants. 
 
-bdd => Gestion de connexion a la base.
+base de données => Gestion de connexion à la base.
 
-Gestion de session => tous les fichiers qui gérer la connexion/déconnection.
+Gestion de session => tout les fichiers qui gèrent la connexion/déconnexion.
 
-javascript => tous les codes javascript du site.
+javascript => Tout les codes javascript du site.
 
-src => Contient tous les images utiliser.
+src => Contient toutes les images utilisées.
 
 ## Installation du projet
 
-### Etape 1 - Installer un serveur local
-Vous-pouvez installer un serveur en local. 
-
-Je vous conseille wamp pour window. Voila le  lien 
-
-```https://www.wampserver.com/```
-
-Ensuite démarrer le .exe est fait l'installation classique.
-
-
-### Gérer l'erreur MSCVR110.dll
-
-A la fin de l'installation vous pourrez trés bien tomber sur cette erreur. pour palier a ça voici une vidéo sur youtube
-
-qui montre comment faire : ```https://www.youtube.com/watch?v=XoCV1ANmRrw&```
-
-### Etape 2 - Installation du projet dans wamp
-En premiet tant cloner le dépots. 
-
-```git clone https://github.com/Rayan-El-Manssouri/sivV2 ```
-
-Déplacer le aller dans le l'exporateur de fichier ou alor petit racourci : ```Win + E ```
-
-Aller dans Disque Local => wamp64 (Si vous êtes en 64 bits.) => www => Déposer le fichier sivV2 ici.
-
-
-Est voila ! maintenant faite un simple localhost/sivV2 est vous aurez acces aux fichier.
-
+Dépendances : 
+- Apache
+- MySQL
+- PHP
 
 ### Installation de l'utilisateur pour que tous fonctionne.
 
-Pour être sûre que tous fonctionne, faut rajouter un utilisateur dans la bdd.
+Pour être sûr que tout fonctionne, il faut rajouter un utilisateur dans la base de données.
 
-Rendez vous sur le panel phpmydamin :
-
-<img src="private/src/panel.png">
-
-Cliquer sur le bouton Compte utilisateur => ajouter un compte utilisateur. alors copier juste ce lien :
-
-
-```http://localhost/phpmyadmin/index.php?route=/server/privileges&adduser=1```
-
-Vous êtes censer arriver ici :
-
-<img src="private/src/utilisateur.png">
-
-Les information du compte utilister :
-
-Identifiant: ```test```
-
-Mot de passe : ```root```
-
-
-
-## Contribuer aux projet.
-
-Pour ceux qui aimeront contribuer aux projet , ne pourront pas. Seuls les amis les plus proches ou alors des professionelle que je connais aurons acces.
-
-Mais **Personne d'autre.**
-
-## Version
-
-Actuellement en version 2.
+Les informations du compte utilisateur :
+- Identifiant : ```test```.
+- Mot de passe : ```root```.
 
 
 ## Nous contacter
 
-Vous pourer nous contacter sur les réseaux comme instagram : 
+Contacter le développeur principal par mail : ```liviackerman69@gmail.com```
 
-```https://instagram.com/rayan_el_man``` 
-
-Ou alor gmail : 
-
-```liviackerman69@gmail.com```
