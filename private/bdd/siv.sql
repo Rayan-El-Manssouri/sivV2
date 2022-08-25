@@ -4,21 +4,22 @@ USE siv;
 
 
   CREATE TABLE personnephysique(
-    IdPersonnePhysique NOT NULL AUTO_INCREMENT,
+    IdPersonnePhysique INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Sexe BOOLEAN,
     Nom varchar(60),
     Nomdusage varchar(60),
     Prenom varchar(60),
     DateDenaissance DATE,
-    IdVille tinyint,
-  );
+    IdVille smallint(9),
+    Idpersonne smallint(9)
+ );
 
 CREATE TABLE personne(
-  IdPersonne NOT NULL AUTO_INCREMENT,
+  IdPersonne INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   ProAuto BOOLEAN,
   Assureur BOOLEAN,
   NumeroDeTelephone varchar(60),
-  Mail varchar(60),
+  Mail varchar(60)
 );
 
 
