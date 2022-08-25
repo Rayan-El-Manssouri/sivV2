@@ -22,7 +22,8 @@
                     $_SESSION['connecte'] = 1;
                     ?>
                     <script>
-                        location.replace("http://localhost/sivV2/public/connexion/confirmer/panel.php");
+                        location.replace("http://localhost/sivV2/public/connexion/connexion.php?status=ok");
+                       
                     </script>
                     <?php
                     die();
@@ -36,4 +37,14 @@
             }
             }
         ?>
+
+                        <?php 
+                        if($_GET['status'] == "ok"){
+                            ?>
+                            <script>
+                                location.replace("http://localhost/sivV2/public/connexion/confirmer/panel.php");
+                            </script>
+                            <?php
+                        }
+                        ?>
 </div>
