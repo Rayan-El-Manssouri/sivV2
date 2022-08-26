@@ -17,6 +17,9 @@
         justify-content: center;
         align-items: center;
         color: #fff;
+        
+        
+
     }
 
     .formulaire input{
@@ -28,6 +31,7 @@
         position: relative;
         left: 93px;
     }
+
 
     .formulaire .btn_envoyer{
         background-color: #fff;
@@ -41,17 +45,14 @@
         cursor: pointer;
         transition: all 0.35s ease-in-out;
     }
-
     .formulaire .btn_envoyer:hover{
         background-color: black;
         color: #fff;
     }
-
     .formulaire .password{
         position: relative;
         left: 20px;
     }
-
     .formulaire .form .input{
         position: relative;
         top: 0;
@@ -64,7 +65,6 @@
         background-color: none;
         padding: 1rem;
     }
-
     .formulaire .form{
         position: relative;
         top: 100px;
@@ -78,6 +78,8 @@
                <span>Email : <input type="text" class="email" name="email" placeholder="Email" required> </span><br> <br>
                <span>Mot de passe : <input type="text" class="password" name="password" placeholder="Mot de passe" required></span>
                  <br> <br>
+                 <?php echo $_GET['status']; ?>
+                    <br>
                 <input type="submit"  name="send" class="btn_envoyer"> <br>
             </div>
         </form>
@@ -93,14 +95,15 @@
                     $_SESSION['connecte'] = 1;
                     ?>
                     <script>
-                        location.replace("http://localhost/sivV2/public/connexion/confirmer/panel.php");
+                        location.replace("http://localhost/sivV2/public/connexion/connexion.php?status=ok");
+                       
                     </script>
                     <?php
                     die();
                 }else{
                     ?>
                     <script>
-                        alert("L'email ou le mot de passe est incorrect.")
+                        alert("Email ou le mot de passe est incorect.")
                         location.replace("")
                     </script>
                     
@@ -108,4 +111,14 @@
             }
             }
         ?>
+
+                        <?php 
+                        if($_GET['status'] == "ok"){
+                            ?>
+                            <script>
+                                location.replace("http://localhost/sivV2/public/connexion/confirmer/panel.php");
+                            </script>
+                            <?php
+                        }
+                        ?>
 </div>

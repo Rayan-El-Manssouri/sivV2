@@ -1,74 +1,27 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Hôte : 127.0.0.1:3306
--- Généré le : mar. 16 août 2022 à 14:01
--- Version du serveur : 5.7.36
--- Version de PHP : 7.4.26
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de données : `siv`
---
-
--- --------------------------------------------------------
-
---
--- Structure de la table `acheteur`
---
-
 CREATE DATABASE siv;
 
 USE siv;
 
 
-DROP TABLE IF EXISTS `acheteur`;
-CREATE TABLE IF NOT EXISTS `acheteur` (
-  `IdAcheteur` int(10) NOT NULL AUTO_INCREMENT,
-  `ProautoAssureur` tinyint(1) DEFAULT NULL,
-  `PhysiqueMorale` tinyint(1) DEFAULT NULL,
-  `Sexe` tinyint(1) DEFAULT NULL,
-  `Nom` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `NomUsage` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Prenom` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `DateNaissance` date DEFAULT NULL,
-  `RaisonSociale` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Siret` char(14) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `TelephonePortable` char(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Mail` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `IdUtilisateur` smallint(6) DEFAULT NULL,
-  `IdVille` smallint(6) DEFAULT NULL,
-  `IdAdresse` mediumint(9) DEFAULT NULL,
-  `CommuneDeNaissance` smallint(6) DEFAULT NULL,
-  PRIMARY KEY (`IdAcheteur`),
-  KEY `IdVille` (`IdVille`),
-  KEY `IdUtilisateur` (`IdUtilisateur`),
-  KEY `IdAdresse` (`IdAdresse`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  CREATE TABLE personnephysique(
+    IdPersonnePhysique INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Sexe BOOLEAN,
+    Nom varchar(60),
+    Nomdusage varchar(60),
+    Prenom varchar(60),
+    DateDenaissance DATE,
+    IdVille smallint(9),
+    Idpersonne smallint(9)
+ );
 
---
--- Déchargement des données de la table `acheteur`
---
+CREATE TABLE personne(
+  IdPersonne INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  ProAuto BOOLEAN,
+  Assureur BOOLEAN,
+  NumeroDeTelephone varchar(60),
+  Mail varchar(60)
+);
 
-INSERT INTO `acheteur` (`IdAcheteur`, `ProautoAssureur`, `PhysiqueMorale`, `Sexe`, `Nom`, `NomUsage`, `Prenom`, `DateNaissance`, `RaisonSociale`, `Siret`, `TelephonePortable`, `Mail`, `IdUtilisateur`, `IdVille`, `IdAdresse`, `CommuneDeNaissance`) VALUES
-(24, 0, 1, NULL, '', NULL, NULL, NULL, NULL, '5456231', '654123', '564123', 1, 1, 14, NULL),
-(23, 0, 0, 0, '8974561', '894561', '89456', '2022-02-02', NULL, NULL, '303', '561', 1, 1, 13, 1);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `adresse`
---
 
 DROP TABLE IF EXISTS `adresse`;
 CREATE TABLE IF NOT EXISTS `adresse` (
@@ -84,31 +37,6 @@ CREATE TABLE IF NOT EXISTS `adresse` (
   KEY `IdVille` (`IdVille`)
 ) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Déchargement des données de la table `adresse`
---
-
-INSERT INTO `adresse` (`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`, `IdAdresse`) VALUES
-(1, '6', '456', 4, 'Ter', 'Ctre Cial', '654', 1),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 2),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 3),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 4),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 5),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 6),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 7),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 8),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 9),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 10),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 11),
-(1, '54', '5', 45, 'Bis', 'Lotissement', '4', 12),
-(1, '654', '56', 56, 'Ter', 'Impasse', '5465', 13);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `carburant`
---
-
 DROP TABLE IF EXISTS `carburant`;
 CREATE TABLE IF NOT EXISTS `carburant` (
   `Code` char(2) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -119,11 +47,6 @@ CREATE TABLE IF NOT EXISTS `carburant` (
   KEY `IdVehicule` (`IdVehicule`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `cotitulaire`
---
 
 DROP TABLE IF EXISTS `cotitulaire`;
 CREATE TABLE IF NOT EXISTS `cotitulaire` (
@@ -140,18 +63,6 @@ CREATE TABLE IF NOT EXISTS `cotitulaire` (
   KEY `IdUtilisateur` (`IdUtilisateur`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Déchargement des données de la table `cotitulaire`
---
-
-INSERT INTO `cotitulaire` (`Nom`, `Prenom`, `NomUsage`, `RaisonSociale`, `Siren`, `IdUtilisateur`, `IdCotitulaire`, `IdVehicule`) VALUES
-('Sinara', 'Prenom', NULL, 'Raison Social', 'Siren', 1, 1, 1);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `couleur`
---
 
 DROP TABLE IF EXISTS `couleur`;
 CREATE TABLE IF NOT EXISTS `couleur` (
@@ -192,13 +103,6 @@ CREATE TABLE IF NOT EXISTS `departement` (
   KEY `IdPays` (`IdPays`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Déchargement des données de la table `departement`
---
-
-INSERT INTO `departement` (`IdDepartement`, `Nom`, `Numero`, `IdPays`) VALUES
-(1, 'Vaucluse', '84', 1),
-(2, 'Puy-de-Dôme', '63', 1);
 
 -- --------------------------------------------------------
 
@@ -223,12 +127,6 @@ INSERT INTO `extentionvoie` (`Id`, `Nom`) VALUES
 (4, 'A'),
 (5, 'B'),
 (6, 'C');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `fomalite`
---
 
 DROP TABLE IF EXISTS `fomalite`;
 CREATE TABLE IF NOT EXISTS `fomalite` (
@@ -420,32 +318,6 @@ CREATE TABLE IF NOT EXISTS `vehicule` (
 INSERT INTO `vehicule` (`IdVehicule`, `Immatriculation`, `DateImmatriculation`, `MarqueVehicule`, `TypeVarianteVersion`, `DenominationCommerciale`, `NumeoIdentification`, `GenreNational`, `MotifAbscenceCertificat`, `PresenceCertificat`, `DateCertificat`, `NumeroFormule`, `Opacité`, `PuissanceDin`, `PuissanceFiscale`, `IdUtilisateur`, `IdCouleur`) VALUES
 (10, '54654654', '2022-06-05', '54', '54', '564', '4', '564', '654', 1, '2000-04-05', '52', 0, 5415, 54, 1, 1),
 (9, 'AA-895-77', '2022-08-12', 'Audi', 'A3', 'Vp', '4564', '444', '44', 1, '2022-08-12', '12', 1, 1, 44, 1, 1);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `vendeur`
---
-
-DROP TABLE IF EXISTS `vendeur`;
-CREATE TABLE IF NOT EXISTS `vendeur` (
-  `IdVendeur` smallint(6) NOT NULL AUTO_INCREMENT,
-  `IdVille` smallint(6) DEFAULT NULL,
-  `IdUtilisateur` smallint(6) DEFAULT NULL,
-  `ProautoAssureur` tinyint(1) DEFAULT NULL,
-  `PhysiqueMorale` tinyint(1) DEFAULT NULL,
-  `Sexe` tinyint(1) DEFAULT NULL,
-  `Nom` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Prenom` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `NomUsage` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Siret` char(14) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `NumAgrement` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `IdAdresse` mediumint(9) DEFAULT NULL,
-  PRIMARY KEY (`IdVendeur`),
-  KEY `IdVille` (`IdVille`),
-  KEY `IdUtilisateur` (`IdUtilisateur`),
-  KEY `IdAdresse` (`IdAdresse`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 

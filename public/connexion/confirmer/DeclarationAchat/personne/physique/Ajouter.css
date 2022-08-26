@@ -8,76 +8,27 @@
 body{
     background-image: url(../../../../../../private/src/fond.png);
     background-attachment: fixed;
+    overflow-x: hidden;
 }
+
+.personnePhysique h1{
+    position: absolute;
+    text-align: center;
+    left: -100px;
+}
+
 .personnePhysique{
     color: #fff;
     width: 1400px;
-    text-align: center;
     position: relative;
-    left: 350px;
+    left: 750px;
     top: 50px;
 }
 
-
-.formulaire{
-    display: flex;
-    
-}
-
-.formulaire input[type="radio"]{
-    display: none;
-}
-
-
-
-
-.formulaire label::before{
-    content: "";
-    height: 30px;
-    width: 30px;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-
-
-.formulaire input[type="radio"]:checked + label{
-    background-color: black;
-}
-
-
-.formulaire input[type="radio"]:checked + label:before{
-    height: 30px;
-    width: 30px;
-    border: 1px solid #fff;
-    background-color: #fff;
-    color: black;
-}
-
-
-.form{
+.personnePhysique .Formulaire{
     position: relative;
-    text-align: left;
-    left: 440px;
-    font-size: 25px;
-    top: 20px;
+    left: 100px;
+    top: 100px;
 }
 
-
-
-.deconnecter a{
-    text-decoration: none;
-    color: #fff;
-    float: right;
-    position: relative;
-    top: -120px;
-    left: -10px;
-    font-size: 20px;
-}
-
-.Formulaire{
-    text-align: left;
-    position: relative;
-}
 

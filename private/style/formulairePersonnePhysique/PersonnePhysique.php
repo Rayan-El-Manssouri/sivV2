@@ -16,7 +16,7 @@ $data4 = $database->read($query4);
                     <input type="radio"  name="Sexe" value="0">
                     <label for="Féminin">Féminin</label>
                     <input type="radio" name="Sexe">
-                    <label for="Masculin"  value="1">Masculin</label>
+                    <label for="Masculin"  value="1" > Masculin</label>
                 <br>
             </div>
             <div>
@@ -56,8 +56,8 @@ $data4 = $database->read($query4);
                     <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
                 <?php endforeach; ?>
                 </select><br><br>
-                <span>Sélectionnez un type de voie adresse :</span> <select name="Ville">
-                 <option value="">Sélectionner une type de voie adresse </option>
+                <span>Sélectionner une Type de voie adresse :</span> <select name="Ville">
+                 option value="">Sélectionner une Type de voie adresse </option>
                  <?php foreach($data3 as $dataV2): ?>
                     <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
                 <?php endforeach; ?>
@@ -97,6 +97,12 @@ $data4 = $database->read($query4);
         $NomVoie = htmlentities($_POST['NomVoie']);
         $ComplementAdresse1 = htmlentities($_POST['ComplementAdresse1']);
         $ComplementAdresse2 = htmlentities($_POST['ComplementAdresse2']);
+
+
+
+
+
+        
     }
 
 ?>
