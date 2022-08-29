@@ -108,8 +108,6 @@ require_once '../private/GestionSession/auth.php';
                     Création de compte en 10 seconde
                 </div>
             </div>
-            
-
         </div>
         <!-- Div qui va gérer les forfaits. -->
         <div class="forfait">

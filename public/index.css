@@ -117,6 +117,14 @@ body{
 
 }
 
+
+.Automatiser .formaliter .Achat{
+    padding: 40px;
+    transition: all 0.35s ease;
+
+
+}
+
 .Automatiser .formaliter .Achat:hover{
     background-color: black;
     color: aliceblue;
@@ -127,10 +135,6 @@ body{
     display: flex;
 }
 
-.Automatiser .formaliter .Achat{
-    padding: 40px;
-
-}
 
 .AVANTAGE{
     text-align: left;
@@ -144,6 +148,8 @@ body{
     position: relative;
     left: 220px;
     font-size: 20px;
+    transition: all 0.35s ease;
+
 }
 
 .separation:hover{
