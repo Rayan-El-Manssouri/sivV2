@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter</title>
     <link href="Ajouter.css" rel="stylesheet" />
+    <link href="../../../../../../private/style/footer/footer.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../../../../../private/javascript/sticky.js"></script>
 </head>   
@@ -18,7 +19,14 @@
     ?>
         <div class="personnePhysique">
             <h1>Bievenue sur la page pour rajouter une personne physique. </h1>
+            
             <br><?php require_once dirname( __DIR__ ) . '../../../../../../private/formulairePersonne/physique.php'; ?>
+            
         </div>
+        <div>
+        </div>
+
+
 </body>
 </html>
+

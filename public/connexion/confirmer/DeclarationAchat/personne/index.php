@@ -24,13 +24,17 @@ session_start();
                 <h2>Qu'elle type de personne voulez-vous rajouter ?</h2>
                 <div class="BtnPrincipal">
                     <button class="personnePhysique" onclick="Physique()"><span>Personne physique</span></button>
-                    <button class="personneMoral"><span>Personne moral</span> </button>
+                    <button class="personneMoral" onclick="moral()"><span>Personne moral</span> </button>
                 </div>
             </div>
         </div>
         <script>
             function Physique(){
                 location.replace("physique/Ajouter.php")
+            }
+
+            function moral(){
+                location.replace("moral/moral.php")
             }
         </script>
 </body>

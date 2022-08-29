@@ -2,6 +2,14 @@ CREATE DATABASE siv;
 
 USE siv;
 
+  CREATE TABLE personnemoral(
+    IdPersonneMoral INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    IdVille smallint(9),
+    Idpersonne smallint(9),
+
+
+  )
+
 
   CREATE TABLE personnephysique(
     IdPersonnePhysique INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
