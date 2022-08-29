@@ -10,6 +10,7 @@
                     <li><a href=""><button>Véhicule</button> </a></li>
                     <li><a href=""><button>Opération</button> </a></li>
                     <li><a href=""><button>Générer les pdf</button> </a></li>
+                    <li><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/"><button>Revenir au panel</button> </a></li>
                 </ul>
             </nav>
         </div>

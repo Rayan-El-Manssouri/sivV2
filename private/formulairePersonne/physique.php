@@ -76,7 +76,12 @@ error_reporting(0);
                 <span>Complement Adresse 1 : <input type="text" name="ComplementAdresse1" placeholder="Complement Adresse 1"></span><br><br>
                 <span>Complement Adresse 2 : <input type="text" name="ComplementAdresse2" placeholder="Complement Adresse 2"></span><br><br>
                 <input type="submit" name="send" value="Envoyer">
-                <input type="submit" name="Anuller" value="Anuller">
+                <script>
+                    function revenir(){
+                        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/")
+                    }
+                </script>
+                <input type="button" name="Anuller" onclick="revenir()" value="Anuller">
                 </div>                 
         </form>
 </div>                    
