@@ -3,6 +3,9 @@ require_once '../../private/bdd/connect.php';
 $database = new Database();
 require_once '../../private/GestionSession/auth.php';
 session_start();
+
+
+
 error_reporting(0);
 ?>
 <!DOCTYPE html>
@@ -22,9 +25,6 @@ error_reporting(0);
 </head>
 <body>
     <?php require_once '../../private/style/headerConnexion/header.php'; ?>
-    
     <?php require_once '../../private/style/connexion/connect.php'; ?>
-   
-    
 </body>
 </html>

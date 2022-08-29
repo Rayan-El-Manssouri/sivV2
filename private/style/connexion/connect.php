@@ -1,11 +1,19 @@
+<?php
+require_once '../../private/GestionSession/auth.php';
+session_start();
+if(est_connecter()){
+    header("Location: ../index.php");
+}
+
+?>
 <div class="formulaire">
         <h1>Connecter vous.</h1>
+        
         <form method="POST">
             <div>
                <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span><br> <br>
                <span>Mot de passe : <input type="text" class="password" name="password" placeholder="password" required></span>
                  <br> <br>
-                 <?php echo $_GET['status']; ?>
                     <br>
                 <input type="submit"  name="send" class="btn_envoyer"> <br>
             </div>
@@ -22,8 +30,7 @@
                     $_SESSION['connecte'] = 1;
                     ?>
                     <script>
-                        location.replace("http://localhost/sivV2/public/connexion/connexion.php?status=ok");
-                       
+                        location.replace("http://localhost/sivV2/public/connexion/connexion.php");
                     </script>
                     <?php
                     die();
@@ -32,19 +39,10 @@
                     <script>
                         location.replace("http://localhost/sivV2/public/connexion/connexion.php?status=Mot de passe ou email incorrecte.")
                     </script>
-                    
                     <?php
             }
             }
         ?>
 
-                        <?php 
-                        if($_GET['status'] == "ok"){
-                            ?>
-                            <script>
-                                location.replace("http://localhost/sivV2/public/connexion/confirmer/panel.php");
-                            </script>
-                            <?php
-                        }
-                        ?>
+
 </div>

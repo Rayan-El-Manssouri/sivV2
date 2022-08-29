@@ -18,7 +18,7 @@
     ?>
         <div class="personnePhysique">
             <h1>Bievenue sur la page pour rajouter une personne physique. </h1>
-            <br><?php require_once dirname( __DIR__ ) . '../../../../../../private/style/formulairePersonnePhysique/PersonnePhysique.php'; ?>
+            <br><?php require_once dirname( __DIR__ ) . '../../../../../../private/formulairePersonne/physique.php'; ?>
         </div>
 </body>
 </html>
