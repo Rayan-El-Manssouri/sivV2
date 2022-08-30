@@ -6,9 +6,18 @@ USE siv;
     IdPersonneMoral INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     IdVille smallint(9),
     Idpersonne smallint(9),
-
-
-  )
+    Pro BOOLEAN,
+    Assureur BOOLEAN,
+    RaisonSocial varchar(100),
+    Siret varchar(100),
+    NumeroDeTelephone varchar(100),
+    NumeroDeVoie varchar(100),
+    Ville varchar(100),
+    TypeDeVoieAdresse varchar(100),
+    NomVoie varchar(100),
+    ComplementAdresse1 varchar(100),
+    ComplementAdresse2 varchar(100)
+  );
 
 
   CREATE TABLE personnephysique(
