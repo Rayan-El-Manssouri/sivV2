@@ -126,7 +126,7 @@ error_reporting(0);
         $siv_sql_id_personne = "SELECT  MAX(IdPersonne) as Id FROM personne";
         $siv_sql_id_result = $database->read($siv_sql_id_personne);
 
-        $siv_sql_id = $siv_sql_id_result[0]['Id'];
+        $siv_sql_id = ++$siv_sql_id_result[0]['Id'];
      
 
         // INSERT INTO pour la table personne Acheteur.
