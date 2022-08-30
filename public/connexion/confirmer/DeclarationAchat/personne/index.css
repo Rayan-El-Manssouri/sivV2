@@ -1,18 +1,15 @@
-
 *{
     margin: 0;
     padding: 0;
     font-family: "DM Sans", sans-serif;
-
 }
 
 body{
     background-image: url(../../../../../private/src/fond.png);
 }
 
-
 .global{
-    color: #fff;
+   color: #fff;
    width: 600px;
    position: relative;
    left: 800px;
@@ -27,13 +24,11 @@ body{
     left: 20px;
 }
 
-
 .button{
     position: relative;
     text-align: center;
     top: 300px;
     height: 250px;
-    
 }
 
 .BtnPrincipal{
@@ -46,9 +41,6 @@ body{
     position: relative;
     left: -40px;
 }
-
-
-
 
 .button button{
     background-color: #fff;
@@ -63,62 +55,45 @@ body{
 .button button:hover{
     background-color: black;
     color: #fff;
-
 }
-
 
 .button .personne{
     position: relative;
     left: -10px;
 }
 
-
 .button .personneMoral{
     position: relative;
     left: 50px;
 }
 
-
-
-
-
-
-
-
 .header{
     background-color: rgb(16, 137, 255);
     justify-content: space-between;
     flex-direction: column;
-    height: 86vh;
+    /*height: 86vh;*/
     margin: 0;
     margin-left: auto;
     float: left;
     bottom: 0;
     width: 300px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     position: relative;
     top: 0;
     height: 950px;
 }
-
-
 
 .header.sticky{
     position: fixed;
     float: left;
 }
 
-
-
 .header ul{
     list-style: none;
-    
 }
 
 .header ul li{
     padding: 20px;
-
 }
 
 .header ul li a{
@@ -172,3 +147,4 @@ body{
     transition: all 0.35s ease-in-out;
     padding: 20px;
 }
+

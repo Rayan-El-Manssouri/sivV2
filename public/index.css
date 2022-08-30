@@ -12,6 +12,7 @@ body{
     flex: 1 0 auto;
 }
 
+
 .background{
     /*background-image: url(../private/src/fond.png);*/
     background-repeat: no-repeat;
@@ -75,11 +76,11 @@ body{
     cursor: pointer;
 }
 
-.connexion{
+.Connection{
     display: inline-flex;
-    /*-moz-box-pack: center;*/
+    -moz-box-pack: center;
     justify-content: center;
-    /*-moz-box-align: center;*/
+    -moz-box-align: center;
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
@@ -99,7 +100,7 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.header.sticky .navigation.text .hover.active a
+.header.sticky .navigation.text .hover.active a,
 .header.sticky .navigation.text a:hover{
     color: rgb(16, 137, 255);
 

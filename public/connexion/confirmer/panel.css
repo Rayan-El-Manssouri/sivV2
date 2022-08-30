@@ -32,7 +32,6 @@ body{
 
 }
 
-
 .Text_Accueil{
     position: relative;
     color: aliceblue;
@@ -61,11 +60,11 @@ body{
     top: -20px;
     
 }
+
 .Text_Accueil a{
     text-decoration: none; 
     outline: none 
 }
-
 
 .button{
     display: inline-flex;
@@ -96,7 +95,7 @@ body{
     font-size: 16px;
     text-align: center;
     line-height: 1;
-    color: rgb(255, 255, 255);
+    /*color: rgb(255, 255, 255);*/
     padding: 21px 29px;
     background-color: aliceblue;
     transition: all 500ms ease 0s;
@@ -106,32 +105,24 @@ body{
     color: rgb(16, 137, 255);
 }
 
-
 .header.sticky{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.header.sticky .navigation.text .hover.active a{
-    color: rgb(16, 137, 255);
-}
-
+.header.sticky .navigation.text .hover.active a,
 .header.sticky .navigation.text a:hover{
     color: rgb(16, 137, 255);
-
 }
+
 
 .header.sticky .navigation.text .logo.active{
     color: black;
 }
 
-
 .connexion:hover{
     color: #fff;
     background-color: black;
 }
-
-
-
 
 .button:hover{
     background-color: aliceblue;
@@ -152,25 +143,17 @@ body{
     transition: all 0.35s ease-in-out 0s;
     padding: 30px 0px;
     height: 80px;
-    z-index: 1000000;
+    z-index: 100;
 }
-
-
 
 .header .navigation.text{
     position: relative;
     top: 50px;
 }
 
-
-
-
-
-
 .header .navigation.text li a{
     color: black;
 }
-
 
 .header .navigation .hover.active li{
     color: rgb(16, 137, 255);
@@ -202,14 +185,12 @@ body{
     font-size: 20px;
 }
 
-
 .header.sticky{
     background-color: #fff;
     position: fixed;
     padding: 5px 10px;
     height: 90px;
 }
-
 
 .formulaire{
     position: relative;
@@ -219,6 +200,5 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
 }
+

@@ -1,12 +1,18 @@
 <?php 
 $query = "SELECT * FROM ville";
 $data = $database->read($query);
+
 $query2 = "SELECT * FROM extentionvoie";
 $data2 = $database->read($query2);
+
 $query3 = "SELECT * FROM typevoieadresse";
 $data3 = $database->read($query3);
+
 $query4 = "SELECT * FROM ville";
 $data4 = $database->read($query4);
+
+error_reporting(0);
+
 ?>
     <div class="Formulaire">
         <form method="POST">
@@ -22,7 +28,7 @@ $data4 = $database->read($query4);
             <div>
                 Situation<br><br>
                 <div>
-                    <span>Pro auto :</span> 
+                    <span>Professionnel :</span> 
                     <input type="radio"  name="Pro" value="0">
                     <label for="Féminin">Oui</label>
                     <input type="radio" name="Pro"  value="1">
@@ -34,16 +40,16 @@ $data4 = $database->read($query4);
                 <input type="radio"  name="Assureur" value="0">
                 <label for="Féminin">Oui</label>
                 <input type="radio" name="Assureur"  value="1">
-                <label for="Masculin" > Non</label> <br> <br>
+                <label for="Masculin">Non</label><br><br>
                 Identité<br><br>
                 <span>Nom : <input type="text" name="Non" placeholder="Nom"></span><br><br>
                 <span>Nom d'usage : <input type="text" name="Nomdusage" placeholder="Nom d'usage"></span><br><br>
                 <span>Prénom : <input type="text" name="Prenom" placeholder="Prénom"></span><br><br>
                 <span>Date de naissance : <input type="date" name="DateDenaissance" ></span><br><br>
-                <span>Sélectionnez une ville :</span> <select name="Ville">
-                <option value="">Sélectionnez la ville</option>
+                <span>Sélectionner une ville :</span> <select name="Ville">
+                <option value="">Sélectionner la ville</option>
                 <?php foreach($data as $dataV2): ?>
-                    <option value=""><?= $dataV2['Nom'] ?></option>
+                    <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
                 <?php endforeach; ?>
                 </select><br><br>
                 <span>Numéro de téléphone : <input type="number" name="NumeroDeTelephone"></span><br><br>
@@ -56,8 +62,8 @@ $data4 = $database->read($query4);
                     <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
                 <?php endforeach; ?>
                 </select><br><br>
-                <span>Sélectionner une Type de voie adresse :</span> <select name="Ville">
-                 option value="">Sélectionner une Type de voie adresse </option>
+                <span>Sélectionnez un type de voie adresse :</span> <select name="Ville">
+                <option value="">Sélectionnez un type de voie adresse</option>
                  <?php foreach($data3 as $dataV2): ?>
                     <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
                 <?php endforeach; ?>
@@ -66,31 +72,33 @@ $data4 = $database->read($query4);
                 <span>Complément Adresse 1 : <input type="text" name="ComplementAdresse1" placeholder="Complément Adresse 1"></span><br><br>
                 <span>Complément Adresse 2 : <input type="text" name="ComplementAdresse2" placeholder="Complément Adresse 2"></span><br><br>
                 <input type="submit" name="send" value="Envoyer">
-                <input type="submit" name="Anuller" value="Annuler">
+                <input type="submit" name="Anuller" value="Anuller">
                 </div>                 
         </form>
 </div>                    
     <?php 
     if(isset($_POST['send'])){
-        ///////////////////////////
         // Sexe
         $sexe = htmlentities($_POST['Sexe']);
 
-        //////////////////////////
-        /// Pro ou Assureur
+        // Pro ou Assureur
         $Pro = htmlentities($_POST['Pro']);
         $Assureur = htmlentities($_POST['Assureur']);
 
-        ///////////////////////////
-        /// Identité de la personne physique
-        $Non = htmlentities($_POST['Non']);
+        // Identité de la personne physique
+        $Nom = htmlentities($_POST['Nom']);
         $Nomdusage = htmlentities($_POST['Nomdusage']);
         $Prenom = htmlentities($_POST['Prenom']);
 
-        ///////////////////////////
-        /// Adresse de la personne physique
+        // Adresse de la personne physique
         $DateDenaissance = htmlentities($_POST['DateDenaissance']);
-        $Ville = htmlentities($_POST['Ville']);
+        $ville = htmlentities($_POST['ville']);
+        $siv_sql_ville = "SELECT * FROM ville WHERE Nom='".$ville."' ";
+        $siv_sql_resultat_ville = $database->read($siv_sql_ville);
+        foreach ($siv_sql_resultat_ville as $sivV2) {
+            $IdVille = $sivV2['IdVille'];
+        }
+
         $NumeroDeTelephone = htmlentities($_POST['NumeroDeTelephone']);
         $Mail = htmlentities($_POST['Mail']);
         $NumeroDeVoie = htmlentities($_POST['NumeroDeVoie']);
@@ -98,11 +106,23 @@ $data4 = $database->read($query4);
         $ComplementAdresse1 = htmlentities($_POST['ComplementAdresse1']);
         $ComplementAdresse2 = htmlentities($_POST['ComplementAdresse2']);
 
+        // INSERT INTO pour la table personne.
+        $siv_sql_personne = "INSERT INTO `personne`( `ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `ComplementAdresse1`, `ComplementAdresse2`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail', '$ComplementAdresse1', '$ComplementAdresse2')";
+        $siv_sql_personne_result = $database->read($siv_sql_personne);
 
+        $siv_sql_id_personne = "SELECT  MAX(IdPersonne) as Id FROM personne";
+        $siv_sql_id_result = $database->read($siv_sql_id_personne);
 
-
-
+        $siv_sql_id = $siv_sql_id_result[0]['Id'];
+     
+        // INSERT INTO pour la table personne Acheteur.
+        $siv_sql_acheteur_personne_physique = "INSERT INTO `personnephysique`( `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `IdVille`, `Idpersonne`) VALUES ('$Nom','$Nomdusage','$Prenom','$DateDenaissance','$IdVille','$siv_sql_id')";
+        $siv_result = $database->read($siv_sql_acheteur_personne_physique);
         
+        ?>
+            <script>
+                location.replace("")
+            </script>
+        <?php
     }
-
 ?>
