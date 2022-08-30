@@ -16,7 +16,8 @@ USE siv;
     TypeDeVoieAdresse varchar(100),
     NomVoie varchar(100),
     ComplementAdresse1 varchar(100),
-    ComplementAdresse2 varchar(100)
+    ComplementAdresse2 varchar(100),
+    ExtensionDeLaVoie varchar(100)
   );
 
 
