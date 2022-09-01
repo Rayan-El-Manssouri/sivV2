@@ -1,0 +1,43 @@
+body{
+    background-image: url(../../../../../private/src/fond.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.g_global{
+    position: relative;
+    left: 700px;
+    top: 100px;
+}
+
+.content_table{
+    border-collapse: collapse;
+    margin: 25px;
+    font-size: 0.9em;
+    min-width: 400px;
+    position: relative;
+    left: 90px;
+    top: 100px;
+}
+
+.content_table thead tr{
+    background-color: #333;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content_table th,
+.content_table td{
+    padding: 12px 15px;
+}
+
+.content_table tbody tr{
+    border-bottom: 1px solid #fff;
+}
+
+.content_table tbody tr:hover{
+    background-color: aqua;
+    color: black;
+}
