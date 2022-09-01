@@ -1,4 +1,5 @@
     <?php echo '<link href="http://localhost/sivV2/private/style/headerFormaliter/header.css" rel="stylesheet" type="text/css" />';  ?>
+    <?php echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />';  ?>
     
         <header class="header">
         <div class="navigation">

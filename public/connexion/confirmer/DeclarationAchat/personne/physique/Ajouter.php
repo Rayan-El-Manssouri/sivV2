@@ -9,6 +9,7 @@
     <link href="../../../../../../private/style/footer/footer.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../../../../../private/javascript/sticky.js"></script>
+
 </head>   
 <body>
     <?php 

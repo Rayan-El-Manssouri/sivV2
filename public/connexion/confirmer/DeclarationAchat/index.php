@@ -23,7 +23,6 @@ foreach ($data as $dataV2) {
     <link href="index.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Panel Achat</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div class="contenue">
@@ -35,7 +34,7 @@ foreach ($data as $dataV2) {
             <div class="acheteur">
                 <p style="color: #fff;">Gestion de personnes</p>
                 <a href="personne/" class="Ajouter"><p>Ajouter</p></a>
-                <a href="" class="Modifier" ><p>Modifier</p> </a>
+                <a href="ModifierPersonne/index.php?status=ok" class="Modifier" ><p>Modifier</p> </a>
                 <a href="" class="Detail"><p>Détail</p> </a>
                 <a href="" class="Suprimmer" ><p>Suprimmer</p> </a>
             </div>

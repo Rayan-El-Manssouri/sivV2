@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+
 .header{
     background-color: rgb(16, 137, 255);
     justify-content: space-between;
