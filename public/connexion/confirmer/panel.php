@@ -19,7 +19,6 @@ if(!est_connecter()){
 <body>
     <div class="contenu">
     <?php require_once '../../../private/style/headerConnexion/header.php'; ?>
-
     <div>
         <h1 style="position: relative; left: 750px; top: 250px; color: #fff;">Choisisser vôtre formalité.</h1>
         <div class="choix">

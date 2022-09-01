@@ -12,6 +12,13 @@
     <?php         
         require_once dirname( __DIR__ ) . '../../../../../../private/style/headerFormaliter/header.php';
         require_once dirname( __DIR__ ) . '../../../../../../private/bdd/connect.php';
-        $database = new Database();?>
+        $database = new Database();
+       
+        ?>
+        <div style="position: relative; left: 900px; top: 100px;">
+        <h1>Bienvenue sur la page pour rajouter une personne moral.</h1>
+        <br>
+            <?php  require_once dirname( __DIR__ ) . '../../../../../../private/formulaireMoral/formulairemoral.php'; ?>
+        </div>
 </body>
 </html>

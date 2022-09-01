@@ -14,6 +14,7 @@ $data4 = $database->read($query4);
 error_reporting(0);
 
 ?>
+    <h1>Bievenue sur la page pour rajouter une personne physique. </h1>
     <div class="Formulaire">
         <form method="POST">
             <div>
@@ -50,15 +51,16 @@ error_reporting(0);
                 <span>Nom d'usage : <input type="text" name="Nomdusage" placeholder="Nom d'usage"></span><br><br>
                 <span>Prénom : <input type="text" name="Prenom" placeholder="Prénom"></span><br><br>
                 <span>Date de naissance : <input type="date" name="DateDenaissance" ></span><br><br>
+        
+                <span>Numéro de téléphone : <input type="number" placeholder="Numéro de téléphone" name="NumeroDeTelephone"></span><br><br>
+                <span>Mail : <input type="mail" name="Mail" placeholder="Mail"></span><br><br>
+                ---------------Adresse de l'acheteur--------------- <br> <br>
                 <span>Sélectionner une ville :</span> <select name="ville">
                 <option value="" >Sélectionner la ville</option>
                 <?php foreach($data as $dataV2): ?>
                     <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
                 <?php endforeach; ?>
                 </select><br><br>
-                <span>Numéro de téléphone : <input type="number" placeholder="Numéro de téléphone" name="NumeroDeTelephone"></span><br><br>
-                <span>Mail : <input type="mail" name="Mail" placeholder="Mail"></span><br><br>
-                ---------------Adresse de l'acheteur--------------- <br> <br>
                 Numéro de voie : <input type="text" name="NumeroDeVoie" placeholder="Numéro de voie"><br><br>
                 <span>Sélectionner une extension de la voie :</span> <select name="Ville">
                 <option value="">Sélectionner une extension de la voie </option>
@@ -78,10 +80,11 @@ error_reporting(0);
                 <input type="submit" name="send" value="Envoyer">
                 <script>
                     function revenir(){
-                        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/")
+                        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/")
                     }
                 </script>
                 <input type="button" name="Anuller" onclick="revenir()" value="Anuller">
+                <?php     echo $_GET['status']; ?>
                 </div>                 
         </form>
 </div>                    
@@ -135,11 +138,13 @@ error_reporting(0);
         
         ?>
             <script>
-                location.replace("")
+                location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/physique/Ajouter.php?status=Personne ajoutée !")
+
             </script>
         <?php
 
 
     }
+
 
 ?>

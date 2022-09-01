@@ -1,3 +1,19 @@
+<?php 
+
+require_once '../../../../private/bdd/connect.php';
+$database = new Database();
+session_start();
+
+$query = "SELECT * FROM utilisateur WHERE email='".$_SESSION['email']."' ";
+$data = $database->read($query);
+
+foreach ($data as $dataV2) {
+    $email = $dataV2['email'];
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,9 +27,11 @@
 </head>
 <body>
     <div class="contenue">
+
     <?php require_once '../../../../private/style/headerFormaliter/header.php';?>
-        <div class="global">
-            <span style="position: relative; left: -300px; text-align: left; color: #fff;">Bievenue sur le panel de la déclaration d'achat !</span>
+        <div class="global" style="color: #fff;">
+            <p class="connection">Connecter en tant que : <?php echo  $email ?></p>
+            <span style="position: relative; left: -300px; text-align: left; ">Bievenue sur le panel de la déclaration d'achat !</span>
             <div class="acheteur">
                 <p style="color: #fff;">Gestion de personnes</p>
                 <a href="personne/" class="Ajouter"><p>Ajouter</p></a>

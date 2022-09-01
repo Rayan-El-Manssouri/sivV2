@@ -8,7 +8,6 @@ body{
     overflow-x: hidden;
     background-image: url(http://localhost/sivV2/private/src/fond.png);
     background-size: cover;
-    overflow-y: hidden;
 }
 
 
@@ -51,6 +50,11 @@ body{
     top: 20px;
     right: 150px;
 
+}
+
+.global .connection{
+    position: relative;
+    left: 1250px;
 }
 
 .acheteur{
