@@ -1,10 +1,6 @@
 
   <!-- Footer -->
-  <footer>
-
-    <style>
-
-    </style>
+  <footer>  
        <div class="contenu-footer">
             <div class="bloc footer-services">
                  <h3>Nos services</h3>
@@ -28,7 +24,6 @@
                 <li><a href=""><img src="http://localhost/sivV2/private/src/tw.png" style="width: 30px; position: relative; top: 5px;"> Tweeter </a></li>
                 </ul>
             </div>
-       </div>
        </div>
        <div class="copyright" style="text-align: center; font-size: 20px; position: relative; top: -20px; left: -20px;">
             <p>© Copyright 2022 sinara</p>

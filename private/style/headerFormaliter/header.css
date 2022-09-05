@@ -7,8 +7,7 @@
 
 .header{
     background-color: rgb(16, 137, 255);
-    justify-content: space-between;
-    flex-direction: column;
+
     height: 86vh;
     margin: 0;
     float: left;

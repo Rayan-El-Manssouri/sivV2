@@ -57,7 +57,7 @@ if (!empty($_GET['q'])){
                 <tbody>
                <?php  foreach ($data as $dataV2): ?>
                     <tr>
-                        <td><?=  $dataV2['Nom'] ?></td>
+                        <td><a href="confirmation/physique/confirmation.php?id=<?=$dataV2['IdPersonnePhysique']?>"><?=  $dataV2['Nom'] ?></a> </td>
                         <td><?= $dataV2['Nomdusage'] ?></td>
                         <td><?= $dataV2['Prenom'] ?></td>
                         <td><?=  $dataV2['DateDenaissance']?></td>

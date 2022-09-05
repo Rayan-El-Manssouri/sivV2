@@ -1,0 +1,142 @@
+*
+
+body{
+    background-image: url(../../../../../../../private/src/fond.png);
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+
+.modification{
+    position: relative;
+    left: 700px;
+    color: #fff;
+    top: 200px;
+}
+
+.modification .Titre{
+    border-bottom: 1px solid #fff;
+    width: 200px;
+    height: 47px;
+    font-size: 30px;
+}
+
+.modification p{
+    position: relative;
+    left: -20px;
+    padding: 20px;
+}
+
+select{
+    appearance: none;
+    background-color: none;
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.35s ease;
+    border: 1px solid black;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/60/60995.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+select:hover{
+    background-color: black;
+    color: #fff;
+}
+
+option{
+    background-color: black;
+    color: #fff;
+    transition: all 0.35s ease;
+}
+
+
+
+:root {
+
+    --input-color: #99A3BA;
+    --input-border: #CDD9ED;
+    --input-background: #fff;
+    --input-placeholder: #CBD1DC;
+
+    --input-border-focus: #275EFE;
+
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #EEF4FF;
+
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #678EFE;
+
+}
+
+.form-field {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    color: var(--input-color);
+    border: 1px solid var(--input-border);
+    background: var(--input-background);
+    transition: border .3s ease;
+
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    width: 400px;
+
+   
+}
+
+
+.form-field {
+        position: relative;
+        z-index: 1;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+
+.form-group span {
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 25px;
+        color: var(--group-color);
+        background: var(--group-background);
+        border: 1px solid var(--group-border);
+        transition:  .3s ease, border .3s ease, color .3s ease;
+}
+
+.footer_v2{
+    position: relative;
+    width: 1700px;
+    left: 300px;
+    top: 200px;
+    background-color: none;
+    color: #fff;
+}
+
+
+
+
