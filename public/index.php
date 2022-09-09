@@ -45,6 +45,7 @@ require_once '../private/GestionSession/auth.php';
         </div>
         <div class="Automatiser">
             <h1>Automatiser les pdf selon vos formaliter</h1>
+            <p>Test de confirmation</p>
             <div class="formaliter">
                 <div class="formaliter_index">
                     <div>
