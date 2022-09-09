@@ -1,6 +1,7 @@
 <?php 
 require_once '../../../../../../../private/bdd/connect.php';
 $database = new Database();
+error_reporting(0);
 
 $query = "SELECT * FROM personnephysique";
 $data = $database->read($query);
