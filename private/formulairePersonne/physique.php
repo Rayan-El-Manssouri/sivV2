@@ -11,7 +11,6 @@ $data3 = $database->read($query3);
 $query4 = "SELECT * FROM ville";
 $data4 = $database->read($query4);
 
-error_reporting(0);
 
 ?>
     <h1>Bievenue sur la page pour rajouter une personne physique. </h1>
@@ -62,13 +61,13 @@ error_reporting(0);
                 <?php endforeach; ?>
                 </select><br><br>
                 Numéro de voie : <input type="text" name="NumeroDeVoie" placeholder="Numéro de voie"><br><br>
-                <span>Sélectionner une extension de la voie :</span> <select name="Ville">
+                <span>Sélectionner une extension de la voie :</span> <select name="ExtentionVoie">
                 <option value="">Sélectionner une extension de la voie </option>
                 <?php foreach($data2 as $dataV2): ?>
                     <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
                 <?php endforeach; ?>
                 </select><br><br>
-                <span>Sélectionner une Type de voie adresse :</span> <select name="Ville">
+                <span>Sélectionner une Type de voie adresse :</span> <select name="TypeVoieAdresse">
                  <option value="">Sélectionner une Type de voie adresse </option>
                  <?php foreach($data3 as $dataV2): ?>
                     <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
@@ -101,6 +100,14 @@ error_reporting(0);
 
         ///////////////////////////
         /// Identité de la personne physique
+        $sexe = htmlentities($_POST['Sexe']);
+
+
+        ///////////////////////////
+        /// Identité de la personne physique
+        $Nom = htmlentities($_POST['Nom']);
+        $Nomdusage = htmlentities($_POST['Nomdusage']);
+        $Prenom = htmlentities($_POST['Prenom']);
         $Nom = htmlentities($_POST['Nom']);
         $Nomdusage = htmlentities($_POST['Nomdusage']);
         $Prenom = htmlentities($_POST['Prenom']);
@@ -115,34 +122,64 @@ error_reporting(0);
             $IdVille = $sivV2['IdVille'];
         }
 
+        echo $siv_insert_adresse;
+
         $NumeroDeTelephone = htmlentities($_POST['NumeroDeTelephone']);
         $Mail = htmlentities($_POST['Mail']);
         $NumeroDeVoie = htmlentities($_POST['NumeroDeVoie']);
         $NomVoie = htmlentities($_POST['NomVoie']);
         $ComplementAdresse1 = htmlentities($_POST['ComplementAdresse1']);
         $ComplementAdresse2 = htmlentities($_POST['ComplementAdresse2']);
+        $TypeVoieAdresse = htmlentities($_POST['TypeVoieAdresse']);
+
+
+        // INSERT INTO pour la table adresse
+        $siv_insert_adresse = "INSERT INTO `adresse`(`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`) VALUES ('$IdVille','$NomVoie','$ComplementAdresse1','$NumeroDeVoie','$idExtentionVoie','$TypeVoieAdresse','$ComplementAdresse2')";
+        $data6 = $database->read($siv_insert_adresse);
+
+
+        // IdAdresse de la table ADresse
+        $siv_sql_id_personne = "SELECT  MAX(IdAdresse) as Id FROM adresse";
+        $siv_sql_id_result_adresse = $database->read($siv_sql_id_personne);
+        
+
+        $siv_sql_id_adresse = ++$siv_sql_id_result_adresse[0]['Id'];
+
+
 
         // INSERT INTO pour la table personne.
-        $siv_sql_personne = "INSERT INTO `personne`( `ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `ComplementAdresse1`, `ComplementAdresse2`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail', '$ComplementAdresse1', '$ComplementAdresse2')";
+        $siv_sql_personne = "INSERT INTO `personne`(`ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `IdAdresse`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail','$siv_sql_id_adresse')";
         $siv_sql_personne_result = $database->read($siv_sql_personne);
 
+
+        // IDpersonne
         $siv_sql_id_personne = "SELECT  MAX(IdPersonne) as Id FROM personne";
         $siv_sql_id_result = $database->read($siv_sql_id_personne);
 
         $siv_sql_id = ++$siv_sql_id_result[0]['Id'];
-     
+
+
+        // ID Extention Voie
+        $ExtentionVoie = htmlentities($_POST['ExtentionVoie']);
+        $siv_sql_id_ExtentionVoie = "SELECT * FROM extentionVoie WHERE Nom='".$ExtentionVoie."' ";
+        $siv_sql_id_ExtentionVoie_result = $database->read($siv_sql_id_ExtentionVoie);
+
+        foreach($siv_sql_id_ExtentionVoie_result as $sivV2){
+            $idExtentionVoie = $sivV2['Id'];
+        }
+
+
+
 
         // INSERT INTO pour la table personne Acheteur.
         $siv_sql_acheteur_personne_physique = "INSERT INTO `personnephysique`( `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `IdVille`, `Idpersonne`) VALUES ('$Nom','$Nomdusage','$Prenom','$DateDenaissance','$IdVille','$siv_sql_id')";
         $siv_result = $database->read($siv_sql_acheteur_personne_physique);
-        
         ?>
-            <script>
-                location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/physique/Ajouter.php?status=Personne ajoutée !")
 
-            </script>
+        <script>
+            lcoation.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/physique/Ajouter.php?requete=<?=$siv_insert_adresse?>")
+        </script>
         <?php
-
 
     }
 
