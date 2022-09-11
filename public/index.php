@@ -9,6 +9,7 @@ require_once '../private/GestionSession/auth.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet">
+    <link href="../private/src/logo.png" rel="icon">
     <link href="http://localhost/sivV2/private/style/headearAcceuille/header.css" rel="stylesheet">
     <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
     <link href="http://localhost/sivV2/private/style/FlecheRemonter/fleche.css" rel="stylesheet">

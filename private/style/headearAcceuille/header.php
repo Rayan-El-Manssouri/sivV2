@@ -1,7 +1,7 @@
 <header class="header">
     <div>
         <nav class="navigation">
-            <span class="logo">Website logo</span>
+            <img width="44" class="logo" height="44" style="position: relative; top: -10px;"  src="http://localhost/sivV2/private/src/logo2.png">
             <li class="hover"><a href="#">Home</a></li>
             <li><a href="#">Signaler</a></li>
             <li><a href="#">Nous contacter</a></li>

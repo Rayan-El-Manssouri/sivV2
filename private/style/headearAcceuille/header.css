@@ -5,12 +5,24 @@
     width: 100%;
     transition: all 0.35s ease-in-out 0s;
     padding: 20px 0px;
-    height: 80px;
+    height: 120px;
     z-index: 1000000;
 }
+
+
+
+
+
 .header .navigation.text{
     position: relative;
 }
+
+.header.sticky  .navigation.text .Connection{
+    position: relative;
+    top: -80px;
+}
+
+
 .header .navigation.text li a{
     color: black;
 }
@@ -45,7 +57,7 @@
     background-color: #fff;
     position: fixed;
     padding: 10px;
-    height: 75px;
+    height: 80px;
     top: -20px;
 }
 
@@ -92,7 +104,8 @@
     background-color: aliceblue;
     transition: all 500ms ease 0s;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     left: 1600px;
+    top: -20px;
     color: rgb(16, 137, 255);
 }
