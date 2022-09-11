@@ -3,8 +3,8 @@ class Database
 {
 
     private $host = "localhost";
-    private $username = "test";
-    private $password = "root";
+    private $username = "root";
+    private $password = "Rayan.200";
     private $db = "siv";
 
     function connect()
