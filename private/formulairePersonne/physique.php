@@ -13,6 +13,8 @@ $data4 = $database->read($query4);
 
 
 ?>
+
+
     <h1>Bievenue sur la page pour rajouter une personne physique. </h1>
     <div class="Formulaire">
         <form method="POST">
@@ -122,7 +124,6 @@ $data4 = $database->read($query4);
             $IdVille = $sivV2['IdVille'];
         }
 
-        echo $siv_insert_adresse;
 
         $NumeroDeTelephone = htmlentities($_POST['NumeroDeTelephone']);
         $Mail = htmlentities($_POST['Mail']);
@@ -136,6 +137,7 @@ $data4 = $database->read($query4);
         // INSERT INTO pour la table adresse
         $siv_insert_adresse = "INSERT INTO `adresse`(`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`) VALUES ('$IdVille','$NomVoie','$ComplementAdresse1','$NumeroDeVoie','$idExtentionVoie','$TypeVoieAdresse','$ComplementAdresse2')";
         $data6 = $database->read($siv_insert_adresse);
+        echo $siv_insert_adresse;
 
 
         // IdAdresse de la table ADresse

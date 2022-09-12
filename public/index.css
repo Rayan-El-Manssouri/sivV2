@@ -231,3 +231,10 @@ body{
     top: 1px;
 }
 
+.alert{
+    color: #fff;
+    background-color: rgb(16, 137, 255);
+    box-shadow: 3px 6px 12px rgb(16, 137, 255, 0.4);
+}
+
+

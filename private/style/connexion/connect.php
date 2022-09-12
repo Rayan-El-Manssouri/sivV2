@@ -1,6 +1,9 @@
 <?php
 require_once '../../private/GestionSession/auth.php';
 session_start();
+
+require_once 'alert.css';
+
 if(est_connecter()){
     header("Location: ../index.php");
 }
@@ -16,6 +19,7 @@ if(est_connecter()){
                  <br> <br>
                     <br>
                 <input type="submit"  name="send" class="btn_envoyer"> <br>
+                <span style="position: relative; top: -75px;"> <?php echo  $_GET['status'] ?></span>
             </div>
         </form>
         <?php 
@@ -25,6 +29,13 @@ if(est_connecter()){
                 $query = "SELECT * FROM utilisateur WHERE BINARY email='".$email."' AND BINARY password='".$password."' ";
                 $data = $database->read($query);
                 if(!empty($data[0])){
+                    ?>
+                    <div class="alert">
+                        <script>
+                            alert("Tous est bon !")
+                        </script>
+                    </div>
+                    <?php
                     $_SESSION['email'] = $data[0]["email"];
                     $_SESSION['id'] = $data[0]["IdUtilisateur"];
                     $_SESSION['connecte'] = 1;

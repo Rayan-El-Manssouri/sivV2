@@ -41,7 +41,9 @@ require_once '../private/GestionSession/auth.php';
                          }                        
                         ?>
                 </div>
-                
+                <div class="alert">
+                    <p>Vous êtes conncecter !</p> 
+                </div>
             </section>
         </div>
         <div class="Automatiser">
