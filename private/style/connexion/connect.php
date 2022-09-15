@@ -1,8 +1,6 @@
 <?php
-require_once '../../private/GestionSession/auth.php';
 session_start();
 
-require_once 'alert.css';
 
 if(est_connecter()){
     header("Location: ../index.php");
@@ -11,7 +9,6 @@ if(est_connecter()){
 ?>
 <div class="formulaire">
         <h1>Connecter vous.</h1>
-        
         <form method="POST">
             <div>
                <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span><br> <br>
@@ -38,10 +35,11 @@ if(est_connecter()){
                     <?php
                     $_SESSION['email'] = $data[0]["email"];
                     $_SESSION['id'] = $data[0]["IdUtilisateur"];
+                    $_SESSION['message'] = 1;
                     $_SESSION['connecte'] = 1;
                     ?>
                     <script>
-                        location.replace("http://localhost/sivV2/public/connexion/connexion.php");
+                        location.replace("http://localhost/sivV2/public/index.php?status=ok");
                     </script>
                     <?php
                     die();
@@ -54,6 +52,4 @@ if(est_connecter()){
             }
             }
         ?>
-
-
 </div>

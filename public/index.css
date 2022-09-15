@@ -233,8 +233,23 @@ body{
 
 .alert{
     color: #fff;
-    background-color: rgb(16, 137, 255);
+    background-color: rgb(35, 55, 77);
     box-shadow: 3px 6px 12px rgb(16, 137, 255, 0.4);
+    width: 200px;
+    padding: 20px;
+    border-radius: 3px;
+    position: fixed;
+    left: 100px;
+    top: 800px;
+    z-index: 20;
+    text-align: center;
+}
+
+
+.alert span{
+    position: relative;
+    top: 5px;
+    cursor: pointer;
 }
 
 

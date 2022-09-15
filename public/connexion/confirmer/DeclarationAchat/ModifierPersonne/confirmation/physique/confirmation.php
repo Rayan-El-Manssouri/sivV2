@@ -80,6 +80,7 @@ $data9 = $database->read($query9);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modification</title>
     <link href="confirmation.css" rel="stylesheet">
+    <link href="../../../../../../../private/src/logo2.png" rel="icon">
     <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
 </head>
 <body>
@@ -125,7 +126,7 @@ $data9 = $database->read($query9);
                 </div>
                 <p>Sélectionner la ville :        <select name="">
                     <option value=""><?php echo $NomVille?></option>
-                    <option value="">-------------</option>
+                    <option value="">----------------------------------</option>
                     
                    <?php foreach ($data6 as $dataV2): ?>
                      <option value=""><?= $dataV2['Nom'] ?></option>

@@ -1,6 +1,7 @@
 <?php 
 session_start();
 require_once '../private/GestionSession/auth.php';
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,7 +10,7 @@ require_once '../private/GestionSession/auth.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet">
-    <link href="../private/src/logo.png" rel="icon">
+    <link href="../private/src/logo2.png" rel="icon">
     <link href="http://localhost/sivV2/private/style/headearAcceuille/header.css" rel="stylesheet">
     <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
     <link href="http://localhost/sivV2/private/style/FlecheRemonter/fleche.css" rel="stylesheet">
@@ -41,8 +42,41 @@ require_once '../private/GestionSession/auth.php';
                          }                        
                         ?>
                 </div>
-                <div class="alert">
-                    <p>Vous êtes conncecter !</p> 
+                <script>
+                        function MessageDisplay(){
+                            $("#Message").hide()
+                            location.replace("http://localhost/sivV2/public/")
+                        }
+                </script>
+
+                <script>
+                    $(document).ready(function(){
+                        $('#Message').hide()
+
+                    })
+                </script>
+
+                    <?php 
+                    if($_GET['status'] == 'ok'){
+                        if($_SESSION['message'] == 1){
+                                ?>
+                                <script type="text/javascript">
+                            $(document).ready(function(){
+                                $('#Message').show()
+                            })
+                                </script>
+                                <?php
+
+                        }
+                    }
+                    
+                    
+                    ?>
+                <div class="alert"id="Message">
+                    <p>Vous êtes conncecter ! <span  class="material-symbols-outlined" onclick="MessageDisplay()">
+                    close
+                    </span></p> 
+
                 </div>
             </section>
         </div>
