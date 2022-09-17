@@ -1,5 +1,3 @@
-*
-
 body{
     background-image: url(../../../../../../../private/src/fond.png);
     margin: 0;
@@ -12,7 +10,6 @@ body{
     color: #fff;
     background-attachment: fixed;
 }
-
 
 .modification{
     position: relative;
@@ -37,7 +34,7 @@ body{
 select{
     appearance: none;
     background-color: none;
-    border: 0;
+    /*border: 0;*/
     border-radius: 4px;
     text-align: center;
     padding: 10px;
@@ -49,36 +46,28 @@ select{
     cursor: pointer;
 }
 
-select:hover{
+select:hover,
+option{
     background-color: black;
     color: #fff;
 }
 
 option{
-    background-color: black;
-    color: #fff;
     transition: all 0.35s ease;
 }
 
-
-
 :root {
-
     --input-color: #99A3BA;
     --input-border: #CDD9ED;
     --input-background: #fff;
     --input-placeholder: #CBD1DC;
-
     --input-border-focus: #275EFE;
-
     --group-color: var(--input-color);
     --group-border: var(--input-border);
     --group-background: #EEF4FF;
-
     --group-color-focus: #fff;
     --group-border-focus: var(--input-border-focus);
     --group-background-focus: #678EFE;
-
 }
 
 .form-field {
@@ -90,7 +79,7 @@ option{
     font-weight: 500;
     font-family: inherit;
     border-radius: 6px;
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
     color: var(--input-color);
     border: 1px solid var(--input-border);
     background: var(--input-background);
@@ -102,30 +91,25 @@ option{
     position: relative;
     display: flex;
     width: 400px;
-
-   
 }
 
-
 .form-field {
-        position: relative;
-        z-index: 1;
-        flex: 1 1 auto;
-        width: 1%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin : 0 auto;
+}
 
 .form-group span {
-        text-align: center;
-        padding: 8px 12px;
-        font-size: 14px;
-        line-height: 25px;
-        color: var(--group-color);
-        background: var(--group-background);
-        border: 1px solid var(--group-border);
-        transition:  .3s ease, border .3s ease, color .3s ease;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--group-color);
+    background: var(--group-background);
+    border: 1px solid var(--group-border);
+    transition:  .3s ease, border .3s ease, color .3s ease;
 }
 
 .footer_v2{
@@ -136,8 +120,6 @@ option{
     background-color: none;
     color: #fff;
 }
-
-
 
 .input{
     padding: 20px;
@@ -154,7 +136,4 @@ option{
     border: 1px solid black;
 
 }
-
-
-
 

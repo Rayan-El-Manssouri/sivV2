@@ -16,9 +16,6 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    
-    
-
 }
 
 .formulaire input{
@@ -30,7 +27,6 @@
     position: relative;
     left: 93px;
 }
-
 
 .formulaire .btn_envoyer{
     background-color: #fff;
@@ -44,14 +40,17 @@
     cursor: pointer;
     transition: all 0.35s ease-in-out;
 }
+
 .formulaire .btn_envoyer:hover{
     background-color: black;
     color: #fff;
 }
+
 .formulaire .password{
     position: relative;
     left: 20px;
 }
+
 .formulaire .form .input{
     position: relative;
     top: 0;
@@ -64,7 +63,9 @@
     background-color: none;
     padding: 1rem;
 }
+
 .formulaire .form{
     position: relative;
     top: 100px;
 }
+

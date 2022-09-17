@@ -6,12 +6,8 @@
     transition: all 0.35s ease-in-out 0s;
     padding: 20px 0px;
     height: 120px;
-    z-index: 1000000;
+    z-index: 100;
 }
-
-
-
-
 
 .header .navigation.text{
     position: relative;
@@ -22,13 +18,14 @@
     top: -80px;
 }
 
-
 .header .navigation.text li a{
     color: black;
 }
+
 .header .navigation .hover.active li{
     color: rgb(16, 137, 255);
 }
+
 .header .navigation{
     display: flex;
     list-style: none;   
@@ -37,9 +34,11 @@
     left: 360px;
     top: 40px;
 }
+
 .header .navigation li a{
     text-decoration: none;
 }
+
 .header .navigation li a{
     text-align: right;
     padding: 15px;
@@ -47,12 +46,13 @@
     position: relative;
     left: 50px;
 }
+
 .header .navigation span{
     color: aliceblue;
     font-size: 15px;
     position: relative;
-
 }
+
 .header.sticky{
     background-color: #fff;
     position: fixed;
@@ -61,45 +61,40 @@
     top: -20px;
 }
 
-
 .header.sticky{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.header.sticky .navigation.text .hover.active a{
-    color: rgb(16, 137, 255);
-}
-.header.sticky .navigation.text a{
-    transition: all 0.35s ease 0s;
-
-}
-
+.header.sticky .navigation.text .hover.active a,
 .header.sticky .navigation.text a:hover{
     color: rgb(16, 137, 255);
+}
+
+.header.sticky .navigation.text a{
+    transition: all 0.35s ease 0s;
 }
 
 .header.sticky .navigation.text .logo.active{
     color: black;
 }
 
-
-.Connection:hover{
+.Connexion:hover{
     color: #fff;
     background-color: black;
 }
 
-.Connection{
+.Connexion{
     display: inline-flex;
-    -moz-box-pack: center;
+    /*-moz-box-pack: center;*/
     justify-content: center;
-    -moz-box-align: center;
+    /*-moz-box-align: center;*/
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
     font-size: 16px;
     text-align: center;
     line-height: 1;
-    color: rgb(255, 255, 255);
+    /*color: rgb(255, 255, 255);*/
     padding: 21px 29px;
     background-color: aliceblue;
     transition: all 500ms ease 0s;
@@ -109,3 +104,4 @@
     top: -20px;
     color: rgb(16, 137, 255);
 }
+

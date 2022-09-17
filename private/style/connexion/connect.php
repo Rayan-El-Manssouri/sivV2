@@ -1,20 +1,16 @@
 <?php
 session_start();
 
-
-if(est_connecter()){
+if(est_connecte()){
     header("Location: ../index.php");
 }
-
 ?>
 <div class="formulaire">
-        <h1>Connecter vous.</h1>
+        <h1>Connectez-vous.</h1>
         <form method="POST">
             <div>
-               <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span><br> <br>
+               <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span>
                <span>Mot de passe : <input type="text" class="password" name="password" placeholder="password" required></span>
-                 <br> <br>
-                    <br>
                 <input type="submit"  name="send" class="btn_envoyer"> <br>
                 <span style="position: relative; top: -75px;"> <?php echo  $_GET['status'] ?></span>
             </div>
@@ -43,13 +39,7 @@ if(est_connecter()){
                     </script>
                     <?php
                     die();
-                }else{
-                    ?>
-                    <script>
-                        location.replace("http://localhost/sivV2/public/connexion/connexion.php?status=Mot de passe ou email incorrecte.")
-                    </script>
-                    <?php
-            }
+                }
             }
         ?>
 </div>

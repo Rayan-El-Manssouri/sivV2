@@ -7,7 +7,7 @@
                     <li class="hover"><a href="http://localhost/sivV2/public/">Home</a></li>
                     <li><a href="#">Signaler</a></li>
                     <li><a href="#">Nous contacter</a></li>
-                    <li><a href="#">Partenaire</a></li>
+                    <li><a href="#">Partenaires</a></li>
                 </nav>
             </div>
         </header>

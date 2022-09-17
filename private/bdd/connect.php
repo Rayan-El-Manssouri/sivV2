@@ -9,10 +9,9 @@ class Database
 
     function connect()
     {
-
-        $connection = mysqli_connect($this->host, $this->username, $this->password, $this->db);
-        $connection->set_charset("utf8");
-        return $connection;
+        $connexion = mysqli_connect($this->host, $this->username, $this->password, $this->db);
+        $connexion->set_charset("utf8");
+        return $connexion;
     }
 
     function read($query)
@@ -33,8 +32,8 @@ class Database
 
         function save($query)
         {
-            $connection = $this->connect();
-            $result = mysqli_query($connection, $query);
+            $connexion = $this->connect();
+            $result = mysqli_query($connexion, $query);
 
             if (!$result) {
                 return false;

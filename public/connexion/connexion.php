@@ -1,15 +1,12 @@
 <?php 
-require_once '../../private/bdd/connect.php';
-$database = new Database();
-require_once '../../private/GestionSession/auth.php';
-session_start();
-
-
-
-error_reporting(0);
+    require_once '../../private/bdd/connect.php';
+    $database = new Database();
+    require_once '../../private/GestionSession/auth.php';
+    session_start();
+    error_reporting(0);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +18,7 @@ error_reporting(0);
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <?= '<link href="../../private/style/headerConnexion/header.css" type="text/css" rel="stylesheet">' ?> 
-    <title>Connection</title>
+    <title>Connexion</title>
 </head>
 <body>
     <?php require_once '../../private/style/headerConnexion/header.php'; ?>

@@ -7,6 +7,7 @@ body{
     display: flex;
     flex-direction: column;
 }
+
 .forfait h1{
     font-weight: 500;
     font-size: 28px;
@@ -15,6 +16,7 @@ body{
     margin-bottom: 0px;
     color: rgb(15, 33, 55);
 }
+
 .forfait .proposition{
     position: relative;
     top: 30px;
@@ -24,6 +26,7 @@ body{
     width: 400px;
     height: 500px;
 }
+
 .forfait .proposition .payement{
     position: absolute;
     top: 40px;
@@ -31,6 +34,7 @@ body{
     color: #fff;
     font-size: 20px;
 }
+
 .forfait .proposition .Pro{
     position: absolute;
     top: 30px;
@@ -38,18 +42,19 @@ body{
     color: #fff;
     font-size: 30px;
 }
+
 .contenu .forfait .proposition .panier{
     display: inline-flex;
-    -moz-box-pack: center;
+    /*-moz-box-pack: center;*/
     justify-content: center;
-    -moz-box-align: center;
+    /*-moz-box-align: center;*/
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
     font-size: 16px;
     text-align: center;
     line-height: 1;
-    color: rgb(255, 255, 255);
+    /*color: rgb(255, 255, 255);*/
     padding: 21px 29px;
     background-color: aliceblue;
     transition: all 500ms ease 0s;
@@ -59,10 +64,10 @@ body{
     top: 400px;
     left: 90px;
 }
+
 .contenu .forfait .proposition .panier:hover{
     color: #fff;
     background-color: black;
-
 }
 
 .contenu{
@@ -75,11 +80,10 @@ body{
     left: -300px;
 }
 
-
 .background{
-    background-image: url(../private/src/fond.png);
+    /*background-image: url(../private/src/fond.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     padding-top: 260px;
     padding-bottom: 235px;
     position: relative;
@@ -90,9 +94,7 @@ body{
     height: 1100px;
 }
 
-
-.Text_Acceuille{
-    position: relative;
+.Text_Accueil{
     color: aliceblue;
     font-weight: 500;
     font-family: 'DM Sans', sans-serif;
@@ -101,7 +103,7 @@ body{
     left: 350px;
 }
 
-.unederline{
+.underline{
     font-weight: normal;
     font-size: 18px;
     line-height: 2.11;
@@ -117,19 +119,18 @@ body{
 .button{
     position: relative;
     top: -20px;
-    
 }
-.Text_Acceuille a{
+
+.Text_Accueil a{
     text-decoration: none; 
     outline: none 
 }
 
-
 .button{
     display: inline-flex;
-    -moz-box-pack: center;
+    /*-moz-box-pack: center;*/
     justify-content: center;
-    -moz-box-align: center;
+    /*-moz-box-align: center;*/
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
@@ -143,7 +144,6 @@ body{
     cursor: pointer;
 }
 
-
 .Avantage{
     padding: 40px 0px;
     color: white;
@@ -152,51 +152,40 @@ body{
     background-color: rgb(25, 32, 44);
 }
 
-
-
 .Automatiser{
     color: black;
     text-align: center;
     font-size: 20px;
     padding: 30px;
     top: 200px;
-
 }
 
-
-
-.Automatiser .formaliter{
+.Automatiser .formalitees{
     display: flex;
     padding: 50px;
     position: relative;
     left: 450px;
-
 }
 
-
-.Automatiser .formaliter .Achat{
+.Automatiser .formalitees .Achat{
     padding: 40px;
     transition: all 0.35s ease;
-
-
 }
 
-.Automatiser .formaliter .Achat:hover{
+.Automatiser .formalitees .Achat:hover{
     background-color: black;
     color: aliceblue;
     cursor: pointer;
 }
 
-.Automatiser .formaliter .formaliter_index{
+.Automatiser .formalitees .formalitees_index{
     display: flex;
 }
-
 
 .AVANTAGE{
     text-align: left;
     padding: 70px 90px;
     display: flex;
-
 }
 
 .separation{
@@ -205,7 +194,6 @@ body{
     left: 220px;
     font-size: 20px;
     transition: all 0.35s ease;
-
 }
 
 .separation:hover{

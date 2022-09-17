@@ -1,7 +1,7 @@
 <?php 
-session_start();
-require_once '../private/GestionSession/auth.php';
-error_reporting(0);
+    session_start();
+    require_once '../private/GestionSession/auth.php';
+    error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,14 +26,14 @@ error_reporting(0);
         <!-- Div qui reste en haut de la page. -->
         <div class="container">
             <section class="background">
-                <?php  require_once '../private/style/headearAcceuille/header.php'; ?>
-                <div class="Text_Acceuille">
-                    <h1 font-weight="bold" >Bienvenue sur le <br> site web siv</h1>
-                    <p class="unederline">Site simple pour gérer les déclarations.</p>
+                <?php  require_once '../private/style/headerAccueil/header.php'; ?>
+                <div class="Text_Accueil">
+                    <h1 font-weight="bold">Bienvenue sur le<br>site web Siv</h1>
+                    <p class="underline">Site simple pour gérer les déclarations.</p>
                         <?php 
-                          if(est_connecter()){
+                          if(est_connecte()){
                             ?>
-                                <a href="connexion/confirmer/panel.php" style="text-decoration : none;" class="button">Aller aux panel</a>
+                                <a href="connexion/confirmer/panel.php" style="text-decoration : none;" class="button">Aller au panneau</a>
                             <?php
                          }else{
                             ?>
@@ -81,15 +81,15 @@ error_reporting(0);
             </section>
         </div>
         <div class="Automatiser">
-            <h1>Automatiser les pdf selon vos formaliter</h1>
-            <div class="formaliter">
-                <div class="formaliter_index">
+            <h1>Automatiser les PDF selon vos formalités</h1>
+            <div class="formalitees">
+                <div class="formalitees_index">
                     <div>
                         <div class="Achat">
                             <p class="material-symbols-outlined">
                                 monetization_on
                             </p>
-                            <p>Déclaration d'achat</p>
+                            <p>Déclarations d'achat</p>
                         </div>
                     </div>
                     <div>
@@ -97,7 +97,7 @@ error_reporting(0);
                             <p class="material-symbols-outlined">
                                 local_shipping
                             </p>
-                            <p>Déclaration d'immatriculation</p>
+                            <p>Déclarations d'immatriculation</p>
                         </div>
                     </div>
                     <div>
@@ -105,7 +105,7 @@ error_reporting(0);
                             <p class="material-symbols-outlined">
                                 directions_car
                             </p>
-                            <p>Déclaration de cession</p>
+                            <p>Déclarations de cession</p>
                         </div>
                     </div>
                 </div>
@@ -114,10 +114,10 @@ error_reporting(0);
         </div>
         <!-- Avantage -->
         <div class="Avantage">
-            <h1>Les avantages </h1>
+            <h1>Les avantages</h1>
             <div>
-                <h2>Gagner 1h 30min sur chaque véhicule</h2>
-                <p>Communication simple si besoin d'aide</p>
+                <h2>Gagner 1h30 sur chaque véhicule</h2>
+                <p>Communication simple avec assistance</p>
             </div>
             <div class="AVANTAGE">
                 <div class="separation">
@@ -126,7 +126,7 @@ error_reporting(0);
                             call
                         </span>
                     </div>
-                    Commuication instantanné <br> <span style="left: 40px; position: relative;" >si besoin d'aide</span> 
+                    Communication instantané<br><span style="left: 40px; position: relative;">avec assistance</span> 
                 </div>
                 <div class="separation">
                     <div class="tel">
@@ -134,7 +134,7 @@ error_reporting(0);
                         picture_as_pdf
                     </span>
                     </div>
-                   Gestion pdf simple a utiliser
+                   Gestion des PDF simple et intuitive
                 </div>
                 <div class="separation">
                     <div class="tel">
@@ -142,40 +142,38 @@ error_reporting(0);
                         person
                     </span>
                     </div>
-                    Création de compte en 10 seconde
+                    Création de compte en 10 secondes
                 </div>
             </div>
         </div>
-        <!-- Div qui va gérer les forfaits. -->
+        <!-- Div qui va gérer les forfaits -->
         <div class="forfait">
-           <h1>Nos fofait</h1>
-           <div class="alignement">
+            <h1>Nos forfaits</h1>
+            <div class="alignement">
                 <div class="proposition">
                         <section>
                             <p class="Pro">Pro</p>
                             <a class="panier">
-                                Ajouter aux panier
+                                Ajouter au panier
                                 <svg class="fleche" fill="currentColor" style="display:inline-block;vertical-align:middle" height="18" width="18" viewBox="0 0 512 512"><g id="Icon_8_"><g><g><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"></path></path></g></g></g></svg>
                             </a>
-                        </section>    
+                        </section>
                 </div>
-                    <div style="position: relative; left: 900px;" class="proposition">
-                        <section>
-                            <p class="Pro">Particulier</p>
-                            <a class="panier">
-                                Ajouter aux panier
-                                <svg class="fleche" fill="currentColor" style="display:inline-block;vertical-align:middle" height="18" width="18" viewBox="0 0 512 512"><g id="Icon_8_"><g><g><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"></path></path></g></g></g></svg>
-                            </a>
-                        </section>    
-                    </div>
-                    
-           </div>
-           
+                <div style="position: relative; left: 900px;" class="proposition">
+                    <section>
+                        <p class="Pro">Particuliers</p>
+                        <a class="panier">
+                            Ajouter au panier
+                            <svg class="fleche" fill="currentColor" style="display:inline-block;vertical-align:middle" height="18" width="18" viewBox="0 0 512 512"><g id="Icon_8_"><g><g><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"></path></path></g></g></g></svg>
+                        </a>
+                    </section>    
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Fléche fixe pour remonter la page. -->
+    <!-- Flèche fixe pour remonter la page -->
     <?php require_once '../private/style/FlecheRemonter/fleche.php' ?>
-    <!-- Footer. -->
+    <!-- Footer -->
     <?php require_once '../private/style/footer/footer.php' ?>
 </body>
 </html>

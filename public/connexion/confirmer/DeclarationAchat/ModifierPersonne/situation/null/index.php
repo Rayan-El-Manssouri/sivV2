@@ -1,52 +1,44 @@
 <?php 
-require_once '../../../../../../../private/bdd/connect.php';
-$database = new Database();
-error_reporting(0);
+    require_once '../../../../../../../private/bdd/connect.php';
+    $database = new Database();
+    error_reporting(0);
 
-$query = "SELECT * FROM personnephysique";
-$data = $database->read($query);
-
-
-
-
-
-error_reporting(0);
-
-if (!empty($_GET['q'])){
-    $recherche = htmlentities($_GET['q']);
-    $query = "SELECT * FROM `personnephysique` WHERE Nom LIKE '%".$recherche."%' ";
+    $query = "SELECT * FROM personnephysique";
     $data = $database->read($query);
 
-};
+    error_reporting(0);
 
+    if (!empty($_GET['q'])){
+        $recherche = htmlentities($_GET['q']);
+        $query = "SELECT * FROM `personnephysique` WHERE Nom LIKE '%".$recherche."%' ";
+        $data = $database->read($query);
+
+    };
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modfier</title>
+    <title>Modifier</title>
     <link href="index.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <?php require_once '../../../../../../../private/style/headerFormaliter/header.php'; ?>
+    <?php require_once '../../../../../../../private/style/headerformalitees/header.php'; ?>
     <div class="g_global">
-        <h1>Bievenue sur le panel pour modifer une personne.</h1>
+        <h1>Bienvenue sur le panneau pour modifier une personne.</h1>
         <br>
         <br>
-            <span>Sélectionner le type de personne.</span> <select id="personne" name="">
-                <option value="null">Sélectionner.</option>
-                <option value="moral">personne moral</option>
+            <span>Sélectionner le type de personne.</span><select id="personne" name="">
+                <option value="null">Sélectionner</option>
+                <option value="moral">Personne morale</option>
             </select>
             <br>
-
         <div id="1">
-        <br>
-
-        <p>Tableaux coresspendant aux personne physique.</p>
+            <br>
+            <p>Tableaux correspondant aux personnes physiques :</p>
             <table  class="content_table">
                 <br>
                 <form method="GET">
@@ -56,7 +48,7 @@ if (!empty($_GET['q'])){
                 <thead>
                     <tr>
                         <th>Nom</th>
-                        <th>Nom usage</th>
+                        <th>Nom d'usage</th>
                         <th>Prénom</th>
                         <th>Date de naissance</th>
                     </tr>
@@ -74,12 +66,11 @@ if (!empty($_GET['q'])){
             </table>
         </div>
     </div>
-
     <script>
         $("#personne")
             .on("change", function(e){
                 e.preventDefault();
-            window.location.href = "http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/ModifierPersonne/situation/" + $(this).val();
+                window.location.href = "http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/ModifierPersonne/situation/" + $(this).val();
         })
     </script>
 </body>

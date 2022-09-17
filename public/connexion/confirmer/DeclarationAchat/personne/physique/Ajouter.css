@@ -4,7 +4,6 @@
     font-family: 'DM sans', sans-serif;
 }
 
-
 body{
     background-image: url(../../../../../../private/src/fond.png);
     background-attachment: fixed;
@@ -30,5 +29,4 @@ body{
     left: 100px;
     top: 100px;
 }
-
 

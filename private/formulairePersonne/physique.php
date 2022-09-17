@@ -12,84 +12,67 @@ $query4 = "SELECT * FROM ville";
 $data4 = $database->read($query4);
 
 error_reporting(0);
-
 ?>
+<h1>Bienvenue sur la page pour rajouter une personne physique. </h1>
+<div class="Formulaire">
+<form method="POST">
+    <div>
+        <span>Sexe :</span> 
+            <input type="radio"  name="Sexe" value="0">
+            <label for="Féminin">Féminin</label>
+            <input type="radio" name="Sexe">
+            <label for="Masculin"  value="1" > Masculin</label>
+        <br>
+        <br>
+    </div>
+    <div>
+        <span>Pro auto :</span> 
+        <input type="radio"  name="Pro" value="0">
+        <label for="Féminin">Oui</label>
+        <input type="radio" name="Assureur"  value="1">
+        <label for="Masculin" > Nom</label>
+        Identité
+        <span>Nom : <input type="text" name="Nom" placeholder="Nom"></span>
+        <span>Nom d'usage : <input type="text" name="Nomdusage" placeholder="Nom d'usage"></span>
+        <span>Prénom : <input type="text" name="Prenom" placeholder="Prénom"></span>
+        <span>Date de naissance : <input type="date" name="DateDenaissance" ></span>
 
-
-    <h1>Bievenue sur la page pour rajouter une personne physique. </h1>
-    <div class="Formulaire">
-        <form method="POST">
-            <div>
-                <!-- Sexe -->
-                --------------- Sexe---------------<br><br>
-                <span>Sexe :</span> 
-                    <input type="radio"  name="Sexe" value="0">
-                    <label for="Féminin">Féminin</label>
-                    <input type="radio" name="Sexe">
-                    <label for="Masculin"  value="1" > Masculin</label>
-                <br>
-                <br>
-            </div>
-            <div>
-                --------------- Situation--------------- <br><br>
-                <div>
-                    <!-- Pro auto -->
-                    <span>Pro auto :</span> 
-                    <input type="radio"  name="Pro" value="0">
-                    <label for="Féminin">Oui</label>
-                    <input type="radio" name="Pro"  value="1">
-                    <label for="Masculin" > Non</label>
-                </div>
-                <br>
-                <br>
-                <!-- Pro auto -->
-                <span>Assureur :</span> 
-                <input type="radio"  name="Assureur" value="0">
-                <label for="Féminin">Oui</label>
-                <input type="radio" name="Assureur"  value="1">
-                <label for="Masculin" > Nom</label> <br> <br>
-                --------------- Identité --------------- <br><br>
-                <span>Nom : <input type="text" name="Nom" placeholder="Nom"></span><br><br>
-                <span>Nom d'usage : <input type="text" name="Nomdusage" placeholder="Nom d'usage"></span><br><br>
-                <span>Prénom : <input type="text" name="Prenom" placeholder="Prénom"></span><br><br>
-                <span>Date de naissance : <input type="date" name="DateDenaissance" ></span><br><br>
-        
-                <span>Numéro de téléphone : <input type="number" placeholder="Numéro de téléphone" name="NumeroDeTelephone"></span><br><br>
-                <span>Mail : <input type="mail" name="Mail" placeholder="Mail"></span><br><br>
-                ---------------Adresse de l'acheteur--------------- <br> <br>
-                <span>Sélectionner une ville :</span> <select name="ville">
-                <option value="" >Sélectionner la ville</option>
-                <?php foreach($data as $dataV2): ?>
-                    <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
-                <?php endforeach; ?>
-                </select><br><br>
-                Numéro de voie : <input type="text" name="NumeroDeVoie" placeholder="Numéro de voie"><br><br>
-                <span>Sélectionner une extension de la voie :</span> <select name="ExtentionVoie">
-                <option value="">Sélectionner une extension de la voie </option>
-                <?php foreach($data2 as $dataV2): ?>
-                    <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
-                <?php endforeach; ?>
-                </select><br><br>
-                <span>Sélectionner une Type de voie adresse :</span> <select name="TypeVoieAdresse">
-                 <option value="">Sélectionner une Type de voie adresse </option>
-                 <?php foreach($data3 as $dataV2): ?>
-                    <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
-                <?php endforeach; ?>
-                </select><br><br>
-                <span>Nom de la voie : <input type="text" name="NomVoie" placeholder="Nom de la voie"></span><br><br>
-                <span>Complement Adresse 1 : <input type="text" name="ComplementAdresse1" placeholder="Complement Adresse 1"></span><br><br>
-                <span>Complement Adresse 2 : <input type="text" name="ComplementAdresse2" placeholder="Complement Adresse 2"></span><br><br>
-                <input type="submit" name="send" value="Envoyer">
-                <script>
-                    function revenir(){
-                        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/")
-                    }
-                </script>
-                <input type="button" name="Anuller" onclick="revenir()" value="Anuller">
-                </div>    
-                <p><?=$_GET['status']?></p>   
-                          
-        </form>
+        <span>Numéro de téléphone : <input type="number" placeholder="Numéro de téléphone" name="NumeroDeTelephone"></span>
+        <span>Mail : <input type="mail" name="Mail" placeholder="Mail"></span><br><br>
+        Adresse de l'acheteur
+        <span>Sélectionnez une ville :</span> <select name="ville">
+        <option value="" >Sélectionnez une ville</option>
+        <?php foreach($data as $dataV2): ?>
+            <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
+        <?php endforeach; ?>
+        </select><br><br>
+        Numéro de voie : <input type="text" name="NumeroDeVoie" placeholder="Numéro de voie"><br><br>
+        <span>Sélectionnez une extension de la voie :</span><select name="ExtentionVoie">
+        <option value="">Sélectionnez une extension de la voie </option>
+        <?php foreach($data2 as $dataV2): ?>
+            <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
+        <?php endforeach; ?>
+        </select><br><br>
+        <span>Sélectionnez un type de voie adresse :</span><select name="TypeVoieAdresse">
+            <option value="">Sélectionnez un type de voie adresse</option>
+            <?php foreach($data3 as $dataV2): ?>
+            <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
+        <?php endforeach; ?>
+        </select><br><br>
+        <span>Nom de la voie : <input type="text" name="NomVoie" placeholder="Nom de la voie"></span><br><br>
+        <span>Complement d'adresse 1 : <input type="text" name="ComplementAdresse1" placeholder="Complement d'adresse 1"></span><br><br>
+        <span>Complement d'adresse 2 : <input type="text" name="ComplementAdresse2" placeholder="Complement d'adresse 2"></span><br><br>
+        <input type="submit" name="send" value="Envoyer">
+        <script>
+            function revenir(){
+                location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/")
+            }
+        </script>
+        <input type="button" name="Annuler" onclick="revenir()" value="Annuler">
+        </div>    
+        <p><?=$_GET['status']?></p>   
+                    
+</form>
 </div>                    
     <?php 
     if(isset($_POST['send'])){
@@ -192,5 +175,28 @@ error_reporting(0);
 
     }
 
+    $NumeroDeTelephone = htmlentities($_POST['NumeroDeTelephone']);
+    $Mail = htmlentities($_POST['Mail']);
+    $NumeroDeVoie = htmlentities($_POST['NumeroDeVoie']);
+    $NomVoie = htmlentities($_POST['NomVoie']);
+    $ComplementAdresse1 = htmlentities($_POST['ComplementAdresse1']);
+    $ComplementAdresse2 = htmlentities($_POST['ComplementAdresse2']);
 
-?>
+    // INSERT INTO pour la table personne.
+    $siv_sql_personne = "INSERT INTO `personne`( `ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `ComplementAdresse1`, `ComplementAdresse2`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail', '$ComplementAdresse1', '$ComplementAdresse2')";
+    $siv_sql_personne_result = $database->read($siv_sql_personne);
+
+    $siv_sql_id_personne = "SELECT  MAX(IdPersonne) as Id FROM personne";
+    $siv_sql_id_result = $database->read($siv_sql_id_personne);
+
+    $siv_sql_id = ++$siv_sql_id_result[0]['Id'];
+    
+
+    // INSERT INTO pour la table personne Acheteur.
+    $siv_sql_acheteur_personne_physique = "INSERT INTO `personnephysique`( `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `IdVille`, `Idpersonne`) VALUES ('$Nom','$Nomdusage','$Prenom','$DateDenaissance','$IdVille','$siv_sql_id')";
+    $siv_result = $database->read($siv_sql_acheteur_personne_physique);
+    
+    ?>
+<script>
+    location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/physique/Ajouter.php?status=Personne ajoutée !")
+</script>
