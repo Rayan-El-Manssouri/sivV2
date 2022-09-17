@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moral</title>
     <link href="moral.css" rel="stylesheet">
+    <link href="../../../../../../private/src/logo2.png" rel="icon">
 
 </head>
 <body>

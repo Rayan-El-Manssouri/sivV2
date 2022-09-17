@@ -86,7 +86,6 @@ error_reporting(0);
                     }
                 </script>
                 <input type="button" name="Anuller" onclick="revenir()" value="Anuller">
-                <?php     echo $_GET['status']; ?>
                 </div>    
                 <p><?=$_GET['status']?></p>   
                           
@@ -187,7 +186,7 @@ error_reporting(0);
         $siv_result = $database->read($siv_sql_acheteur_personne_physique);
         ?>
         <script>
-            lcoation.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/physique/Ajouter.php?status=Tous est correct !")
+            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/physique/Ajouter.php?status=Tous est correct !")
         </script>
         <?php
 

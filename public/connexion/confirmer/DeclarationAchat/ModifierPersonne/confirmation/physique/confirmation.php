@@ -1,6 +1,10 @@
 <?php 
 require_once '../../../../../../../private/bdd/connect.php';
 $database = new Database();
+
+
+
+
 $query = "SELECT * FROM personnephysique WHERE IdPersonnePhysique='".$_GET['id']."' ";
 $data = $database->read($query);
 
@@ -84,74 +88,93 @@ $data9 = $database->read($query9);
     <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
 </head>
 <body>
-    <?php require_once '../../../../../../../private/style/headerFormaliter/header.php'; ?>
-    <div class="modification">
-        <div class="Titre">
-            Identité
-        </div>
-        <?php foreach($data as $dataV2): ?>
-            <br>
+    <form name="form1" id="form1"  method="post">
 
-
-                <p>Nom : <input type="text" value="<?= $dataV2['Nom'] ?>"></p>
-                <p>Nomd usage : <input type="text" value="<?= $dataV2['Nomdusage'] ?>"></p>
-                <p>Prénom : <input type="text" value="<?= $dataV2['Prenom'] ?>"></p>
-                <p>Date De naissance : <input type="date" value="<?= $dataV2['DateDenaissance'] ?>"></p>
+        <?php require_once '../../../../../../../private/style/headerFormaliter/header.php'; ?>
+        <div class="modification">
+            <div class="Titre">
+                Identité
+            </div>
+            <?php foreach($data as $dataV2): ?>
                 <br>
-                <div class="Titre">
-                    Parti personne
-                </div>
-                <p>Pro : <span>Oui</span> <input type="radio" name="Pro" <?php if($Pro == "0"){ 
-                    ?>
-                        checked
-                    <?php
-                } ?>> <span>Non <input type="radio" name="Pro"<?php if($Pro == "1"){ 
-                    ?>
-                        checked
-                    <?php
-                } ?>></span> </p>
-                  <p>Assureur : <span>Oui</span> <input type="radio" name="Assureur" <?php if($Assureur == "0"){ 
-                    ?>
-                        checked
-                    <?php
-                } ?>> <span>Non <input type="radio" name="Assureur"<?php if($Assureur == "1"){ 
-                    ?>
-                        checked
-                    <?php
-                } ?>></span> </p>
-                <p>Numéro de téléphone : <input type="text" value="<?= $NumeroDeTelephone?> "></p>
-                <p>Mail : <input type="text" value="<?= $Mail?> "></p>
-                <div class="Titre">
-                    Adresse
-                </div>
-                <p>Sélectionner la ville :        <select name="">
-                    <option value=""><?php echo $NomVille?></option>
-                    <option value="">----------------------------------</option>
-                    
-                   <?php foreach ($data6 as $dataV2): ?>
-                     <option value=""><?= $dataV2['Nom'] ?></option>
-                    <?php endforeach; ?>
-                </select></p>
+                    <p>Nom : <input type="text" name="nom" value="<?= $dataV2['Nom'] ?>" onkeypress="validerForm(event);"></p>
+                    <p>Nom usage : <input type="text" name="NomUsage" value="<?= $dataV2['Nomdusage'] ?>" onkeypress="validerForm(event);"></p>
+                    <p>Prénom : <input type="text" value="<?= $dataV2['Prenom'] ?>" onkeypress="validerForm(event);"></p>
+                    <p>Date De naissance : <input type="date" value="<?= $dataV2['DateDenaissance'] ?>"></p>
+                    <br>
+                    <div class="Titre">
+                        Parti personne
+                    </div>
+                    <p>Pro : <span>Oui</span> <input type="radio" name="Pro" value="0" <?php if($Pro == "0"){ 
+                        ?>
+                            checked
+                        <?php
+                    } ?>> <span>Non <input type="radio" name="Pro" value="1" <?php if($Pro == "1"){ 
+                        ?>
+                            checked
+                        <?php
+                    } ?>></span> </p>
+                    <p>Assureur : <span>Oui</span> <input type="radio" name="Assureur" value="0"  <?php if($Assureur == "0"){ 
+                        ?>
+                            checked
+                        <?php
+                    } ?>> <span>Non <input type="radio" name="Assureur" value="1" <?php if($Assureur == "1"){ 
+                        ?>
+                            checked
+                        <?php
+                    } ?>></span> </p>
+                    <p>Numéro de téléphone : <input type="text" value="<?= $NumeroDeTelephone?> " onkeypress="validerForm(event);"></p>
+                    <p>Mail : <input type="text" value="<?= $Mail?> " onkeypress="validerForm(event);"></p>
+                    <div class="Titre">
+                        Adresse
+                    </div>
+                    <p>Sélectionner la ville :        <select name="">
+                        <option value=""><?php echo $NomVille?></option>
+                        <option value="">----------------------------------</option>
+                        
+                    <?php foreach ($data6 as $dataV2): ?>
+                        <option value=""><?= $dataV2['Nom'] ?></option>
+                        <?php endforeach; ?>
+                    </select></p>
 
-                <p>Sélectionner l'extension de voie : <select name="">
-                    <option value=""><?php echo $ExtentionVoie2?></option>
-                    <option value="">----------------------------------</option>
-                   <?php foreach ($data8 as $dataV2): ?>
-                     <option value=""><?= $dataV2['Nom'] ?></option>
-                    <?php endforeach; ?>
-                </select></p>
-                <p>Nom Voie : <input type="text" value="<?= $NomVoie?>"></p>
-                <p>Complement Adresse 1 : <input type="text" value="<?= $ComplementAdresse1?>"></p>
-                <p>Complement Adresse 2 : <input type="text" value="<?= $ComplementAdresse2?>"></p>
-                <p>Numero Voie : <input type="text" value="<?= $NumeroVoie?>"></p>
-                <p>Sélectionner le type de voie adresse : <select name="">
-                    <option value=""><?php echo $TypeVoieAdresse_id?></option>
-                    <option value="">----------------------------------</option>
-                   <?php foreach ($data9 as $dataV2): ?>
-                     <option value=""><?= $dataV2['Nom'] ?></option>
-                    <?php endforeach; ?>
-                </select></p>
-        <?php endforeach; ?>
-    </div>
+                    <p>Sélectionner l'extension de voie : <select name="">
+                        <option value=""><?php echo $ExtentionVoie2?></option>
+                        <option value="">----------------------------------</option>
+                    <?php foreach ($data8 as $dataV2): ?>
+                        <option value=""><?= $dataV2['Nom'] ?></option>
+                        <?php endforeach; ?>
+                    </select></p>
+                    <p>Nom Voie : <input type="text" value="<?= $NomVoie?>" onkeypress="validerForm(event);"></p>
+                    <p>Complement Adresse 1 : <input type="text" value="<?= $ComplementAdresse1?>" onkeypress="validerForm(event);" ></p>
+                    <p>Complement Adresse 2 : <input type="text" value="<?= $ComplementAdresse2?>" onkeypress="validerForm(event);"></p>
+                    <p>Numero Voie : <input type="text" value="<?= $NumeroVoie?>" onkeypress="validerForm(event);"></p>
+                    <p>Sélectionner le type de voie adresse : <select name="">
+                        <option value=""><?php echo $TypeVoieAdresse_id?></option>
+                        <option value="">----------------------------------</option>
+                    <?php foreach ($data9 as $dataV2): ?>
+                        <option value=""><?= $dataV2['Nom'] ?></option>
+                        <?php endforeach; ?>
+                    </select></p>
+            <?php endforeach; ?>
+            <input type="submit" class="input" id="send" name="send">
+        </div>
+    </form>
+    <script type="text/javascript" src="../../../../../../../private/javascript/entrer.js"></script>
+   <?php 
+   if(!empty($_POST['send'])){
+        $Nom = htmlentities($_POST['nom']);
+        $NomUsage = htmlentities($_POST['NomUsage']);
+        $query = "UPDATE personnephysique SET Nom='$Nom', Nomdusage='$NomUsage' WHERE IdPersonnePhysique='".$_GET['id']."' ";
+        $data1 = $database->read($query);
+        ?>
+        <script>
+            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/ModifierPersonne/confirmation/physique/confirmation.php?id=<?=$_GET['id']?>")
+        </script>
+        <?php
+    }
+   
+   
+   
+   ?>
 </body>
 </html>

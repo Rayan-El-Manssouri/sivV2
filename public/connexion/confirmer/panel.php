@@ -12,6 +12,7 @@ if(!est_connecter()){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="panel.css" rel="stylesheet">
+    <link href="../../../private/src/logo2.png" rel="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel</title>
     <?php echo '<link href="http://localhost/sivV2/private/style/headerConnexion/header.css" rel="stylesheet" type="text/css" />';  ?>

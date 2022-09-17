@@ -139,4 +139,22 @@ option{
 
 
 
+.input{
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px solid white;
+    transition: all 0.32s ease;
+}
+
+.input:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: black;
+    border: 1px solid black;
+
+}
+
+
+
 
