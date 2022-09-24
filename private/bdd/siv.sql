@@ -1,56 +1,61 @@
-CREATE DATABASE siv;
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1:3306
+-- Généré le : sam. 24 sep. 2022 à 12:26
+-- Version du serveur : 5.7.36
+-- Version de PHP : 7.4.26
 
-USE siv;
-
-  CREATE TABLE personnemoral(
-    IdPersonneMoral INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    IdVille smallint(9),
-    Idpersonne smallint(9),
-    RaisonSocial varchar(100),
-    Siret varchar(100),
-    NumeroDeTelephone varchar(100),
-    NumeroDeVoie varchar(100),
-    TypeDeVoieAdresse varchar(100),
-    NomVoie varchar(100),
-    ComplementAdresse1 varchar(100),
-    ComplementAdresse2 varchar(100),
-    ExtensionDeLaVoie varchar(100)
-  );
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
-  CREATE TABLE personnephysique(
-    IdPersonnePhysique INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    Sexe BOOLEAN,
-    Nom varchar(60),
-    Nomdusage varchar(60),
-    Prenom varchar(60),
-    DateDenaissance DATE,
-    IdVille smallint(9),
-    Idpersonne smallint(9)
- );
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-CREATE TABLE personne(
-  IdPersonne INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  ProAuto BOOLEAN,
-  Assureur BOOLEAN,
-  NumeroDeTelephone varchar(60),
-  Mail varchar(60)
-);
+--
+-- Base de données : `siv`
+--
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `adresse`
+--
 
 DROP TABLE IF EXISTS `adresse`;
 CREATE TABLE IF NOT EXISTS `adresse` (
   `IdVille` smallint(9) DEFAULT NULL,
-  `NomVoie` varchar(38) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `ComplementAdresse1` varchar(38) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `NumeroVoie` smallint(6) DEFAULT NULL,
-  `ExtentionVoie` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `TypeVoieAdresse` varchar(36) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `ComplementAdresse2` varchar(38) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NomVoie` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ComplementAdresse1` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NumeroVoie` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ExtentionVoie` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `TypeVoieAdresse` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ComplementAdresse2` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `IdAdresse` mediumint(9) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`IdAdresse`),
   KEY `IdVille` (`IdVille`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `adresse`
+--
+
+INSERT INTO `adresse` (`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`, `IdAdresse`) VALUES
+(1, '512', '512', '4651', '3', '16', '512', 49),
+(3, '651', '5641', '5412', '2', '16', '5123', 48),
+(3, '651', '5641', '5412', '2', '16', '5123', 47),
+(3, '5412', '56123', '4651', '2', 'SQUARE', '16523', 46);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `carburant`
+--
 
 DROP TABLE IF EXISTS `carburant`;
 CREATE TABLE IF NOT EXISTS `carburant` (
@@ -62,6 +67,11 @@ CREATE TABLE IF NOT EXISTS `carburant` (
   KEY `IdVehicule` (`IdVehicule`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `cotitulaire`
+--
 
 DROP TABLE IF EXISTS `cotitulaire`;
 CREATE TABLE IF NOT EXISTS `cotitulaire` (
@@ -78,6 +88,11 @@ CREATE TABLE IF NOT EXISTS `cotitulaire` (
   KEY `IdUtilisateur` (`IdUtilisateur`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `couleur`
+--
 
 DROP TABLE IF EXISTS `couleur`;
 CREATE TABLE IF NOT EXISTS `couleur` (
@@ -118,7 +133,6 @@ CREATE TABLE IF NOT EXISTS `departement` (
   KEY `IdPays` (`IdPays`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-
 -- --------------------------------------------------------
 
 --
@@ -142,6 +156,12 @@ INSERT INTO `extentionvoie` (`Id`, `Nom`) VALUES
 (4, 'A'),
 (5, 'B'),
 (6, 'C');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fomalite`
+--
 
 DROP TABLE IF EXISTS `fomalite`;
 CREATE TABLE IF NOT EXISTS `fomalite` (
@@ -215,7 +235,7 @@ CREATE TABLE IF NOT EXISTS `operation` (
 --
 
 INSERT INTO `operation` (`IdOperation`, `IdUtilisateur`, `Kilometrage`, `DateVente`, `DateDeclaration`, `PresenceCertificat`, `InformationAssurance`, `CederDestruction`, `CertifieSituationAdministrative`, `Transformation`, `OppositionUtilisationDonnees`, `Destruction`, `CertifieAchat`, `IdVille`, `Nature`) VALUES
-(2, 1, 45, '2022-08-03 10:35:00', '2022-08-03', 0, 0, 1, 0, 0, 0, 0, 0, 1, 'Achat');
+(2, 1, 45, '2022-08-03 08:35:00', '2022-08-03', 0, 0, 1, 0, 0, 0, 0, 0, 1, 'Achat');
 
 -- --------------------------------------------------------
 
@@ -236,6 +256,79 @@ CREATE TABLE IF NOT EXISTS `pays` (
 
 INSERT INTO `pays` (`IdPays`, `Nom`) VALUES
 (1, 'FRANCE');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `personne`
+--
+
+DROP TABLE IF EXISTS `personne`;
+CREATE TABLE IF NOT EXISTS `personne` (
+  `IdPersonne` int(11) NOT NULL AUTO_INCREMENT,
+  `ProAuto` tinyint(1) DEFAULT NULL,
+  `Assureur` tinyint(1) DEFAULT NULL,
+  `NumeroDeTelephone` varchar(60) DEFAULT NULL,
+  `Mail` varchar(60) DEFAULT NULL,
+  `IdAdresse` int(11) NOT NULL,
+  PRIMARY KEY (`IdPersonne`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `personne`
+--
+
+INSERT INTO `personne` (`IdPersonne`, `ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `IdAdresse`) VALUES
+(17, 0, 1, '0632084069                                    ', '1234567                                ', 49),
+(16, 0, 1, '0632084069                                    ', '1234567                                ', 46);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `personnemoral`
+--
+
+DROP TABLE IF EXISTS `personnemoral`;
+CREATE TABLE IF NOT EXISTS `personnemoral` (
+  `IdPersonneMoral` int(11) NOT NULL AUTO_INCREMENT,
+  `IdVille` smallint(9) DEFAULT NULL,
+  `Idpersonne` smallint(9) DEFAULT NULL,
+  `RaisonSocial` varchar(100) DEFAULT NULL,
+  `Siret` varchar(100) DEFAULT NULL,
+  `NumeroDeTelephone` varchar(100) DEFAULT NULL,
+  `NumeroDeVoie` varchar(100) DEFAULT NULL,
+  `TypeDeVoieAdresse` varchar(100) DEFAULT NULL,
+  `NomVoie` varchar(100) DEFAULT NULL,
+  `ComplementAdresse1` varchar(100) DEFAULT NULL,
+  `ComplementAdresse2` varchar(100) DEFAULT NULL,
+  `ExtensionDeLaVoie` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`IdPersonneMoral`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `personnephysique`
+--
+
+DROP TABLE IF EXISTS `personnephysique`;
+CREATE TABLE IF NOT EXISTS `personnephysique` (
+  `IdPersonnePhysique` int(11) NOT NULL AUTO_INCREMENT,
+  `Sexe` tinyint(1) DEFAULT NULL,
+  `Nom` varchar(60) DEFAULT NULL,
+  `Nomdusage` varchar(60) DEFAULT NULL,
+  `Prenom` varchar(60) DEFAULT NULL,
+  `DateDenaissance` date DEFAULT NULL,
+  `Idpersonne` smallint(9) DEFAULT NULL,
+  PRIMARY KEY (`IdPersonnePhysique`)
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `personnephysique`
+--
+
+INSERT INTO `personnephysique` (`IdPersonnePhysique`, `Sexe`, `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `Idpersonne`) VALUES
+(27, NULL, 'aaa', 'ssssss', 'h1', '2022-08-04', 17);
 
 -- --------------------------------------------------------
 
@@ -295,7 +388,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`IdUtilisateur`, `email`, `password`) VALUES
-(1, 'root', 'root');
+(1, 'livi', 'root');
 
 -- --------------------------------------------------------
 

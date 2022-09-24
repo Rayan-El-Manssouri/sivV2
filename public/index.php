@@ -148,8 +148,8 @@
         </div>
         <!-- Div qui va gérer les forfaits -->
         <div class="forfait">
-            <h1>Nos forfaits</h1>
-            <div class="alignement">
+           <h1>Nos forfaits</h1>
+           <div class="alignement">
                 <div class="proposition">
                         <section>
                             <p class="Pro">Pro</p>

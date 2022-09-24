@@ -7,7 +7,6 @@ $data = $database->read($query);
 
 foreach($data as $dataV2){
     $IdPersonne = $dataV2['Idpersonne'];
-    $IdVille = $dataV2['IdVille'];
 }
 
 $query5 = "SELECT * FROM personne WHERE IdPersonne='".$IdPersonne."' ";
@@ -19,6 +18,7 @@ foreach($data5 as $dataV2 ){
     $NumeroDeTelephone = $dataV2['NumeroDeTelephone'];
     $Mail = $dataV2['Mail'];
     $IdAdresse = $dataV2['IdAdresse'];
+
 };
 
 $query9 = "SELECT * FROM adresse WHERE IdAdresse='".$IdAdresse."' ";
@@ -30,6 +30,7 @@ foreach ($data9 as $key) {
     $ComplementAdresse2 = $key['ComplementAdresse2'];
     $NumeroVoie = $key['NumeroVoie'];
     $TypeVoieAdresse = $key['TypeVoieAdresse'];
+    $IdVille = $key['IdVille'];
 }
 
 $query11 = "SELECT * FROM typeVoieAdresse WHERE Id='".$TypeVoieAdresse ."' ";
@@ -54,6 +55,7 @@ $data7 = $database->read($query7);
 
 foreach($data7 as $dataV2){
     $NomVille = $dataV2['Nom'];
+    $IdVille = $dataV2['IdVille'];
 }
 
 $query8 = "SELECT * FROM extentionvoie";
