@@ -22,7 +22,6 @@
 </head>
 <body>
     <?php require_once '../../private/style/headerConnexion/header.php'; ?>
-
     <?php require_once '../../private/style/connexion/connect.php'; ?>
 </body>
 </html>

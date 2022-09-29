@@ -9,8 +9,8 @@ if(est_connecte()){
         <h1>Connectez-vous.</h1>
         <form method="POST">
             <div>
-               <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span>
-               <span>Mot de passe : <input type="text" class="password" name="password" placeholder="password" required></span>
+               <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span> <br> <br> <br>
+               <span>Mot de passe : <input type="text" class="password" name="password" placeholder="password" required></span> <br>
                 <input type="submit"  name="send" class="btn_envoyer"> <br>
                 <span style="position: relative; top: -75px;"> <?php echo  $_GET['status'] ?></span>
             </div>

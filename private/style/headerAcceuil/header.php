@@ -14,7 +14,7 @@
             <?php
             }else{
             ?>
-                <a href="connexion/connexion.php" style="text-decoration : none;" class="Connexion">Se connecter</a>
+                <a href="connexion/connexion.php" style="text-decoration : none; position: relative; top: 2px;" class="Connexion">Se connecter</a>
             <?php
             }
         ?>

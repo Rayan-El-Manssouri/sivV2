@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet">
     <link href="../private/src/logo2.png" rel="icon">
-    <link href="http://localhost/sivV2/private/style/headearAcceuille/header.css" rel="stylesheet">
+    <link href="http://localhost/sivV2/private/style/headerAcceuil/header.css" rel="stylesheet">
     <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
     <link href="http://localhost/sivV2/private/style/FlecheRemonter/fleche.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,25 +19,25 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Siv</title>
+    <title>Siv - Acceuille</title>
 </head>
 <body>
     <div class="contenu">
         <!-- Div qui reste en haut de la page. -->
         <div class="container">
             <section class="background">
-                <?php  require_once '../private/style/headerAccueil/header.php'; ?>
+                <?php  require_once '../private/style/headerAcceuil/header.php'; ?>
                 <div class="Text_Accueil">
                     <h1 font-weight="bold">Bienvenue sur le<br>site web Siv</h1>
                     <p class="underline">Site simple pour gérer les déclarations.</p>
                         <?php 
                           if(est_connecte()){
                             ?>
-                                <a href="connexion/confirmer/panel.php" style="text-decoration : none;" class="button">Aller au panneau</a>
+                                <a href="connexion/confirmer/panel.php" style="text-decoration : none;" class="button">Aller au panelle</a>
                             <?php
                          }else{
                             ?>
-                              <a href="connexion/connexion.php" style="text-decoration : none;" class="button">Se connecter</a>
+                              <a href="connexion/connexion.php" style="text-decoration : none; " class="button">Se connecter</a>
                             <?php
                          }                        
                         ?>
