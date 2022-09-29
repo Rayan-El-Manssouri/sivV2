@@ -11,7 +11,7 @@
                 <li><a href=""><button><span class="material-symbols-outlined">local_shipping</span>Opérations</button> </a></li>
                 <li><a href=""><button><span class="material-symbols-outlined">picture_as_pdf</span>Générer les PDF</button> </a></li>
                 <li><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/"><button><span class="material-symbols-outlined">chevron_left</span>Revenir au panneau</button> </a></li>
-                <li><a style="top: 80px; position: relative" href="http://localhost/sivV2/private/GestionSession/logout.php"><button><span class="material-symbols-outlined">Log out</span>Se déconnecter</button></a></li>
+                <li><a style="top: 80px; position: relative" href="http://localhost/sivV2/private/GestionSession/logout.php"><button><span class="material-symbols-outlined">Logout</span>Se déconnecter</button></a></li>
             </ul>
         </nav>
     </div>

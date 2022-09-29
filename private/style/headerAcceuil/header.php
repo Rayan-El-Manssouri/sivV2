@@ -10,7 +10,7 @@
         <?php 
             if(est_connecte()){
             ?>
-                <a href="http://localhost/sivV2/private/GestionSession/logout.php" style="text-decoration : none;" class="Connexion">Se déconnecter</a>
+                <a href="http://localhost/sivV2/private/GestionSession/logout.php" style="text-decoration : none;  position: relative; top: 2px;"" class="Connexion">Se déconnecter</a>
             <?php
             }else{
             ?>
