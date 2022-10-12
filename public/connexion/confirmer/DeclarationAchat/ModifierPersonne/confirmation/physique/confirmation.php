@@ -77,7 +77,7 @@ $data9 = $database->read($query9);
 </head>
 <body>
     <form name="form1" id="form1"  method="post">
-    <?php require_once '../../../../../../../private/style/headerFormaliter/header.php'; ?>
+    <?php require_once '../../../../../../../private/style/headerFormalitees/header.php'; ?>
     <div class="modification">
         <div class="Titre">
             Identité
@@ -86,8 +86,8 @@ $data9 = $database->read($query9);
             <br>
                 <p>Nom : <input type="text" name="nom" value="<?= $dataV2['Nom'] ?>" onkeypress="validerForm(event);"></p>
                 <p>Nom d'usage : <input type="text" name="NomUsage" value="<?= $dataV2['Nomdusage'] ?>" onkeypress="validerForm(event);"></p>
-                <p>Prénom : <input type="text" value="<?= $dataV2['Prenom'] ?>" onkeypress="validerForm(event);"></p>
-                <p>Date De naissance : <input type="date" value="<?= $dataV2['DateDenaissance'] ?>"></p>
+                <p>Prénom : <input type="text" name="Prenom" value="<?= $dataV2['Prenom'] ?>" onkeypress="validerForm(event);"></p>
+                <p>Date De naissance : <input name="DateDeNaissance" type="date" value="<?= $dataV2['DateDenaissance'] ?>"></p>
                 <br>
                 <div class="Titre">
                     Parti personne
@@ -144,6 +144,12 @@ $data9 = $database->read($query9);
                 </select></p>
         <?php endforeach; ?>
         <input type="submit" class="input" id="send" name="send">
+        <script>
+            function retour(){
+                location.replace("../../index.php")
+            }
+        </script>
+        <input type="button" class="input" id="send" name="send" value="annuler" onclick="retour()">
     </div>
 </form>
 <script type="text/javascript" src="../../../../../../../private/javascript/entrer.js"></script>
@@ -151,7 +157,9 @@ $data9 = $database->read($query9);
 if(!empty($_POST['send'])){
     $Nom = htmlentities($_POST['nom']);
     $NomUsage = htmlentities($_POST['NomUsage']);
-    $query = "UPDATE personnephysique SET Nom='$Nom', Nomdusage='$NomUsage' WHERE IdPersonnePhysique='".$_GET['id']."' ";
+    $Prenom = htmlentities($_POST['Prenom']);
+    $DateDeNaissance = htmlentities($_POST['DateDeNaissance']);
+    $query = "UPDATE personnephysique SET Nom='$Nom', Nomdusage='$NomUsage', Prenom='$Prenom', DateDeNaissance='$DateDeNaissance' WHERE IdPersonnePhysique='".$_GET['id']."' ";
     $data1 = $database->read($query);
     ?>
     <script>

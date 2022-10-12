@@ -26,18 +26,27 @@ error_reporting(0);
         <br>
     </div>
     <div>
-        <span>Pro auto :</span> 
-        <input type="radio"  name="Pro" value="0">
+        <span>Pro :</span> 
+        <input type="radio"  name="Pro" value="0"> 
         <label for="Féminin">Oui</label>
-        <input type="radio" name="Assureur"  value="1">
-        <label for="Masculin" > Nom</label>
-        Identité
-        <span>Nom : <input type="text" name="Nom" placeholder="Nom"></span>
-        <span>Nom d'usage : <input type="text" name="Nomdusage" placeholder="Nom d'usage"></span>
-        <span>Prénom : <input type="text" name="Prenom" placeholder="Prénom"></span>
-        <span>Date de naissance : <input type="date" name="DateDenaissance" ></span>
+        <input type="radio" name="Pro"  value="1">
+        <label for="Masculin" > Nom</label> <br> <br>
 
-        <span>Numéro de téléphone : <input type="number" placeholder="Numéro de téléphone" name="NumeroDeTelephone"></span>
+
+        <span>Auto :</span> 
+        <input type="radio"  name="Assureur" value="0"> 
+        <label>Oui</label>
+        <input type="radio" name="Assureur"  value="1">
+        <label> Nom</label> <br> <br>
+
+
+        Identité <br> <br>
+        <span>Nom : <input type="text" name="Nom" placeholder="Nom"></span> <br> <br>
+        <span>Nom d'usage : <input type="text" name="Nomdusage" placeholder="Nom d'usage"></span> <br> <br>
+        <span>Prénom : <input type="text" name="Prenom" placeholder="Prénom"></span> <br> <br>
+        <span>Date de naissance : <input type="date" name="DateDenaissance" ></span> <br> <br>
+
+        <span>Numéro de téléphone : <input type="number" placeholder="Numéro de téléphone" name="NumeroDeTelephone"></span> <br> <br>
         <span>Mail : <input type="mail" name="Mail" placeholder="Mail"></span><br><br>
         Adresse de l'acheteur
         <span>Sélectionnez une ville :</span> <select name="ville">
@@ -138,7 +147,7 @@ error_reporting(0);
 
 
         // INSERT INTO pour la table adresse
-        $siv_insert_adresse = "INSERT INTO `adresse`(`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`) VALUES ('$IdVille','$NomVoie','$ComplementAdresse1','$NumeroDeVoie','$idExtentionVoie','$idTypeVoieAdresse','$ComplementAdresse2')";
+        $siv_insert_adresse = "INSERT INTO `adresse`(`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`) VALUES ('$IdVille','$NomVoie','$ComplementAdresse1','$NumeroDeVoie','$idExtentionVoie','$idTypeVoieAdresse','$ComplementAdresse2');";
         $data6 = $database->read($siv_insert_adresse);
 
 
@@ -152,7 +161,7 @@ error_reporting(0);
 
 
         // INSERT INTO pour la table personne.
-        $siv_sql_personne = "INSERT INTO `personne`(`ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `IdAdresse`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail','$siv_sql_id_adresse')";
+        $siv_sql_personne = "INSERT INTO `personne`(`ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `IdAdresse`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail','$siv_sql_id_adresse');";
         $siv_sql_personne_result = $database->read($siv_sql_personne);
         echo $siv_sql_personne;
 
@@ -165,38 +174,9 @@ error_reporting(0);
         $siv_sql_id = $siv_sql_id_result[0]['Id'];
 
         // INSERT INTO pour la table personne Acheteur.
-        $siv_sql_acheteur_personne_physique = "INSERT INTO `personnephysique`( `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `IdVille`, `Idpersonne`) VALUES ('$Nom','$Nomdusage','$Prenom','$DateDenaissance','$IdVille','$siv_sql_id')";
+        $siv_sql_acheteur_personne_physique = "INSERT INTO `personnephysique`( `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `Idpersonne`) VALUES ('$Nom','$Nomdusage','$Prenom','$DateDenaissance','$siv_sql_id');";
         $siv_result = $database->read($siv_sql_acheteur_personne_physique);
-        ?>
-        <script>
-            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/physique/Ajouter.php?status=Tous est correct !")
-        </script>
-        <?php
+            echo $siv_sql_acheteur_personne_physique;
 
-    }
-
-    $NumeroDeTelephone = htmlentities($_POST['NumeroDeTelephone']);
-    $Mail = htmlentities($_POST['Mail']);
-    $NumeroDeVoie = htmlentities($_POST['NumeroDeVoie']);
-    $NomVoie = htmlentities($_POST['NomVoie']);
-    $ComplementAdresse1 = htmlentities($_POST['ComplementAdresse1']);
-    $ComplementAdresse2 = htmlentities($_POST['ComplementAdresse2']);
-
-    // INSERT INTO pour la table personne.
-    $siv_sql_personne = "INSERT INTO `personne`( `ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `ComplementAdresse1`, `ComplementAdresse2`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail', '$ComplementAdresse1', '$ComplementAdresse2')";
-    $siv_sql_personne_result = $database->read($siv_sql_personne);
-
-    $siv_sql_id_personne = "SELECT  MAX(IdPersonne) as Id FROM personne";
-    $siv_sql_id_result = $database->read($siv_sql_id_personne);
-
-    $siv_sql_id = ++$siv_sql_id_result[0]['Id'];
-    
-
-    // INSERT INTO pour la table personne Acheteur.
-    $siv_sql_acheteur_personne_physique = "INSERT INTO `personnephysique`( `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `IdVille`, `Idpersonne`) VALUES ('$Nom','$Nomdusage','$Prenom','$DateDenaissance','$IdVille','$siv_sql_id')";
-    $siv_result = $database->read($siv_sql_acheteur_personne_physique);
-    
+    }    
     ?>
-<script>
-    location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/physique/Ajouter.php?status=Personne ajoutée !")
-</script>

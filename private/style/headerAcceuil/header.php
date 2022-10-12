@@ -1,7 +1,7 @@
 <header class="header">
     <div>
         <nav class="navigation">
-            <span class="logo">Website logo</span>
+            <span class="logo"><img src="http://localhost/sivV2/private/src/logo2.png" style="position: relative; top: -20px;"  height="70" alt=""></span>
             <li class="hover"><a href="#">Home</a></li>
             <li><a href="#">Signaler</a></li>
             <li><a href="#">Nous contacter</a></li>
@@ -10,11 +10,11 @@
         <?php 
             if(est_connecte()){
             ?>
-                <a href="http://localhost/sivV2/private/GestionSession/logout.php" style="text-decoration : none;  position: relative; top: 2px;"" class="Connexion">Se déconnecter</a>
+                <a href="http://localhost/sivV2/private/GestionSession/logout.php" style="text-decoration : none;  position: relative; top: -50px;" class="Connexion">Se déconnecter</a>
             <?php
             }else{
             ?>
-                <a href="connexion/connexion.php" style="text-decoration : none; position: relative; top: 2px;" class="Connexion">Se connecter</a>
+                <a href="connexion/connexion.php" style="text-decoration : none; position: relative; top: -50px;" class="Connexion">Se connecter</a>
             <?php
             }
         ?>

@@ -66,11 +66,8 @@
                             })
                                 </script>
                                 <?php
-
                         }
                     }
-                    
-                    
                     ?>
                 <div class="alert"id="Message">
                     <p>Vous êtes conncecter ! <span  class="material-symbols-outlined" onclick="MessageDisplay()">
