@@ -20,6 +20,8 @@ endforeach;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siv - confirmation - modif</title>
     <link rel="stylesheet" href="index.css" >
+    <link href="../../../../../../../../private/src/logo2.png" rel="icon">
+
 </head>
 <body>
     <?php require_once '../../../../../../../../private/style/headerFormalitees/header.php'?>
