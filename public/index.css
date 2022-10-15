@@ -81,9 +81,9 @@ body{
 }
 
 .background{
-    /*background-image: url(../private/src/fond.png);
+    background-image: url(../private/src/fond.png);
     background-repeat: no-repeat;
-    background-size: cover;*/
+    background-size: cover;
     padding-top: 260px;
     padding-bottom: 235px;
     position: relative;

@@ -34,27 +34,27 @@ error_reporting(0);
             Numéro de téléphone : <input type="text" placeholder="Numéro de téléphone" name="NumeroDeTelephone"> <br> <br>
             Mail : <input type="text" placeholder="Mail" name="Mail"> <br> <br>
         </div>
-        Adresse de l'acheteur
+        Adresse de l'acheteur <br> <br>
         Numéro de voie : <input type="text" name="NumeroDeVoie" placeholder="Numéro de voie"><br><br>
         <span>Sélectionnez une extension de la voie :</span> <select name="ExtensionDeLaVoie">
-        <option name="ExtensionDeLaVoie" value="">Sélectionnez une extension de la voie </option>
+        <option value="">Sélectionnez une extension de la voie </option>
         <?php foreach($data2 as $dataV2): ?>
-            <option  value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
+            <option   name="ExtensionDeLaVoie" value="<?= $dataV2['Id'] ?>"><?= $dataV2['Nom'] ?></option>
         <?php endforeach; ?>
         </select><br><br>
         <span>Sélectionnez un type de voie adresse :</span> <select name="TypeDeVoieAdresse">
-            <option name="TypeDeVoieAdresse" value="">Sélectionner un type de voie adresse </option>
+            <option  value="">Sélectionner un type de voie adresse </option>
             <?php foreach($data3 as $dataV2): ?>
-            <option value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
+            <option  name="TypeDeVoieAdresse" value="<?= $dataV2['Id'] ?>"><?= $dataV2['Nom'] ?></option>
         <?php endforeach; ?>
         </select><br><br>
         <span>Nom de la voie : <input type="text" name="NomVoie" placeholder="Nom de la voie"></span><br><br>
         <span>Complement d'adresse 1 : <input type="text" name="ComplementAdresse1" placeholder="Complement d'adresse 1"></span><br><br>
         <span>Complement d'adresse 2 : <input type="text" name="ComplementAdresse2" placeholder="Complement d'adresse 2"></span><br><br>
-        <span>Sélectionnez une ville :</span> <select name="ville"  >
-            <option name="ville"  value="" >Sélectionner la ville</option>
+        <span>Sélectionnez une ville :</span> <select name="ville" >
+            <option   value="" >Sélectionner la ville</option>
                 <?php foreach($data as $dataV2): ?>
-                    <option  value="<?= $dataV2['Nom'] ?>"><?= $dataV2['Nom'] ?></option>
+                    <option name="ville"  value="<?= $dataV2['IdVille'] ?>"><?= $dataV2['Nom'] ?></option>
                 <?php endforeach; ?>
         </select><br><br>
         <div>
@@ -77,6 +77,7 @@ if(isset($_POST['submit'])){
     $Siret = htmlentities($_POST['Siret']);
     $NumeroDeTelephone = htmlentities($_POST['NumeroDeTelephone']);
     $Mail = htmlentities($_POST['Mail']);
+
     // Gestion Adresse
     $NumeroDeVoie = htmlentities($_POST['NumeroDeVoie']);
     $ville = htmlentities($_POST['ville']);
@@ -85,6 +86,8 @@ if(isset($_POST['submit'])){
     $NomVoie = htmlentities($_POST['NomVoie']);
     $ComplementAdresse1 = htmlentities($_POST['ComplementAdresse1']);
     $ComplementAdresse2 = htmlentities($_POST['ComplementAdresse2']);
+
+    
     $query_ville = "SELECT * FROM ville WHERE Nom='".$ville."' ";
     $query_result_ville = $database->read($query_ville);
     foreach ($query_result_ville as $dataV2) {
@@ -93,11 +96,25 @@ if(isset($_POST['submit'])){
     $siv_sql_id_personne = "SELECT  MAX(IdPersonne) as Id FROM personne";
     $siv_sql_id_result = $database->read($siv_sql_id_personne);
     $siv_sql_id = ++$siv_sql_id_result[0]['Id'];
-    $query5 ="INSERT INTO `personne`(`ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `ComplementAdresse1`, `ComplementAdresse2`, `ExtensionDeLaVoie`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail','$ComplementAdresse1','$ComplementAdresse2','$ExtensionDeLaVoie')";
+
+
+    // IdAdresse
+    $query7 = "INSERT INTO `adresse`(`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`) VALUES ('$ville','$NomVoie','$ComplementAdresse1','$NumeroDeVoie','$ExtensionDeLaVoie','$TypeDeVoieAdresse','$ComplementAdresse2');";
+    $data7 = $database->read($query7);
+    $query6 = "SELECT IdAdresse FROM adresse;";
+    $data6 = $database->read($query6);
+    $IdAdresse = $data6[0]['IdAdresse'];
+    $query5 ="INSERT INTO `personne`(`ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `IdAdresse`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail', '$IdAdresse');";
     $data5 = $database->read($query5);
+    
     // Gestion des requêtes + excecutation.
-    $query = "INSERT INTO `personnemoral`(`IdVille`, `Idpersonne`,`RaisonSocial`, `Siret`,`NumeroDeVoie`, `TypeDeVoieAdresse`, `NomVoie`, `ComplementAdresse1`, `ComplementAdresse2`) VALUES ('$IdVille','$siv_sql_id','$RaisonSocial','$Siret','$NumeroDeVoie','$TypeDeVoieAdresse','$NomVoie','$ComplementAdresse1','$ComplementAdresse2')";
+    $query = "INSERT INTO `personnemoral`( `Idpersonne`,`RaisonSocial`, `Siret`) VALUES ('$siv_sql_id','$RaisonSocial','$Siret');";
     $data = $database->read($query);
+    ?>
+    <script>
+        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/morale/morale.php")
+    </script>
+    <?php
 }
 ?>
 </div>

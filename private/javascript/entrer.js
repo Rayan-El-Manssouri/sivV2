@@ -4,7 +4,7 @@
                 var k = e.keyCode || e.which;
                 if (k == 13 && !e.shiftKey)
                 {
-                    alert('Tu a appuyé sur Entrée');
+                    alert("Formulaire bien envoyer !")
                     document.getElementById("send").click();
                 }
             }
