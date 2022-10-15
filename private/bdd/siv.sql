@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 24 sep. 2022 à 12:26
+-- Généré le : sam. 15 oct. 2022 à 16:12
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -39,17 +39,7 @@ CREATE TABLE IF NOT EXISTS `adresse` (
   `IdAdresse` mediumint(9) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`IdAdresse`),
   KEY `IdVille` (`IdVille`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `adresse`
---
-
-INSERT INTO `adresse` (`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`, `IdAdresse`) VALUES
-(1, '512', '512', '4651', '3', '16', '512', 49),
-(3, '651', '5641', '5412', '2', '16', '5123', 48),
-(3, '651', '5641', '5412', '2', '16', '5123', 47),
-(3, '5412', '56123', '4651', '2', 'SQUARE', '16523', 46);
+) ENGINE=MyISAM AUTO_INCREMENT=118 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -230,13 +220,6 @@ CREATE TABLE IF NOT EXISTS `operation` (
   KEY `IdVille` (`IdVille`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Déchargement des données de la table `operation`
---
-
-INSERT INTO `operation` (`IdOperation`, `IdUtilisateur`, `Kilometrage`, `DateVente`, `DateDeclaration`, `PresenceCertificat`, `InformationAssurance`, `CederDestruction`, `CertifieSituationAdministrative`, `Transformation`, `OppositionUtilisationDonnees`, `Destruction`, `CertifieAchat`, `IdVille`, `Nature`) VALUES
-(2, 1, 45, '2022-08-03 08:35:00', '2022-08-03', 0, 0, 1, 0, 0, 0, 0, 0, 1, 'Achat');
-
 -- --------------------------------------------------------
 
 --
@@ -272,15 +255,7 @@ CREATE TABLE IF NOT EXISTS `personne` (
   `Mail` varchar(60) DEFAULT NULL,
   `IdAdresse` int(11) NOT NULL,
   PRIMARY KEY (`IdPersonne`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `personne`
---
-
-INSERT INTO `personne` (`IdPersonne`, `ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `IdAdresse`) VALUES
-(17, 0, 1, '0632084069                                    ', '1234567                                ', 49),
-(16, 0, 1, '0632084069                                    ', '1234567                                ', 46);
+) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -291,19 +266,11 @@ INSERT INTO `personne` (`IdPersonne`, `ProAuto`, `Assureur`, `NumeroDeTelephone`
 DROP TABLE IF EXISTS `personnemoral`;
 CREATE TABLE IF NOT EXISTS `personnemoral` (
   `IdPersonneMoral` int(11) NOT NULL AUTO_INCREMENT,
-  `IdVille` smallint(9) DEFAULT NULL,
   `Idpersonne` smallint(9) DEFAULT NULL,
   `RaisonSocial` varchar(100) DEFAULT NULL,
   `Siret` varchar(100) DEFAULT NULL,
-  `NumeroDeTelephone` varchar(100) DEFAULT NULL,
-  `NumeroDeVoie` varchar(100) DEFAULT NULL,
-  `TypeDeVoieAdresse` varchar(100) DEFAULT NULL,
-  `NomVoie` varchar(100) DEFAULT NULL,
-  `ComplementAdresse1` varchar(100) DEFAULT NULL,
-  `ComplementAdresse2` varchar(100) DEFAULT NULL,
-  `ExtensionDeLaVoie` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`IdPersonneMoral`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -321,14 +288,7 @@ CREATE TABLE IF NOT EXISTS `personnephysique` (
   `DateDenaissance` date DEFAULT NULL,
   `Idpersonne` smallint(9) DEFAULT NULL,
   PRIMARY KEY (`IdPersonnePhysique`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `personnephysique`
---
-
-INSERT INTO `personnephysique` (`IdPersonnePhysique`, `Sexe`, `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `Idpersonne`) VALUES
-(27, NULL, 'aaa', 'ssssss', 'h1', '2022-08-04', 17);
+) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -418,14 +378,6 @@ CREATE TABLE IF NOT EXISTS `vehicule` (
   PRIMARY KEY (`IdVehicule`),
   KEY `IdUtilisateur` (`IdUtilisateur`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `vehicule`
---
-
-INSERT INTO `vehicule` (`IdVehicule`, `Immatriculation`, `DateImmatriculation`, `MarqueVehicule`, `TypeVarianteVersion`, `DenominationCommerciale`, `NumeoIdentification`, `GenreNational`, `MotifAbscenceCertificat`, `PresenceCertificat`, `DateCertificat`, `NumeroFormule`, `Opacité`, `PuissanceDin`, `PuissanceFiscale`, `IdUtilisateur`, `IdCouleur`) VALUES
-(10, '54654654', '2022-06-05', '54', '54', '564', '4', '564', '654', 1, '2000-04-05', '52', 0, 5415, 54, 1, 1),
-(9, 'AA-895-77', '2022-08-12', 'Audi', 'A3', 'Vp', '4564', '444', '44', 1, '2022-08-12', '12', 1, 1, 44, 1, 1);
 
 -- --------------------------------------------------------
 
