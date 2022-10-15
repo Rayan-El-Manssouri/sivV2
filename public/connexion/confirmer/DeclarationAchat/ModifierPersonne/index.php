@@ -18,7 +18,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier</title>
+    <title>Siv - Modifier</title>
     <link href="index.css" rel="stylesheet">
     <link href="../../../../../private/src/logo2.png" rel="icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -29,10 +29,7 @@
         <h1>Bienvenue sur le panneau pour modifier une personne</h1>
         <br>
         <br>
-        <span>Sélectionnez le type de personne :</span><select id="personne" name="">
-            <option value="null">Sélectionner</option>
-            <option value="moral">Personne morale</option>
-        </select>
+        <a href="situation/morale/"><button> Aller aux personne morale.</button></a>
         <br>
         <div id="1">
             <br>
@@ -41,7 +38,13 @@
                 <br>
                 <form method="GET">
                     <input type="search" name="q" placeholder="Rechercher une personne physique." width="80px">
-                    <input type="submit" placeholder="Rechercher une personne physique." width="80px">
+                    <input type="submit" width="80px">
+                    <script>
+                        function revenir(){
+                            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/")
+                        }
+                    </script>
+                    <input type="button" value="Revenir en arriére" width="80px" onclick="revenir()">
                 </form>
                 <thead>
                     <tr>

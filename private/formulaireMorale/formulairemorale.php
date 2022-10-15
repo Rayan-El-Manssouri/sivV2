@@ -12,22 +12,33 @@ error_reporting(0);
 ?>
 
 <form method="POST">
+ <?php echo '<link href="http://localhost/sivV2/private/style/formulaire/formulaire.css" rel="stylesheet">'; ?>
+
     <div>
-        Situation
+        <h3>Situation :</h3>
+            <label>
+                <input type="radio" name="Pro" value="0" />
+                <span >Oui</span>
+            </label>
+            <label>
+                <input type="radio" name="Pro"  value="1" />
+                <span >Non</span>
+            </label>
         <div>
-            <span>Pro auto :</span> 
-            <input type="radio"  name="Pro" value="0">
-            <label for="Féminin">Oui</label>
-            <input type="radio" name="Pro"  value="1">
-            <label for="Masculin" > Non</label>
+
         </div>
         <br>
         <br>
-        <span>Assureur :</span>
-        <input type="radio"  name="Assureur" value="0">
-        <label for="Féminin">Oui</label>
-        <input type="radio" name="Assureur"  value="1">
-        <label for="Masculin">Nom</label>
+        <h3>Assureur :</h3>
+            <label>
+                <input type="radio" name="Assureur" value="0" />
+                <span >Oui</span>
+            </label>
+            <label>
+                <input type="radio" name="Assureur"  value="1" />
+                <span >Non</span>
+            </label>
+        <div>
         <div>
             Raison sociale : <input type="text" placeholder="Raison social" name="RaisonSocial"> <br> <br>
             Siret : <input type="text" placeholder="Siret" name="Siret"> <br> <br>
@@ -112,6 +123,7 @@ if(isset($_POST['submit'])){
     $data = $database->read($query);
     ?>
     <script>
+        alert("Personne morale bien ajoutée !")
         location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/morale/morale.php")
     </script>
     <?php

@@ -1,0 +1,11 @@
+body{
+    background-image: url(../../../../../../../../private//src//fond.png);
+}
+
+
+.contenaire {
+    position: relative;
+    left: 700px;
+    top: 100px;
+    color: #fff;
+}

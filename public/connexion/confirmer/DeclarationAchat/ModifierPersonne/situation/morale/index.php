@@ -50,7 +50,7 @@
             <tbody>
                 <?php foreach ($data1 as $dataV2): ?>
                 <tr>
-                    <td><?= $dataV2['RaisonSocial'] ?></td>
+                    <td><a href="confirmation/index.php?id=<?=$dataV2['IdPersonneMoral']?>"> <?= $dataV2['RaisonSocial'] ?></a></td>
                     <td><?= $dataV2['Siret']  ?></td>
                 </tr>
                 <?php endforeach; ?>
