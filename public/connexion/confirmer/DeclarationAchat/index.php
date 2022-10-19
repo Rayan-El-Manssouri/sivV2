@@ -31,7 +31,7 @@
                 <p style="color: #fff;">Gestion des personnes</p>
                 <a href="personne/" class="Ajouter"><p>Ajouter</p></a>
                 <a href="ModifierPersonne" class="Modifier"><p>Modifier</p> </a>
-                <a href="" class="Detail"><p>Détails</p></a>
+                <a href="DétailPersonne/index.php" class="Detail"><p>Détails</p></a>
                 <a href="" class="Supprimer"><p>Supprimer</p></a>
             </div>
             <div class="acheteur">

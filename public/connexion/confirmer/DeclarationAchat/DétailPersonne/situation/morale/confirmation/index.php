@@ -145,45 +145,10 @@ $data7 = $database->read($query7);
                 <br>
                 <br>
                 <div class="button">
-                    <input type="submit" name="send">
                     <button><a href="../../morale/">Retour</a></button>
                 </div>
             </div>
         </form>
-
-        <?php 
-        if(isset($_POST['send'])){
-            $RaisonSocial = htmlentities($_POST['RaisonSocial']);
-            $Siret = htmlentities($_POST['Siret']);
-            $query8 = "UPDATE personnemoral SET RaisonSocial='$RaisonSocial', Siret='$Siret' ";
-            $data8 = $database->read($query8);
-
-            $Pro = htmlentities($_POST['Pro']);
-            $Assureur = htmlentities($_POST['Assureur']);
-            $NumeroDeTelephone = htmlentities($_POST['NumeroDeTelephone']);
-            $Mail = htmlentities($_POST['Mail']);
-
-            $query9 = "UPDATE personne SET ProAuto='$Pro', Assureur='$Assureur', NumeroDeTelephone='$NumeroDeTelephone', Mail='$Mail' ";
-            $data9 = $database->read($query9);
-
-            $NomVoie = htmlentities($_POST['NomVoie']);
-            $NumeroVoie = htmlentities($_POST['NumeroVoie']);
-            $ComplementAdresse1  = htmlentities($_POST['ComplementAdresse1']);
-            $ComplementAdresse2  = htmlentities($_POST['ComplementAdresse2']);
-            $ExtentionVoie  = htmlentities($_POST['ExtentionVoie']);
-            $typevoieadresse  = htmlentities($_POST['typevoieadresse']);
-
-            $query10 = "UPDATE adresse SET NomVoie='$NomVoie', NumeroVoie='$NumeroVoie', ComplementAdresse1='$ComplementAdresse1', ComplementAdresse2='$ComplementAdresse2', ExtentionVoie='$ExtentionVoie', typevoieadresse='$typevoieadresse' ";
-            $data10 = $database->read($query10);
-            ?>
-            <script>
-                location.replace("")
-            </script>
-            <?php
-        }
-        
-        ?>
-
     </div>
 </body>
 </html>
