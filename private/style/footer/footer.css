@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .forfait h1{
     font-weight: 500;
     font-size: 28px;
@@ -61,6 +62,8 @@
 
 }
 
+=======
+>>>>>>> main
 footer{
     flex-shrink: 0;
     width: 100%;
@@ -113,4 +116,7 @@ footer{
     position: relative;
     left: -10px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main

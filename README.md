@@ -1,15 +1,10 @@
 # Siv V2
 
-Siv est un service pour gérer en ligne les déclarations de véhicules. 
+Siv est un gestionnaire de déclarations de véhicules. 
+Créé en 2022, le projet est actuellement à sa deuxième version, qui optimise la sécurité et l'intuitivité. 
+Le but de Siv est de faciliter les déclarations (d'achat, de cession et d'immatriculation).
 
 <img src="private/src/sivV2.png">
-
-
-## Description
-
-Créé en 2022.
-Actuellement à la version 2 du siv, il rajoute une meilleure sécurisation et une meilleure structure du projet. 
-Objectif : faciliter les déclarations (achat, session, immatriculation).
 
 
 ### Structure
@@ -25,17 +20,16 @@ Objectif : faciliter les déclarations (achat, session, immatriculation).
 
 ## Installation du projet
 
-Dépendances : 
+Dépendances :
 - Apache
 - PHP
 - MySQL
+- PhpMyAdmin
 
-Après ces logiciels installés, il faut rajouter un utilisateur dans la base de données.
-- Identifiant : ```test```.
-- Mot de passe : ```root```.
+Veuillez à ajouter un premier utilisateur dans PhpMyAdmin.
 
 
 ## Nous contacter
 
-Contacter le développeur principal par mail : ```liviackerman69@gmail.com```
+Contacter le développeur principal : ```liviackerman69@gmail.com```
 

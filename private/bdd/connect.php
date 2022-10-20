@@ -2,13 +2,16 @@
 class Database
 {
     private $host = "localhost";
-    private $username = "test";
-    private $password = "root";
+    private $username = "root2";
+    private $password = "Rayan.200";
     private $db = "siv";
 
     function connect()
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
         $connexion = mysqli_connect($this->host, $this->username, $this->password, $this->db);
         $connexion->set_charset("utf8");
         return $connexion;

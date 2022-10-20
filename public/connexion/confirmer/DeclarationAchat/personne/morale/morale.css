@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'DM sans', sans-serif;
+}
+
+body{
+    background-image: url(../../../../../../private/src/fond.png);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    color: #fff;
+}
+

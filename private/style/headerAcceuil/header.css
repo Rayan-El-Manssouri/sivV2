@@ -5,7 +5,11 @@
     width: 100%;
     transition: all 0.35s ease-in-out 0s;
     padding: 20px 0px;
+<<<<<<< HEAD:private/style/headearAcceuille/header.css
     height: 80px;
+=======
+    height: 120px;
+>>>>>>> main:private/style/headerAcceuil/header.css
     z-index: 100;
 }
 
@@ -13,6 +17,14 @@
     position: relative;
 }
 
+<<<<<<< HEAD:private/style/headearAcceuille/header.css
+=======
+.header.sticky  .navigation.text .Connection{
+    position: relative;
+    top: -80px;
+}
+
+>>>>>>> main:private/style/headerAcceuil/header.css
 .header .navigation.text li a{
     color: black;
 }
@@ -52,7 +64,7 @@
     background-color: #fff;
     position: fixed;
     padding: 10px;
-    height: 75px;
+    height: 80px;
     top: -20px;
 }
 
@@ -60,32 +72,40 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.header.sticky .navigation.text .hover.active a{
+.header.sticky .navigation.text .hover.active a,
+.header.sticky .navigation.text a:hover{
     color: rgb(16, 137, 255);
 }
 
 .header.sticky .navigation.text a{
     transition: all 0.35s ease 0s;
+<<<<<<< HEAD:private/style/headearAcceuille/header.css
 }
 
 .header.sticky .navigation.text a:hover{
     color: rgb(16, 137, 255);
+=======
+>>>>>>> main:private/style/headerAcceuil/header.css
 }
 
 .header.sticky .navigation.text .logo.active{
     color: black;
 }
 
+<<<<<<< HEAD:private/style/headearAcceuille/header.css
 .Connection:hover{
+=======
+.Connexion:hover{
+>>>>>>> main:private/style/headerAcceuil/header.css
     color: #fff;
     background-color: black;
 }
 
-.Connection{
+.Connexion{
     display: inline-flex;
-    -moz-box-pack: center;
+    /*-moz-box-pack: center;*/
     justify-content: center;
-    -moz-box-align: center;
+    /*-moz-box-align: center;*/
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
@@ -97,8 +117,9 @@
     background-color: aliceblue;
     transition: all 500ms ease 0s;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     left: 1600px;
+    top: -20px;
     color: rgb(16, 137, 255);
 }
 

@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -33,7 +39,10 @@ body{
 }
 
 .Text_Accueil{
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> main
     color: aliceblue;
     font-weight: 500;
     font-family: 'DM Sans', sans-serif;
@@ -68,9 +77,9 @@ body{
 
 .button{
     display: inline-flex;
-    -moz-box-pack: center;
+    /*-moz-box-pack: center;*/
     justify-content: center;
-    -moz-box-align: center;
+    /*-moz-box-align: center;*/
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
@@ -84,11 +93,15 @@ body{
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .connexion{
+=======
+.Connexion{
+>>>>>>> main
     display: inline-flex;
-    -moz-box-pack: center;
+    /*-moz-box-pack: center;*/
     justify-content: center;
-    -moz-box-align: center;
+    /*-moz-box-align: center;*/
     align-items: center;
     border-radius: 30px;
     font-weight: bold;
@@ -119,7 +132,11 @@ body{
     color: black;
 }
 
+<<<<<<< HEAD
 .connexion:hover{
+=======
+.Connexion:hover{
+>>>>>>> main
     color: #fff;
     background-color: black;
 }

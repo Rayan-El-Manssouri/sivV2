@@ -8,9 +8,9 @@ body{
     overflow-x: hidden;
     background-image: url(http://localhost/sivV2/private/src/fond.png);
     background-size: cover;
-    overflow-y: hidden;
 }
 
+<<<<<<< HEAD
 .header{
     background-color: rgb(16, 137, 255);
     justify-content: space-between;
@@ -27,6 +27,8 @@ body{
     height: 950px;
 }
 
+=======
+>>>>>>> main
 .global{
     position: relative;
     top: 20px;
@@ -40,6 +42,11 @@ body{
     position: relative;
     top: 20px;
     right: 150px;
+}
+
+.global .Connexion{
+    position: relative;
+    left: 1250px;
 }
 
 .acheteur{

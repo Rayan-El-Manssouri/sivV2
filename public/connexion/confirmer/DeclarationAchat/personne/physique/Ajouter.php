@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter</title>
     <link href="Ajouter.css" rel="stylesheet" />
+    <link href="../../../../../../private/src/logo2.png" rel="icon" />
     <link href="../../../../../../private/style/footer/footer.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../../../../../private/javascript/sticky.js"></script>
@@ -13,10 +14,11 @@
 <body>
     <?php 
         require_once dirname( __DIR__ ) . '../../../../../../private/GestionSession/auth.php';
-        require_once dirname( __DIR__ ) . '../../../../../../private/style/headerFormaliter/header.php';
+        require_once dirname( __DIR__ ) . '../../../../../../private/style/headerformalitees/header.php';
         require_once dirname( __DIR__ ) . '../../../../../../private/bdd/connect.php';
         $database = new Database();
     ?>
+<<<<<<< HEAD
         <div class="personnePhysique">
             <h1>Bienvenue sur la page pour rajouter une personne physique. </h1>
             
@@ -24,6 +26,13 @@
         </div>
         <div>
         </div>
+=======
+    <div class="personnePhysique">
+        <?php require_once dirname( __DIR__ ) . '../../../../../../private/formulairePersonne/physique.php'; ?>
+    </div>
+    <div>
+    </div>
+>>>>>>> main
 </body>
 </html>
 
