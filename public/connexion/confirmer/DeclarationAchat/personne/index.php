@@ -17,16 +17,6 @@
     <?php 
         require_once dirname( __DIR__ ) . '../../../../../private/style/headerformalitees/header.php';
     ?>
-<<<<<<< HEAD
-        <div class="global">
-            <h1>Bienvenue sur la page personnes</h1>
-            <div class="button">
-                <h2>Quel type de personne voulez-vous rajouter ?</h2>
-                <div class="BtnPrincipal">
-                    <button class="personnePhysique" onclick="Physique()"><span>Personne physique</span></button>
-                    <button class="personneMoral" onclick="moral()"><span>Personne morale</span> </button>
-                </div>
-=======
     <div class="global">
         <h1>Bienvenue sur la page personnes</h1>
         <div class="button">
@@ -34,7 +24,6 @@
             <div class="BtnPrincipal">
                 <button class="personnePhysique" onclick="Physique()"><span>Personne physique</span></button>
                 <button class="personneMoral" onclick="moral()"><span>Personne morale</span> </button>
->>>>>>> main
             </div>
         </div>
     </div>

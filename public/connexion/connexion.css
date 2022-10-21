@@ -3,20 +3,6 @@ body{
     padding: 0;
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
-<<<<<<< HEAD
-    overflow : hidden;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.background{
-    /*background-image: url(../src/fond.png);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding : 260px 0 235px 0;
-    position: relative;
-=======
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -30,7 +16,6 @@ body{
     padding-bottom: 235px;
     position: relative;
     /*height: 348px;*/
->>>>>>> main
     background-color: rgb(16, 137, 255);
     overflow-x: hidden;
     box-sizing: border-box;
@@ -39,19 +24,12 @@ body{
 
 .button{
     position: relative;
-<<<<<<< HEAD
-    top: -20px;
-=======
     top: -20px;    
->>>>>>> main
 }
 
 .valider{
     border-radius: 30px;
-<<<<<<< HEAD
-=======
     /*background-color: aqua;*/
->>>>>>> main
     border: none;
     background-color: black;
     color: #fff;

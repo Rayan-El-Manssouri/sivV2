@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 session_start();
 
@@ -7,20 +5,12 @@ if(est_connecte()){
     header("Location: ../index.php");
 }
 ?>
->>>>>>> main
 <div class="formulaire">
         <h1>Connectez-vous.</h1>
         <form method="POST">
             <div>
-<<<<<<< HEAD
-               <span>Email : <input type="text" class="email" name="email" placeholder="Email" required> </span><br> <br>
-               <span>Mot de passe : <input type="text" class="password" name="password" placeholder="Mot de passe" required></span>
-                 <br> <br>
-                    <br>
-=======
                <span>Email : <input type="text" class="email" name="email" placeholder="email" required> </span> <br> <br> <br>
                <span>Mot de passe : <input type="text" class="password" name="password" placeholder="password" required></span> <br>
->>>>>>> main
                 <input type="submit"  name="send" class="btn_envoyer"> <br>
                 <span style="position: relative; top: -75px;"> <?php echo  $_GET['status'] ?></span>
             </div>
@@ -49,16 +39,6 @@ if(est_connecte()){
                     </script>
                     <?php
                     die();
-<<<<<<< HEAD
-                }else{
-                    ?>
-                    <script>
-                        alert("L'email ou le mot de passe est incorrect.")
-                        location.replace("")
-                    </script>
-                    <?php
-=======
->>>>>>> main
                 }
             }
         ?>

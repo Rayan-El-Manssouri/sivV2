@@ -8,10 +8,6 @@ class Database
 
     function connect()
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> main
         $connexion = mysqli_connect($this->host, $this->username, $this->password, $this->db);
         $connexion->set_charset("utf8");
         return $connexion;

@@ -13,11 +13,7 @@ $(document).ready(function(){
         btn.classList.toggle("bloc", window.scrollY > 0)
     })
 
-<<<<<<< HEAD
-    //Flèche pour remonter en haute de page.
-=======
     // Flèche pour remonter en haut de la page
->>>>>>> main
     const btn = document.querySelector('.btn');
     btn.addEventListener('click', () => {
         window.scrollTo({

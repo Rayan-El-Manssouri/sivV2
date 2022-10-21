@@ -18,21 +18,11 @@
         require_once dirname( __DIR__ ) . '../../../../../../private/bdd/connect.php';
         $database = new Database();
     ?>
-<<<<<<< HEAD
-        <div class="personnePhysique">
-            <h1>Bienvenue sur la page pour rajouter une personne physique. </h1>
-            
-            <br><?php require_once dirname( __DIR__ ) . '../../../../../../private/formulairePersonne/physique.php'; ?>
-        </div>
-        <div>
-        </div>
-=======
     <div class="personnePhysique">
         <?php require_once dirname( __DIR__ ) . '../../../../../../private/formulairePersonne/physique.php'; ?>
     </div>
     <div>
     </div>
->>>>>>> main
 </body>
 </html>
 

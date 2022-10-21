@@ -1,18 +1,9 @@
 <?php 
-<<<<<<< HEAD
-require_once '../../private/bdd/connect.php';
-$database = new Database();
-require_once '../../private/GestionSession/auth.php';
-session_start();
-
-error_reporting(0);
-=======
     require_once '../../private/bdd/connect.php';
     $database = new Database();
     require_once '../../private/GestionSession/auth.php';
     session_start();
     error_reporting(0);
->>>>>>> main
 ?>
 <!DOCTYPE html>
 <html lang="fr">

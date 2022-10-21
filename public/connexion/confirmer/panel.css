@@ -39,10 +39,6 @@ body{
 }
 
 .Text_Accueil{
-<<<<<<< HEAD
-    position: relative;
-=======
->>>>>>> main
     color: aliceblue;
     font-weight: 500;
     font-family: 'DM Sans', sans-serif;
@@ -93,11 +89,7 @@ body{
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-.connexion{
-=======
 .Connexion{
->>>>>>> main
     display: inline-flex;
     /*-moz-box-pack: center;*/
     justify-content: center;
@@ -132,11 +124,7 @@ body{
     color: black;
 }
 
-<<<<<<< HEAD
-.connexion:hover{
-=======
 .Connexion:hover{
->>>>>>> main
     color: #fff;
     background-color: black;
 }

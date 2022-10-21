@@ -9,21 +9,12 @@ body{
 }
 
 .global{
-<<<<<<< HEAD
-   color: #fff;
-   width: 600px;
-   position: relative;
-   left: 800px;
-   height: 700px;
-   text-align: center;
-=======
     color: #fff;
     width: 600px;
     position: relative;
     left: 800px;
     height: 700px;
     text-align: center;
->>>>>>> main
 }
 
 .global h1{
@@ -81,12 +72,7 @@ body{
     justify-content: space-between;
     flex-direction: column;
     /*height: 86vh;*/
-<<<<<<< HEAD
-    margin: 0;
-    margin-left: auto;
-=======
     margin: 0 0 0 auto;
->>>>>>> main
     float: left;
     top: 0;
     bottom: 0;
@@ -102,11 +88,7 @@ body{
 }
 
 .header ul{
-<<<<<<< HEAD
-    list-style: none;
-=======
     list-style: none;    
->>>>>>> main
 }
 
 .header ul li{

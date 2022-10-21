@@ -5,11 +5,7 @@
     width: 100%;
     transition: all 0.35s ease-in-out 0s;
     padding: 20px 0px;
-<<<<<<< HEAD:private/style/headearAcceuille/header.css
-    height: 80px;
-=======
     height: 120px;
->>>>>>> main:private/style/headerAcceuil/header.css
     z-index: 100;
 }
 
@@ -17,14 +13,11 @@
     position: relative;
 }
 
-<<<<<<< HEAD:private/style/headearAcceuille/header.css
-=======
 .header.sticky  .navigation.text .Connection{
     position: relative;
     top: -80px;
 }
 
->>>>>>> main:private/style/headerAcceuil/header.css
 .header .navigation.text li a{
     color: black;
 }
@@ -79,24 +72,13 @@
 
 .header.sticky .navigation.text a{
     transition: all 0.35s ease 0s;
-<<<<<<< HEAD:private/style/headearAcceuille/header.css
-}
-
-.header.sticky .navigation.text a:hover{
-    color: rgb(16, 137, 255);
-=======
->>>>>>> main:private/style/headerAcceuil/header.css
 }
 
 .header.sticky .navigation.text .logo.active{
     color: black;
 }
 
-<<<<<<< HEAD:private/style/headearAcceuille/header.css
-.Connection:hover{
-=======
 .Connexion:hover{
->>>>>>> main:private/style/headerAcceuil/header.css
     color: #fff;
     background-color: black;
 }

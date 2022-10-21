@@ -8,8 +8,6 @@ body{
     flex-direction: column;
 }
 
-<<<<<<< HEAD
-=======
 .forfait h1{
     font-weight: 500;
     font-size: 28px;
@@ -72,19 +70,15 @@ body{
     background-color: black;
 }
 
->>>>>>> main
 .contenu{
     flex: 1 0 auto;
 }
 
-<<<<<<< HEAD
-=======
 .alignement{
     display: flex;
     position: relative;
     left: -300px;
 }
->>>>>>> main
 
 .background{
     /*background-image: url(../private/src/fond.png);*/
@@ -100,10 +94,6 @@ body{
 }
 
 .Text_Accueil{
-<<<<<<< HEAD
-    position: relative;
-=======
->>>>>>> main
     color: aliceblue;
     font-weight: 500;
     font-family: 'DM Sans', sans-serif;
@@ -128,10 +118,6 @@ body{
     position: relative;
     top: -20px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 .Text_Accueil a{
     text-decoration: none; 
     outline: none;
@@ -155,22 +141,6 @@ body{
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-.Connection{
-    display: inline-flex;
-    -moz-box-pack: center;
-    justify-content: center;
-    -moz-box-align: center;
-    align-items: center;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    line-height: 1;
-    padding: 21px 29px;
-    background-color: aliceblue;
-    transition: all 500ms ease 0s;
-=======
 .Avantage{
     padding: 40px 0px;
     color: white;
@@ -202,23 +172,12 @@ body{
 .Automatiser .formalitees .Achat:hover{
     background-color: black;
     color: aliceblue;
->>>>>>> main
     cursor: pointer;
     position: absolute;
     left: 1600px;
     color: rgb(16, 137, 255);
 }
 
-<<<<<<< HEAD
-.header.sticky{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.header.sticky .navigation.text .hover.active a,
-.header.sticky .navigation.text a:hover{
-    color: rgb(16, 137, 255);
-
-=======
 .Automatiser .formalitees .formalitees_index{
     display: flex;
 }
@@ -235,7 +194,6 @@ body{
     left: 220px;
     font-size: 20px;
     transition: all 0.35s ease;
->>>>>>> main
 }
 
 .header.sticky .navigation.text .logo.active{

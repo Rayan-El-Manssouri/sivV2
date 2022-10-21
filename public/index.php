@@ -10,12 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet">
-<<<<<<< HEAD
-    <link href="http://localhost/sivV2/private/style/headearAccueil/header.css" rel="stylesheet">
-=======
     <link href="../private/src/logo2.png" rel="icon">
     <link href="http://localhost/sivV2/private/style/headerAcceuil/header.css" rel="stylesheet">
->>>>>>> main
     <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
     <link href="http://localhost/sivV2/private/style/FlecheRemonter/fleche.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,24 +26,14 @@
         <!-- Div qui reste en haut de la page. -->
         <div class="container">
             <section class="background">
-<<<<<<< HEAD
-                <?php  require_once '../private/style/headearAccueil/header.php'; ?>
-                <div class="Text_Accueil">
-                    <h1 font-weight="bold" >Bienvenue sur le<br>site web siv</h1>
-=======
                 <?php  require_once '../private/style/headerAcceuil/header.php'; ?>
                 <div class="Text_Accueil">
                     <h1 font-weight="bold">Bienvenue sur le<br>site web Siv</h1>
->>>>>>> main
                     <p class="underline">Site simple pour gérer les déclarations.</p>
                         <?php 
                           if(est_connecte()){
                             ?>
-<<<<<<< HEAD
-                                <a href="connexion/confirmer/panel.php" style="text-decoration : none;" class="button">Aller au panneau</a>
-=======
                                 <a href="connexion/confirmer/panel.php" style="text-decoration : none;" class="button">Aller au panelle</a>
->>>>>>> main
                             <?php
                          }else{
                             ?>
@@ -93,13 +79,8 @@
         </div>
         <div class="Automatiser">
             <h1>Automatiser les PDF selon vos formalités</h1>
-<<<<<<< HEAD
-            <div class="formaliter">
-                <div class="formaliter_index">
-=======
             <div class="formalitees">
                 <div class="formalitees_index">
->>>>>>> main
                     <div>
                         <div class="Achat">
                             <p class="material-symbols-outlined">
@@ -132,13 +113,8 @@
         <div class="Avantage">
             <h1>Les avantages</h1>
             <div>
-<<<<<<< HEAD
-                <h2>Gagner 1h30min sur chaque véhicule</h2>
-                <p>Communication simple avec aide si besoin</p>
-=======
                 <h2>Gagner 1h30 sur chaque véhicule</h2>
                 <p>Communication simple avec assistance</p>
->>>>>>> main
             </div>
             <div class="AVANTAGE">
                 <div class="separation">
@@ -147,11 +123,7 @@
                             call
                         </span>
                     </div>
-<<<<<<< HEAD
-                    Communication instantanée<br><span style="left: 40px; position: relative;">avec aide si besoin</span> 
-=======
                     Communication instantané<br><span style="left: 40px; position: relative;">avec assistance</span> 
->>>>>>> main
                 </div>
                 <div class="separation">
                     <div class="tel">
@@ -159,11 +131,7 @@
                         picture_as_pdf
                     </span>
                     </div>
-<<<<<<< HEAD
-                   Gestionnaire des PDF simple à utiliser
-=======
                    Gestion des PDF simple et intuitive
->>>>>>> main
                 </div>
                 <div class="separation">
                     <div class="tel">
@@ -178,16 +146,6 @@
         <!-- Div qui va gérer les forfaits -->
         <div class="forfait">
            <h1>Nos forfaits</h1>
-<<<<<<< HEAD
-            <div class="proposition">
-                <section>
-                    <p class="Pro">Pro</p>
-                    <a class="panier">
-                        Ajouter au panier
-                        <svg class="fleche" fill="currentColor" style="display:inline-block;vertical-align:middle" height="18" width="18" viewBox="0 0 512 512"><g id="Icon_8_"><g><g><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"><path d="M85,277.375h259.704L225.002,397.077L256,427l171-171L256,85l-29.922,29.924l118.626,119.701H85V277.375z"></path></path></g></g></g></svg>
-                    </a>
-                </section>    
-=======
            <div class="alignement">
                 <div class="proposition">
                         <section>
@@ -207,7 +165,6 @@
                         </a>
                     </section>    
                 </div>
->>>>>>> main
             </div>
         </div>
     </div>
