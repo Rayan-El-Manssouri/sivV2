@@ -29,10 +29,10 @@
             <span style="position: relative; left: -300px; text-align: left; ">Bienvenue sur le panneau de la déclaration d'achat</span>
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des personnes</p>
-                <a href="personne/" class="Ajouter"><p>Ajouter</p></a>
-                <a href="ModifierPersonne" class="Modifier"><p>Modifier</p> </a>
-                <a href="DétailPersonne/index.php" class="Detail"><p>Détails</p></a>
-                <a href="" class="Supprimer"><p>Supprimer</p></a>
+                <a href="GestionPersonne/AjouterPersonne/" class="Ajouter"><p>Ajouter</p></a>
+                <a href="GestionPersonne/ModifierPersonne/" class="Modifier"><p>Modifier</p> </a>
+                <a href="GestionPersonne/DétailPersonne/" class="Detail"><p>Détails</p></a>
+                <a href="GestionPersonne/SuprimmerPersonnne/" class="Supprimer"><p>Supprimer</p></a>
             </div>
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des véhicules</p>
