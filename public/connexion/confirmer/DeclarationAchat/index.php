@@ -36,9 +36,9 @@
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des véhicules</p>
                 <a href="GestionVehicule/" class="Ajouter"><p>Ajouter</p></a>
-                <a href="GestionVehicule/ModifierVehicule" class="Modifier"><p>Modifier</p></a>
-                <a href="GestionVehicule/DetailVehicule" class="Detail"><p>Détail</p></a>
-                <a href=""  class="Supprimer"><p>Supprimer</p></a>
+                <a href="GestionVehicule/ModifierVehicule"   class="Modifier"><p>Modifier</p></a>
+                <a href="GestionVehicule/DetailVehicule"     class="Detail"><p>Détail</p></a>
+                <a href="GestionVehicule/SuprimmerVehicule"  class="Supprimer"><p>Supprimer</p></a>
             </div>
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des opérations</p>
