@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php 
-        require_once dirname( __DIR__ ) . '../../../../../private/style/headerFormalitees/header.php';
+        require_once dirname( __DIR__ ) . '../../../../private/style/headerFormalitees/header.php';
     ?>
     <div class="global">
         <h1>Bienvenue sur la page personnes</h1>
