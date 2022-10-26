@@ -1,3 +1,9 @@
+<?php 
+  require_once dirname( __DIR__ ) . '../../../../../../../private/bdd/connect.php';
+  $database = new Database();
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,8 +21,7 @@
     <?php 
         require_once dirname( __DIR__ ) . '../../../../../../../private/GestionSession/auth.php';
         require_once dirname( __DIR__ ) . '../../../../../../../private/style/headerformalitees/header.php';
-        require_once dirname( __DIR__ ) . '../../../../../../../private/bdd/connect.php';
-        $database = new Database();
+      
     ?>
     <div class="personnePhysique">
         <?php require_once dirname( __DIR__ ) . '../../../../../../../private/formulairePersonne/physique.php'; ?>

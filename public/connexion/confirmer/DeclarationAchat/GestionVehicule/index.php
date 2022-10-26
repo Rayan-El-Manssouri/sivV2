@@ -3,8 +3,8 @@ require_once '../../../../../private/bdd/connect.php';
 $database = new Database();
 
 session_start();
-$query = "SELECT * FROM couleur";
-$data = $database->read($query);
+$query1 = "SELECT * FROM couleur";
+$data1 = $database->read($query1);
 
 
 
@@ -87,7 +87,7 @@ $data = $database->read($query);
                                 <br>
                                 <div>
                                 <p>Sélectionner la couleur : <select name="couleur">
-                                    <?php foreach($data as $dataV2): ?>
+                                    <?php foreach($data1 as $dataV2): ?>
                                     <option value="<?=$dataV2['idCouleur']?>"><?=$dataV2['Nom']?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -98,7 +98,7 @@ $data = $database->read($query);
     </form>
 
     <?php 
-    if(isset($_POST['send'])){
+    if(!empty($_POST['send'])){
         $id = $_SESSION['id'];
         $Immatriculation = $_POST['Immatriculation'];
         $DateImmatriculation = $_POST['DateImmatriculation'];
@@ -133,7 +133,6 @@ $data = $database->read($query);
             location.replace("")
         </script>
         <?php
-
     }
     
     
