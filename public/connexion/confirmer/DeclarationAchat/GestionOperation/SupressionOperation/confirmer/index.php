@@ -83,7 +83,7 @@ $data9 = $database->read($query9);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,7 +96,6 @@ $data9 = $database->read($query9);
     <?php require_once '../../../../../../../private/style/headerFormalitees/header.php'; ?>
     <div class="modification_confirmation">
         <h1>modification d'une opération.</h1>
-        <form method="POST">
                         <br>
                         <p>Nature : <input type="radio" name="nature" value="Achat" <?php 
                             if($NatureOperation == 'Achat'){
@@ -436,40 +435,25 @@ $data9 = $database->read($query9);
                         </div>
                     </div>
                     <div class="Bouton2">
-                        <input type="submit" name="send" id="personne" class="Bouton" ></input>
-                        <button class="Bouton"><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/">Annuler</a> </button>
+                        <form method="POST">
+                            <input type="submit" name="send" onclick="return confirm('Etes vous sûre de vouloir suprimmer cette opération ?')" >
+                        </form>
+                        <button class="Bouton"><a href="../">Annuler</a> </button>
                     </div>
-</form>
+
+                    <?php 
+                    if(isset($_POST['send'])){
+                        $query15 = "DELETE FROM `operation` WHERE IdOperation='".$_GET['id']."' ";
+                        $data15 = $database->read($query15);
+                        ?>
+                        <script>
+                            alert("Cette opération est bien suprimmer !")
+                            location.replace("../")
+                        </script>
+                        <?php
+                    }
+                    
+                    ?>
     </div>
-    <?php
-    if(!empty($_POST['send'])){
-        $Kilometrage2 = htmlentities($_POST['Kilometrage']);
-        $NomOperation = htmlentities($_POST['NomOperation']);
-        $nature2 = htmlentities($_POST['nature']);
-        $DateVente = htmlentities($_POST['DateVente']);
-        $DateDeclaration = htmlentities($_POST['DateDeclaration']);
-        $PresenceCertificat = htmlentities($_POST['PresenceCertificat']);
-        $InformationAssurance = htmlentities($_POST['InformationAssurance']);
-        $CederDestruction = htmlentities($_POST['CederDestruction']);
-        $CertifieSituationAdministrative = htmlentities($_POST['CertifieSituationAdministrative']);
-        $Transformation = htmlentities($_POST['Transformation']);
-        $OppositionUtilisationDonnees = htmlentities($_POST['OppositionUtilisationDonnees']);
-        $CertifieAchat = htmlentities($_POST['CertifieAchat']);
-        $Destruction = htmlentities($_POST['Destruction']);
-        $ville = htmlentities($_POST['ville']);
-        $vehicule = htmlentities($_POST['vehicule']);
-        $acheteur = htmlentities($_POST['acheteur']);
-        $vendeur = htmlentities($_POST['vendeur']);
-        $query12 = "UPDATE operation SET `Kilometrage`='$Kilometrage2', `NomOperation`='$NomOperation', `nature`='$nature2', `DateVente`='$DateVente', `DateDeclaration`='$DateDeclaration', `PresenceCertificat`='$PresenceCertificat', `InformationAssurance`='$InformationAssurance', `CederDestruction`='$CederDestruction', `CertifieSituationAdministrative`='$CertifieSituationAdministrative', `Transformation`='$Transformation', `OppositionUtilisationDonnees`='$OppositionUtilisationDonnees', `CertifieAchat`='$CertifieAchat', `Destruction`='$Destruction',  `IdVille`='$ville', `IdVehicule`='$vehicule', `acheteur`='$acheteur', `vendeur`='$vendeur' WHERE IdOperation='".$_GET['id']."'";
-        $data12 = $database->read($query12);
-        ?>
-        <script>
-            alert("Bien modifié !")
-            location.replace("")
-        </script>
-        <?php
-    }
-    
-    ?>
 </body>
 </html>
