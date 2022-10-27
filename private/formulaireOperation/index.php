@@ -9,21 +9,9 @@
     <p>Nom de l'Operation : <input type="text" name="NomOperation" placeholder="NomOperation"></p>
     <br>
     <div>
-                        <div>
-                            <br>
-                            <span>Sélectionner un véhicule :</span>
-                            <select name="vehicule" required>
-                                <option value="">Séléctionner la véhicule</option>
-                                <?php foreach($data4 as $dataV2): ?>
-                                <option value="<?= $dataV2['Immatriculation'] ?>">
-                                    <p><?= $dataV2['Immatriculation'] ?></p>
-                                    </option><?php
-                                    endforeach?>
-                            </select>
-                        </div>
                         <br>
 
-                        <p>Kilométrage : <input type="text" name="Kilometrage" placeholder="Kilométrage"></p>
+                        <p>Kilométrage : <input type="num" name="Kilometrage" placeholder="Kilométrage"></p>
                         <br>
                         <p>Date Vente : <input type="datetime-local" name="DateVente"></p>
                         <br>
@@ -176,7 +164,7 @@
                             <br>
                             <br>
                             <span>Sélectionner un véhicule :</span>
-                            <select name="ville">
+                            <select name="vehicule">
                                 <option>Séléctionner  un véhicule</option>
                                 <?php 
                                 $Setupvehicule = "SELECT * FROM `vehicule`";

@@ -49,19 +49,15 @@ $data6 = $database->read($query6);
         $data2 = $database->read($query2);
         $NomOperation = $_POST['NomOperation'];
         $vehicule = $_POST['vehicule'];
-        $query5 = "SELECT * FROM vehicule WHERE Immatriculation='".$vehicule."' ";
-        $data5 = $database->read($query5);
-        foreach($data5 as $dataV2):
-            $IdVehicule = $dataV2['IdVehicule'];
-        endforeach;
         $nature = $_POST['nature'];
         $vendeur = $_POST['vendeur'];
         $acheteur = $_POST['acheteur'];
-        $query3 = "INSERT INTO `operation` ( `Kilometrage`, `DateVente`, `DateDeclaration`, `PresenceCertificat`, `InformationAssurance`, `CederDestruction`, `CertifieSituationAdministrative`, `Transformation`, `OppositionUtilisationDonnees`, `Destruction`, `CertifieAchat`, `IdVille`, `Nature`, `IdVehicule` ,`Acheteur`, `Vendeur`) VALUES ('$Kilometrage', '$DateVente', '$DateDeclaration', '$PresenceCertificat', '$InformationAssurance', '$CederDestruction', '$CertifieSituationAdministrative', '$Transformation', '$OppositionUtilisationDonnees', '$Destruction', '$CertifieAchat', '$ville', '$nature', '$IdVehicule',    '$acheteur', '$vendeur');";
+        $NomOperation = $_POST['NomOperation'];
+        $query3 = "INSERT INTO `operation` ( `Kilometrage`, `DateVente`, `DateDeclaration`, `PresenceCertificat`, `InformationAssurance`, `CederDestruction`, `CertifieSituationAdministrative`, `Transformation`, `OppositionUtilisationDonnees`, `Destruction`, `CertifieAchat`, `IdVille`, `Nature`, `IdVehicule` ,`Acheteur`, `Vendeur`, `NomOperation`) VALUES ('$Kilometrage', '$DateVente', '$DateDeclaration', '$PresenceCertificat', '$InformationAssurance', '$CederDestruction', '$CertifieSituationAdministrative', '$Transformation', '$OppositionUtilisationDonnees', '$Destruction', '$CertifieAchat', '$ville', '$nature', '$vehicule', '$acheteur', '$vendeur', '$NomOperation');";
         $data3 = $database->read($query3);
         ?>
         <script>
-            alert("Opération bien ajoutée !")
+            alert("Bien rajoutée !")
             location.replace("")
         </script>
         <?php
