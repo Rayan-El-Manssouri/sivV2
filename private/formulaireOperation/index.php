@@ -6,16 +6,16 @@
                  <span>Vente</span>
     </p>
     <br>
-    <p>Nom de l'Operation : <input type="text" name="NomOperation" placeholder="NomOperation"></p>
+    <p>Nom de l'Operation : <input type="text" name="NomOperation" placeholder="NomOperation" required></p>
     <br>
     <div>
                         <br>
 
-                        <p>Kilométrage : <input type="num" name="Kilometrage" placeholder="Kilométrage"></p>
+                        <p>Kilométrage : <input type="num" name="Kilometrage" placeholder="Kilométrage" required></p>
                         <br>
-                        <p>Date Vente : <input type="datetime-local" name="DateVente"></p>
+                        <p>Date Vente : <input type="datetime-local" name="DateVente" required ></p>
                         <br>
-                        <p>Date Declaration : <input type="Date" name="DateDeclaration"></p>
+                        <p>Date Declaration : <input type="Date" name="DateDeclaration" required></p>
                         <br>
                         <div>
                             <br>
@@ -148,8 +148,8 @@
                         <div>
                             <br>
                             <span>Sélectionner une ville :</span>
-                            <select name="ville">
-                                <option>Séléctionner la ville</option>
+                            <select name="ville" required>
+                                <option value="">Séléctionner la ville</option>
                                 <?php 
                                 $SetupVille = "SELECT * FROM `ville`";
                                 $ExuctVille = $database->read($SetupVille);
@@ -165,7 +165,7 @@
                             <br>
                             <span>Sélectionner un véhicule :</span>
                             <select name="vehicule">
-                                <option>Séléctionner  un véhicule</option>
+                                <option value="">Séléctionner un véhicule</option>
                                 <?php 
                                 $Setupvehicule = "SELECT * FROM `vehicule`";
                                 $Exuctvehicule = $database->read($Setupvehicule);
