@@ -43,7 +43,7 @@
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des opérations</p>
                 <a href="GestionOperation/"  class="Ajouter"><p>Ajouter</p></a>
-                <a href="" class="Modifier"><p>Modifier</p></a>
+                <a href="GestionOperation/ModifierOperation/" class="Modifier"><p>Modifier</p></a>
                 <a href="" class="Detail"><p>Détail</p></a>
                 <a href="" class="Supprimer"><p>Supprimer</p></a>
             </div>

@@ -61,6 +61,7 @@ $data6 = $database->read($query6);
         $data3 = $database->read($query3);
         ?>
         <script>
+            alert("Opération bien ajoutée !")
             location.replace("")
         </script>
         <?php
