@@ -1,0 +1,27 @@
+.btn{
+    display: none;
+    transition: all 0.35s ease;
+}
+
+.btn.bloc{
+    display: flex;
+    background-color: rgb(16, 137, 255);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 20;
+    padding: 20px;
+    color: #fff;
+    border-radius: 30px;
+    width: 30px;
+    transition: all 0.35s ease-in-out;
+}
+
+.btn:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #333;
+}
+
