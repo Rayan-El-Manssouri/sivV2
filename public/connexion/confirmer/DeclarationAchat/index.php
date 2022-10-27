@@ -47,6 +47,14 @@
                 <a href="GestionOperation/DetailOperation/" class="Detail"><p>Détail</p></a>
                 <a href="GestionOperation/SupressionOperation/" class="Supprimer"><p>Supprimer</p></a>
             </div>
+            <br>
+            <div class="acheteur">
+                <p style="color: #fff;">Gestion des pdf</p>
+                <a href="GestionFormalite/"  class="Ajouter"><p>Déclaration d'achat</p></a>
+                <a href="GestionFormalite/" class="Modifier"><p>Déclaration de cession</p></a>
+                <a href="GestionFormalite/" class="Detail"><p>Mandat</p></a>
+                <a href="GestionFormalite/" class="Supprimer"><p>Déclaration de cession</p></a>
+            </div>
         </div>
     </div>
 </body>
