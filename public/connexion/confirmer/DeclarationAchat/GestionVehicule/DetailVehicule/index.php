@@ -4,13 +4,13 @@ require_once '../../../../../../private/bdd/connect.php';
 $database = new Database();
 error_reporting(0);
 
-$query = "SELECT * FROM vehicule";
+$query1 = "SELECT * FROM vehicule";
 
 if (!empty($_GET['q'])){
     $recherche = htmlentities($_GET['q']);
-    $query = "SELECT * FROM `vehicule` WHERE Immatriculation LIKE '%".$recherche."%' ";
+    $query1 = "SELECT * FROM `vehicule` WHERE Immatriculation LIKE '%".$recherche."%' ";
 };
-$data = $database->read($query);
+$data1 = $database->read($query1);
 
 ?>
 
@@ -44,7 +44,7 @@ $data = $database->read($query);
             <br>
             <br>
             <tbody>
-                <?php foreach($data as $dataV2): ?>
+                <?php foreach($data1 as $dataV2): ?>
                 <tr><a href="confirmer/index.php?id=<?= $dataV2['IdVehicule']?>"><?= $dataV2['Immatriculation'] ?></a></tr> <br> <br>
                 <?php endforeach; ?>
             </tbody>

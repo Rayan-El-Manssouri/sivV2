@@ -3,8 +3,8 @@
 <?php 
 
 
-$query = "SELECT COUNT(*) FROM `vehicule`";
-$data = $database->read($query);
+$count = "SELECT COUNT(*) FROM `vehicule`";
+$countRecive = $database->read($count);
 
 
 
@@ -29,7 +29,7 @@ $totaloperation = $operation1[0]['COUNT(*)'];
             <ul>
                 <li><a href="http://localhost/sivV2/public"> <button> <span  class="material-symbols-outlined">home</span>Accueil</button> </a></li>
                 <li><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionPersonne/AjouterPersonne/"> <button> <span class="material-symbols-outlined">groups</span>Personnes <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $total?></span></button> </a></li>
-                <li><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionVehicule/"><button> <span class="material-symbols-outlined">directions_car</span>Véhicules <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $data[0]['COUNT(*)']?></span></button> </a></li>
+                <li><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionVehicule/"><button> <span class="material-symbols-outlined">directions_car</span>Véhicules <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $countRecive[0]['COUNT(*)']?></span></button> </a></li>
                 <li><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionOperation/"><button><span class="material-symbols-outlined">local_shipping</span>Opérations  <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $totaloperation?></span></button> </a></li>
                 <li><a href=""><button><span class="material-symbols-outlined">picture_as_pdf</span>Générer les PDF</button> </a></li>
                 <li><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/"><button><span class="material-symbols-outlined">chevron_left</span>Revenir au panneau</button> </a></li>

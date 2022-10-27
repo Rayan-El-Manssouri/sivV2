@@ -3,8 +3,8 @@ require_once '../../../../../../../private/bdd/connect.php';
 $database = new Database();
 error_reporting(0);
 
-$query = "SELECT * FROM vehicule WHERE IdVehicule='".$_GET['id']."' ";
-$data = $database->read($query);
+$query1 = "SELECT * FROM vehicule WHERE IdVehicule='".$_GET['id']."' ";
+$data1 = $database->read($query1);
 
 
 ?>
@@ -22,7 +22,7 @@ $data = $database->read($query);
     </div>
 <div class="formulaire">
  
-        <?php foreach($data as $dataV2):  ?>
+        <?php foreach($data1 as $dataV2):  ?>
                 <table style="text-align: left;">
                 <h1>Modification du véhicule</h1>
                 <tr>
