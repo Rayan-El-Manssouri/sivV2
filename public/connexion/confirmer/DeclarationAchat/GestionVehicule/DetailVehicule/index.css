@@ -1,0 +1,19 @@
+body{
+    background-image: url(../../../../../../private/src/fond.png);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.form{
+    position: relative;
+    left: 900px;
+    top: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: black;
+}

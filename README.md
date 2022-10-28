@@ -25,6 +25,7 @@ Dépendances :
 - PHP
 - MySQL
 - PhpMyAdmin
+- pdftk
 
 Veuillez à ajouter un premier utilisateur dans PhpMyAdmin.
 

@@ -75,7 +75,7 @@ error_reporting(0);
 </form>
 <script>
     function annuler(){
-        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/")
+        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionPersonne/AjouterPersonne/")
     }
 </script>
 <?php 
@@ -104,19 +104,23 @@ if(isset($_POST['submit'])){
     foreach ($query_result_ville as $dataV2) {
         $IdVille = $dataV2['IdVille'];
     }
-    $siv_sql_id_personne = "SELECT  MAX(IdPersonne) as Id FROM personne";
-    $siv_sql_id_result = $database->read($siv_sql_id_personne);
-    $siv_sql_id = ++$siv_sql_id_result[0]['Id'];
+    
 
 
     // IdAdresse
     $query7 = "INSERT INTO `adresse`(`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`) VALUES ('$ville','$NomVoie','$ComplementAdresse1','$NumeroDeVoie','$ExtensionDeLaVoie','$TypeDeVoieAdresse','$ComplementAdresse2');";
     $data7 = $database->read($query7);
+    
     $query6 = "SELECT IdAdresse FROM adresse;";
     $data6 = $database->read($query6);
     $IdAdresse = $data6[0]['IdAdresse'];
+
     $query5 ="INSERT INTO `personne`(`ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `IdAdresse`) VALUES ('$Pro','$Assureur','$NumeroDeTelephone','$Mail', '$IdAdresse');";
     $data5 = $database->read($query5);
+
+    $siv_sql_id_personne = "SELECT  MAX(IdPersonne) as Id FROM personne";
+    $siv_sql_id_result = $database->read($siv_sql_id_personne);
+    $siv_sql_id = $siv_sql_id_result[0]['Id'];
     
     // Gestion des requêtes + excecutation.
     $query = "INSERT INTO `personnemoral`( `Idpersonne`,`RaisonSocial`, `Siret`) VALUES ('$siv_sql_id','$RaisonSocial','$Siret');";
@@ -124,7 +128,7 @@ if(isset($_POST['submit'])){
     ?>
     <script>
         alert("Personne morale bien ajoutée !")
-        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/personne/morale/morale.php")
+        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionPersonne/AjouterPersonne")
     </script>
     <?php
 }
