@@ -9,4 +9,5 @@ return array(
     'mikehaertl\\tmp\\' => array($vendorDir . '/mikehaertl/php-tmpfile/src'),
     'mikehaertl\\shellcommand\\' => array($vendorDir . '/mikehaertl/php-shellcommand/src'),
     'mikehaertl\\pdftk\\' => array($vendorDir . '/mikehaertl/php-pdftk/src'),
+    'Classes\\' => array($baseDir . '/classes'),
 );

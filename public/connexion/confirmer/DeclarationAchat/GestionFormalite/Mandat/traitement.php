@@ -5,19 +5,19 @@ use mikehaertl\pdftk\Pdf;
 
 //On récupere tous les id de nos champs pour les affichier (dans un tableaux)
 $data = array(
-        "pdfjs_internal_id_5R" => "1", 
+        "pdfjs_internal_id_43R" => "1",
         "IdentiteMandant" => "2", 
         "SIRETMandant" => "3", 
         "ExtentionAdresse" => "4",
         "TypeVoieAdresse" => "5", 
-        "NomVoieAdresse" => "6", 
-        "CodePostalAdresse" => "7", 
-        "CommuneAdresse" => "8", 
-        "PaysAdresse" => "9", 
+        "NomVoieAdresse" => "6",
+        "CodePostalAdresse" => "7",
+        "CommuneAdresse" => "8",
+        "PaysAdresse" => "9",
         "IdentiteMandataire" => "10",
-        "SiretMandataire" => "11", 
-        "NatureOperation" => "12", 
-        "MarqueVehicule" => "13", 
+        "SIRETMandataire" => "11",
+        "NatureOperation" => "12",
+        "MarqueV&#233;hicule" => "13",
         "NumVinVehicule" => "14", 
         "NumeroImmatriculation" => "15", 
         "LieuDeclaration" => "16", 
@@ -40,4 +40,6 @@ header("Content-type: application.pdf");
 header("Content-Length: " . filesize($file));
 //On lis le pdf
 readfile($file);
+
+var_dump($data);
 ?>

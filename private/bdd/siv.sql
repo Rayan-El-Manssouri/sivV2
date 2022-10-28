@@ -1,10 +1,9 @@
-USE siv;
 -- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 15 oct. 2022 à 16:12
+-- Généré le : ven. 28 oct. 2022 à 10:59
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -40,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `adresse` (
   `IdAdresse` mediumint(9) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`IdAdresse`),
   KEY `IdVille` (`IdVille`)
-) ENGINE=MyISAM AUTO_INCREMENT=118 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=134 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -202,7 +201,6 @@ CREATE TABLE IF NOT EXISTS `mandataire` (
 DROP TABLE IF EXISTS `operation`;
 CREATE TABLE IF NOT EXISTS `operation` (
   `IdOperation` int(10) NOT NULL AUTO_INCREMENT,
-  `IdUtilisateur` smallint(6) DEFAULT NULL,
   `Kilometrage` mediumint(9) DEFAULT NULL,
   `DateVente` timestamp NULL DEFAULT NULL,
   `DateDeclaration` date DEFAULT NULL,
@@ -216,10 +214,13 @@ CREATE TABLE IF NOT EXISTS `operation` (
   `CertifieAchat` tinyint(1) DEFAULT NULL,
   `IdVille` smallint(6) DEFAULT NULL,
   `Nature` enum('Achat','Vente') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Acheteur` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Vendeur` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `IdVehicule` int(11) NOT NULL,
+  `NomOperation` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`IdOperation`),
-  KEY `IdUtilisateur` (`IdUtilisateur`),
   KEY `IdVille` (`IdVille`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -256,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `personne` (
   `Mail` varchar(60) DEFAULT NULL,
   `IdAdresse` int(11) NOT NULL,
   PRIMARY KEY (`IdPersonne`)
-) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -271,7 +272,7 @@ CREATE TABLE IF NOT EXISTS `personnemoral` (
   `RaisonSocial` varchar(100) DEFAULT NULL,
   `Siret` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`IdPersonneMoral`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -289,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `personnephysique` (
   `DateDenaissance` date DEFAULT NULL,
   `Idpersonne` smallint(9) DEFAULT NULL,
   PRIMARY KEY (`IdPersonnePhysique`)
-) ENGINE=MyISAM AUTO_INCREMENT=70 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=79 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -373,12 +374,12 @@ CREATE TABLE IF NOT EXISTS `vehicule` (
   `NumeroFormule` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `Opacité` tinyint(1) DEFAULT NULL,
   `PuissanceDin` smallint(6) DEFAULT NULL,
-  `PuissanceFiscale` tinyint(4) DEFAULT NULL,
+  `PuissanceFiscale` smallint(6) DEFAULT NULL,
   `IdUtilisateur` smallint(6) DEFAULT NULL,
   `IdCouleur` tinyint(4) NOT NULL,
   PRIMARY KEY (`IdVehicule`),
   KEY `IdUtilisateur` (`IdUtilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 

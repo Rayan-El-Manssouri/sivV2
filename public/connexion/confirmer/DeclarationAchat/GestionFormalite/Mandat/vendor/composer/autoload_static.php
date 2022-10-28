@@ -13,6 +13,10 @@ class ComposerStaticInit957ca0e3149bf0f638156e5d2b87483a
             'mikehaertl\\shellcommand\\' => 24,
             'mikehaertl\\pdftk\\' => 17,
         ),
+        'C' => 
+        array (
+            'Classes\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -27,6 +31,10 @@ class ComposerStaticInit957ca0e3149bf0f638156e5d2b87483a
         'mikehaertl\\pdftk\\' => 
         array (
             0 => __DIR__ . '/..' . '/mikehaertl/php-pdftk/src',
+        ),
+        'Classes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes',
         ),
     );
 
