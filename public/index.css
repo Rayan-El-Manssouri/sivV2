@@ -81,13 +81,14 @@ body{
 }
 
 .background{
-    /*background-image: url(../private/src/fond.png);*/
+    background-image: url(../private/src/fond.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(16, 137, 255);
-    padding : 260px 0 235px 0;
+    padding-top: 260px;
+    padding-bottom: 235px;
     position: relative;
-    /*height: 348px;*/
+    height: 348px;
+    background-color: rgb(16, 137, 255);
     overflow-x: hidden;
     box-sizing: border-box;
     height: 1100px;
@@ -98,6 +99,7 @@ body{
     font-weight: 500;
     font-family: 'DM Sans', sans-serif;
     font-size: 40px;
+    position: relative;
     left: 350px;
 }
 
@@ -118,9 +120,10 @@ body{
     position: relative;
     top: -20px;
 }
+
 .Text_Accueil a{
     text-decoration: none; 
-    outline: none;
+    outline: none 
 }
 
 .button{
@@ -173,9 +176,6 @@ body{
     background-color: black;
     color: aliceblue;
     cursor: pointer;
-    position: absolute;
-    left: 1600px;
-    color: rgb(16, 137, 255);
 }
 
 .Automatiser .formalitees .formalitees_index{
@@ -196,8 +196,16 @@ body{
     transition: all 0.35s ease;
 }
 
-.header.sticky .navigation.text .logo.active{
+.separation:hover{
+    background-color: aliceblue;
     color: black;
+    cursor: pointer;
+}
+
+.Avantage .AVANTAGE .tel{
+    position: relative;
+    text-align: left;
+    left: 150px;
 }
 
 .button:hover{
