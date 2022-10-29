@@ -1,45 +1,80 @@
 <?php
-//On prend le module mikehaertl pour pouvoir compléter les pdf
+
+//cd C:\wamp64\www\public_html\fillable-pdf
+
+//pdftk mandat.pdf output mandat1.pdf // répare le fichier
+
+//pdftk mandat.pdf dump_data_fields // affiche tout les champ d'un formulaire
+
+//pdftk mandat.pdf generate_fdf output data.fdf    // créer un DFF fichier à partir d'un PDF
+
 require_once 'vendor/autoload.php';
+
 use mikehaertl\pdftk\Pdf;
 
-//On récupere tous les id de nos champs pour les affichier (dans un tableaux)
-$data = array(
-        "pdfjs_internal_id_43R" => "1",
-        "IdentiteMandant" => "2", 
-        "SIRETMandant" => "3", 
-        "ExtentionAdresse" => "4",
-        "TypeVoieAdresse" => "5", 
-        "NomVoieAdresse" => "6",
-        "CodePostalAdresse" => "7",
-        "CommuneAdresse" => "8",
-        "PaysAdresse" => "9",
-        "IdentiteMandataire" => "10",
-        "SIRETMandataire" => "11",
-        "NatureOperation" => "12",
-        "MarqueV&#233;hicule" => "13",
-        "NumVinVehicule" => "14", 
-        "NumeroImmatriculation" => "15", 
-        "LieuDeclaration" => "16", 
-        "DateJourDeclaration" => "17", 
-        "DateMoisDeclaration" => "18", 
-        "DateAnneeDeclaration" => "19",
-        "InformationAssurance" => "20",
-        "OppositionUtilisationDonnees" => "21",
+$fields = array(
+                'IdentiteMandant'    => 'NAIL AUTO',
+
+                'SIRETMandant' => '49994704200060',
+
+                'VoieAdresse' => '13',
+
+                'ExtentionAdresse'    => 'BIS',
+
+                'TypeVoieAdresse' => 'RUE',
+
+                'NomVoieAdresse'   => 'CARISTIE',
+
+                'CodePostalAdresse'   => '84100',
+
+                'CommuneAdresse'   => 'ORANGE',
+
+                'PaysAdresse'   => 'FRANCE',
+
+                'IdentiteMandataire'   => 'SINARA',
+
+                'SiretMandataire'   => '49994704800028',
+
+                'NatureOperation'   => 'DEMANDE IMMATRICULATION',
+
+                'MarqueVehicule'   => 'MERCEDES',
+
+                'NumVinVehicule'   => 'SKLFHDKLFG454DFDFDF',
+
+                'NumeroImmatriculation'   => 'TE-243-FG',
+
+                'InformationAssurance'   => 'Off',            
+
+                'LieuDeclaration'   => 'ORANGE',
+
+                'DateJourDeclaration'   => '18',
+
+                'DateMoisDeclaration'   => '02',
+
+                'DateAnneeDeclaration'   => '2022',
+
+                'OppositionUtilisationDonnees'   => 'Oui',
+
 );
 
-//On lui donne le modéle
-$pdf = new Pdf('pdf/mandat.pdf', []);
-$pdf->fillForm($data);
-$pdf->needAppearances();
-//Ils va nous renvoyer le formulaire rempli sur le filled.pdf
-$pdf->saveAs('pdf/pdf_fill/filled.pdf');
-$file = "pdf/pdf_fill/filled.pdf";
-//Qu'elle que paramètre supplémentaire
-header("Content-type: application.pdf");
-header("Content-Length: " . filesize($file));
-//On lis le pdf
-readfile($file);
+$pdf = new Pdf('mandat.pdf', [
 
-var_dump($data);
+]);
+
+$pdf->fillForm($fields); // Remplissage du des champs du formulaire PDF
+
+$pdf->needAppearances(); //garantit qu'un lecteur PDF prend en charge le rendu du contenu du champ de formulaire
+
+$pdf->saveAs('filled.pdf');
+
+ 
+
+$file = "filled.pdf"; // préparation pour affichage à l'écran
+
+header("Content-type: application/pdf"); // Type de contenu d'en-tête
+
+header("Content-Length: " . filesize($file));
+
+readfile($file); // Envoyez le fichier au navigateur.
+
 ?>
