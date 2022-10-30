@@ -25,7 +25,7 @@ Dépendances :
 - PHP
 - MySQL
 - PhpMyAdmin
-- pdftk
+- spipu/html2pdf
 
 Veuillez à ajouter un premier utilisateur dans PhpMyAdmin.
 

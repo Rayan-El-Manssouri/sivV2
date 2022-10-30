@@ -1,80 +1,81 @@
-<?php
+<?php 
+// Commande : composer require spipu/Html2Pdf
+require __DIR__.'/vendor/autoload.php';
+use Spipu\Html2Pdf\Html2Pdf;
+$html2pdf = new Html2Pdf();
 
-//cd C:\wamp64\www\public_html\fillable-pdf
+$html2pdf->writeHTML('
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Mandat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+    .title{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 600px;
+        top: 5px;
+    }
+    
+    .title .p{
+        font-weight: bold;
+        font-size: 14px;
+        position: relative;
+        top: -10px;
+         left: -10px;
+    }
+    
+    .title h1{
+        color: #003888;
+        font-weight: bold;
+    
+    }
+    .center{
+        border: 1.2px solid #003888;
+        padding: 9px;
+        width: 430px;
+        position: relative;
+        left: 20px;
+        top: 50px;
+    }
 
-//pdftk mandat.pdf output mandat1.pdf // répare le fichier
+    .span{
+        display: flex;
+        flex-direction: column;
+    }
 
-//pdftk mandat.pdf dump_data_fields // affiche tout les champ d'un formulaire
-
-//pdftk mandat.pdf generate_fdf output data.fdf    // créer un DFF fichier à partir d'un PDF
-
-require_once 'vendor/autoload.php';
-
-use mikehaertl\pdftk\Pdf;
-
-$fields = array(
-                'IdentiteMandant'    => 'NAIL AUTO',
-
-                'SIRETMandant' => '49994704200060',
-
-                'VoieAdresse' => '13',
-
-                'ExtentionAdresse'    => 'BIS',
-
-                'TypeVoieAdresse' => 'RUE',
-
-                'NomVoieAdresse'   => 'CARISTIE',
-
-                'CodePostalAdresse'   => '84100',
-
-                'CommuneAdresse'   => 'ORANGE',
-
-                'PaysAdresse'   => 'FRANCE',
-
-                'IdentiteMandataire'   => 'SINARA',
-
-                'SiretMandataire'   => '49994704800028',
-
-                'NatureOperation'   => 'DEMANDE IMMATRICULATION',
-
-                'MarqueVehicule'   => 'MERCEDES',
-
-                'NumVinVehicule'   => 'SKLFHDKLFG454DFDFDF',
-
-                'NumeroImmatriculation'   => 'TE-243-FG',
-
-                'InformationAssurance'   => 'Off',            
-
-                'LieuDeclaration'   => 'ORANGE',
-
-                'DateJourDeclaration'   => '18',
-
-                'DateMoisDeclaration'   => '02',
-
-                'DateAnneeDeclaration'   => '2022',
-
-                'OppositionUtilisationDonnees'   => 'Oui',
-
+    </style>
+    </head>
+<body>
+    <div>
+        <div>
+            <img style="width: 70px; height: 90px; position: relative; left: 20px; top: 6px;" src="src/logo.jpg" >
+            <div class="title">
+                <h1>MANDAT</h1>
+                <p class="p" style="position: relative; top: -10px;">POUR EFFECTUER <br> <span style="text-overflow: ""; width: 2px;">LES FORMALITÉS D" <span style="z-index: 20px; left: -8px; position: relative;">IMMATRICULATION AUPRÉS DU MINISTRE DE L"<span style="position: relative; left: -3.6px;">INTÉRIEUR</span></span> </span>  </p>
+                <div>
+                    <img style="position: relative; left: 20px; top: -100px; width: 60px; height: 30px;" src="src/logo-cerfa.png" >
+                   <br> <span style="position: relative; left: 18px; font-weight: bold;">N° <span>13757*03</span></span>
+                </div> 
+            </div>
+        </div>
+        <div class="center">
+            <p><span style="font-weight: bold;">Je soussigné(e)</span>, <span style="position: relative; top: -0.3px;">|</span><span style="position: relative; left: -2px;">___________________________________________________</span><span style="position: relative; left: -2px; top: -0.3px;">|</span></p> 
+            <span style="position: relative; left: 110px; font-size: 10px; top: -5px;" >NOM, NOM D"<span style="position: relative; left: -2.1px;" >USAGE</span> Le cas échéant et PRÉNOM ou RAISON SOCIALE </span>    
+            <div class="span">
+                <span>|</span><span  style="position: relative; left: -2px;">__</span><span style="position: relative; left: -2px;">|</span><span style="position: relative; left: -2px;">__</span><span style="position: relative; left: -2px;">|</span><span style="position: relative; left: -2px;">__</span><span style="position: relative; left: -2px;">|</span>
+                <p style="position: relative; left: -2px;"> <span>|</span><span  style="position: relative; left: -2px;">__</span><span style="position: relative; left: -2px;">|</span><span style="position: relative; left: -2px;">__</span><span style="position: relative; left: -2px;">|</span><span style="position: relative; left: -2px;">__</span><span style="position: relative; left: -2px;">|</span> </p>
+            </div>    
+        </div>
+          
+    </div>
+</body>
+</html>'
 );
-
-$pdf = new Pdf('mandat.pdf', [
-
-]);
-
-$pdf->fillForm($fields); // Remplissage du des champs du formulaire PDF
-
-$pdf->needAppearances(); //garantit qu'un lecteur PDF prend en charge le rendu du contenu du champ de formulaire
-
-$pdf->saveAs('filled.pdf');
-
- 
-
-$file = "filled.pdf"; // préparation pour affichage à l'écran
-
-header("Content-type: application/pdf"); // Type de contenu d'en-tête
-
-header("Content-Length: " . filesize($file));
-
-readfile($file); // Envoyez le fichier au navigateur.
-
+$content = utf8_encode(ob_get_clean());
+$html2pdf->output();
+ob_flush();
 ?>
