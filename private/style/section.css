@@ -1,0 +1,85 @@
+#content > section
+{
+     display: flex;
+     flex-direction: column;
+     row-gap: 15px;
+}
+
+.quick
+{
+     display: flex;
+     gap : 20px;
+}
+
+.quick a
+{
+     text-decoration: none;
+}
+
+.quick div
+{
+     color : var(--accentColorDark);
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     align-items: flex-start;
+     min-width : 100px;
+     height : 100px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     padding : 15px;
+     border-radius: 10px;
+     row-gap: 10px;
+}
+
+.quick div span
+{
+     background-color: var(--accentColorLight);
+     padding : 10px;
+     border-radius: 100%;
+}
+
+.quick div p
+{
+     margin : 0;
+}
+
+.data
+{
+     width : 100%;
+     border-collapse: collapse;
+}
+
+.data th
+{
+     font-weight: bold;
+}
+
+.data tr
+{
+     border-bottom : 1px solid rgb(128, 128, 128);
+}
+
+.data th, .data td
+{
+     padding : 10px 15px;
+}
+
+.data th:last-child
+{
+     width : 75px;
+}
+
+.actioncol span
+{
+     color : var(--accentColorDark);
+     background-color: var(--accentColorLight);
+     padding : 5px;
+     border-radius: 15px;
+     font-size : 20px;
+}
+
+.actioncol > *:not(:last-child)
+{
+     margin-right: 10px;
+}
+

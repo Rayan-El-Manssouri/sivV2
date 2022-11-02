@@ -3,8 +3,8 @@ require_once '../../../../../../../private/bdd/connect.php';
 $database = new Database();
 error_reporting(0);
 
-$query = "SELECT * FROM vehicule WHERE IdVehicule='".$_GET['id']."' ";
-$data = $database->read($query);
+$query1 = "SELECT * FROM vehicule WHERE IdVehicule='".$_GET['id']."' ";
+$data1 = $database->read($query1);
 
 
 ?>
@@ -22,7 +22,7 @@ $data = $database->read($query);
     </div>
 <div class="formulaire">
  
-        <?php foreach($data as $dataV2):  ?>
+        <?php foreach($data1 as $dataV2):  ?>
                 <table style="text-align: left;">
                 <h1>Modification du véhicule</h1>
                 <tr>
@@ -134,30 +134,12 @@ $data = $database->read($query);
                 <div class="envoyer">
                     <script>
                         function annuler(){
-                            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionVehicule/SuprimmerVehicule/");
+                            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/vehicle/DetailVehicule/");
                         }
                     </script>
                     <input type="button" value="Annuler" id="Annuler" onclick="annuler()">
-                    <form method="POST" >
-                        <input type="submit" value="Surpimmer" name="send"  onclick="return confirm('Etes vous sure de vouloir suprimmer cette véhicule ?')">
-
-                    </form>
                 </div>
         <?php endforeach; ?>
     </div>
-
-    <?php 
-    if($_POST['send']){
-        $query = "DELETE FROM `vehicule` WHERE IdVehicule='".$_GET['id']."' ";
-        $data = $database->read($query);
-        ?>
-        <script>
-            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionVehicule/SuprimmerVehicule/?message=ok ")
-        </script>
-        <?php 
-    }
-    
-    
-    ?>
 </body>
 </html>

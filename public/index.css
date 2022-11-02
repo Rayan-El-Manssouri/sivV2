@@ -1,243 +1,39 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: "DM Sans", sans-serif;
-    font-size: 16px;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+body
+{
+     display : block;
 }
 
-.forfait h1{
-    font-weight: 500;
-    font-size: 28px;
-    text-align: center;
-    letter-spacing: -0.5px;
-    margin-bottom: 0px;
-    color: rgb(15, 33, 55);
+.presentation
+{
+     border-radius: 20px;
+     margin : 20px;
+     overflow: hidden;
+     background-image: url('../private/src/welcome_wallpaper.jpg');
+     background-size: cover;
+     background-position: center;
 }
 
-.forfait .proposition{
-    position: relative;
-    top: 30px;
-    left: 770px;
-    background-color: rgb(16, 137, 255);
-    border-radius: 10px;
-    width: 400px;
-    height: 500px;
+.presentation div
+{
+     padding : 20px;
+     background-color: rgb(0,0,0,.5);
 }
 
-.forfait .proposition .payement{
-    position: absolute;
-    top: 40px;
-    left: 230px;
-    color: #fff;
-    font-size: 20px;
+.presentation *
+{
+     color : white;
+     text-decoration: none;
 }
 
-.forfait .proposition .Pro{
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    color: #fff;
-    font-size: 30px;
+.presentation h1
+{
+     margin : 0 0 20px 0;
 }
 
-.contenu .forfait .proposition .panier{
-    display: inline-flex;
-    /*-moz-box-pack: center;*/
-    justify-content: center;
-    /*-moz-box-align: center;*/
-    align-items: center;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    line-height: 1;
-    /*color: rgb(255, 255, 255);*/
-    padding: 21px 29px;
-    background-color: aliceblue;
-    transition: all 500ms ease 0s;
-    cursor: pointer;
-    position: absolute;
-    color: rgb(16, 137, 255);
-    top: 400px;
-    left: 90px;
+.presentation span
+{
+     font-size: 22px !important;
+     vertical-align: bottom;
+     margin-left : 5px;
 }
-
-.contenu .forfait .proposition .panier:hover{
-    color: #fff;
-    background-color: black;
-}
-
-.contenu{
-    flex: 1 0 auto;
-}
-
-.alignement{
-    display: flex;
-    position: relative;
-    left: -300px;
-}
-
-.background{
-    background-image: url(../private/src/fond.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 260px;
-    padding-bottom: 235px;
-    position: relative;
-    height: 348px;
-    background-color: rgb(16, 137, 255);
-    overflow-x: hidden;
-    box-sizing: border-box;
-    height: 1100px;
-}
-
-.Text_Accueil{
-    color: aliceblue;
-    font-weight: 500;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 40px;
-    position: relative;
-    left: 350px;
-}
-
-.underline{
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 2.11;
-    letter-spacing: -0.3px;
-    color: rgb(255, 255, 255);
-    margin-bottom: 0px;
-    max-width: 515px;
-    opacity: 0.8;
-    position: relative;
-    top: -40px;
-}
-
-.button{
-    position: relative;
-    top: -20px;
-}
-
-.Text_Accueil a{
-    text-decoration: none; 
-    outline: none 
-}
-
-.button{
-    display: inline-flex;
-    /*-moz-box-pack: center;*/
-    justify-content: center;
-    /*-moz-box-align: center;*/
-    align-items: center;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    line-height: 1;
-    color: rgb(255, 255, 255);
-    padding: 21px 29px;
-    background-color: rgb(35, 55, 77);
-    transition: all 500ms ease 0s;
-    cursor: pointer;
-}
-
-.Avantage{
-    padding: 40px 0px;
-    color: white;
-    text-align: center;
-    position: relative;
-    background-color: rgb(25, 32, 44);
-}
-
-.Automatiser{
-    color: black;
-    text-align: center;
-    font-size: 20px;
-    padding: 30px;
-    top: 200px;
-}
-
-.Automatiser .formalitees{
-    display: flex;
-    padding: 50px;
-    position: relative;
-    left: 450px;
-}
-
-.Automatiser .formalitees .Achat{
-    padding: 40px;
-    transition: all 0.35s ease;
-}
-
-.Automatiser .formalitees .Achat:hover{
-    background-color: black;
-    color: aliceblue;
-    cursor: pointer;
-}
-
-.Automatiser .formalitees .formalitees_index{
-    display: flex;
-}
-
-.AVANTAGE{
-    text-align: left;
-    padding: 70px 90px;
-    display: flex;
-}
-
-.separation{
-    padding: 80px;
-    position: relative;
-    left: 220px;
-    font-size: 20px;
-    transition: all 0.35s ease;
-}
-
-.separation:hover{
-    background-color: aliceblue;
-    color: black;
-    cursor: pointer;
-}
-
-.Avantage .AVANTAGE .tel{
-    position: relative;
-    text-align: left;
-    left: 150px;
-}
-
-.button:hover{
-    background-color: aliceblue;
-    color: rgb(35, 55, 77);
-}
-
-.fleche{
-    position: relative;
-    left: 10px;
-    top: 1px;
-}
-
-.alert{
-    color: #fff;
-    background-color: rgb(35, 55, 77);
-    box-shadow: 3px 6px 12px rgb(16, 137, 255, 0.4);
-    width: 200px;
-    padding: 20px;
-    border-radius: 3px;
-    position: fixed;
-    left: 100px;
-    top: 800px;
-    z-index: 20;
-    text-align: center;
-}
-
-
-.alert span{
-    position: relative;
-    top: 5px;
-    cursor: pointer;
-}
-
 

@@ -93,7 +93,7 @@ error_reporting(0);
         <input type="submit" name="send" value="Envoyer">
         <script>
             function revenir(){
-                location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionPersonne/AjouterPersonne/")
+                location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/people/AjouterPersonne/")
             }
         </script>
         <input type="button" name="Annuler" onclick="revenir()" value="Annuler">
@@ -166,7 +166,7 @@ error_reporting(0);
 
         <script>
             alert("Personne physique bien ajoutée !")
-            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionPersonne/AjouterPersonne/")
+            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/people/AjouterPersonne/")
         </script>
         <?php
         

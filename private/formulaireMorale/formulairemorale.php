@@ -75,7 +75,7 @@ error_reporting(0);
 </form>
 <script>
     function annuler(){
-        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionPersonne/AjouterPersonne/")
+        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/people/AjouterPersonne/")
     }
 </script>
 <?php 
@@ -128,7 +128,7 @@ if(isset($_POST['submit'])){
     ?>
     <script>
         alert("Personne morale bien ajoutée !")
-        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionPersonne/AjouterPersonne")
+        location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/people/AjouterPersonne")
     </script>
     <?php
 }

@@ -1,0 +1,13 @@
+footer
+{
+     display: flex;
+     align-items: center;
+     column-gap: 20px;
+}
+
+footer *
+{
+     margin : 0;
+     color : rgb(64, 64, 64);
+     text-decoration: none;
+}

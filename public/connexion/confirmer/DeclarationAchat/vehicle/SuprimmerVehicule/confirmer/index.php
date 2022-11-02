@@ -23,7 +23,6 @@ $data = $database->read($query);
 <div class="formulaire">
  
         <?php foreach($data as $dataV2):  ?>
-            <form method="post" >
                 <table style="text-align: left;">
                 <h1>Modification du véhicule</h1>
                 <tr>
@@ -133,57 +132,32 @@ $data = $database->read($query);
                 </div>
                 <br>
                 <div class="envoyer">
-                    <input type="submit" value="Envoyer" name="send">
                     <script>
                         function annuler(){
-                            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionVehicule/ModifierVehicule/");
+                            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/vehicle/SuprimmerVehicule/");
                         }
                     </script>
                     <input type="button" value="Annuler" id="Annuler" onclick="annuler()">
+                    <form method="POST" >
+                        <input type="submit" value="Surpimmer" name="send"  onclick="return confirm('Etes vous sure de vouloir suprimmer cette véhicule ?')">
+
+                    </form>
                 </div>
-            </form>
         <?php endforeach; ?>
     </div>
 
     <?php 
-        if(isset($_POST['send'])){
-                    $Immatriculation = $_POST['Immatriculation'];
-                    $id = $_GET['id'];
-                    $DateImmatriculation = $_POST['DateImmatriculation'];
-                    $MarqueVehicule = $_POST['MarqueVehicule'];
-                    $TypeVarianteVersion = $_POST['TypeVarianteVersion'];
-                    $DenominationCommerciale = $_POST['DenominationCommerciale'];
-                    $NumeoIdentification = $_POST['NumeoIdentification'];
-                    $GenreNational = $_POST['GenreNational'];
-                    $MotifAbscenceCertificat = $_POST['MotifAbscenceCertificat'];
-                    $PresenceCertificat = $_POST['PresenceCertificat'];
-                    $DateCertificat = $_POST['DateCertificat'];
-                    $NumeroFormule = $_POST['NumeroFormule'];
-                    $Opacite = $_POST['Opacite'];
-
-                    if($_POST['PuissanceDin'] == ""){
-                        $PuissanceDin = "NULL";
-                    }else{
-                        $P = " ".$_POST['PuissanceDin']." ";
-                        $PuissanceDin = " '".$P."' ";
-                    }
-
-                    if($_POST['PuissanceFiscale'] == ""){
-                        $PuissanceFiscale = "NULL";
-                    }else{
-                        $f = " ".$_POST['PuissanceFiscale']." ";
-                        $PuissanceFiscale = " '".$f."' ";
-                    }
-
-                   
-                    $query1 = "UPDATE vehicule SET Opacité='$Opacite', Immatriculation='$Immatriculation' , DateImmatriculation='$DateImmatriculation',  MarqueVehicule='$MarqueVehicule',  TypeVarianteVersion='$TypeVarianteVersion' , DenominationCommerciale='$DenominationCommerciale' , GenreNational='$GenreNational' , MotifAbscenceCertificat='$MotifAbscenceCertificat' , PresenceCertificat='$PresenceCertificat' , DateCertificat='$DateCertificat',  NumeroFormule='$NumeroFormule',  PuissanceDin=$PuissanceDin , PuissanceFiscale=$PuissanceFiscale, NumeoIdentification='$NumeoIdentification' WHERE IdVehicule='".$_GET['id']."'";
-                    $data1 = $database->read($query1);
-                    ?>
-                            <script>
-                                location.replace("")
-                            </script>
-                    <?php
-
-        }?>
+    if($_POST['send']){
+        $query = "DELETE FROM `vehicule` WHERE IdVehicule='".$_GET['id']."' ";
+        $data = $database->read($query);
+        ?>
+        <script>
+            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/vehicle/SuprimmerVehicule/?message=ok ")
+        </script>
+        <?php 
+    }
+    
+    
+    ?>
 </body>
 </html>

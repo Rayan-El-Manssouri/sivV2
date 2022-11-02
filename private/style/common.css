@@ -1,0 +1,30 @@
+@import url('./navbars.css');
+@import url('./header.css');
+@import url('./input.css');
+@import url('./section.css');
+@import url('./footer.css');
+
+:root
+{
+     --accentColorLight : rgb(128, 191, 255);
+     --accentColor : rgb(0, 128, 255);
+     --accentColorDark : rgb(0, 64, 128);
+}
+
+body
+{
+     min-height : 100vh;
+     margin : 0;
+     font-family: 'Noto Sans',sans-serif;
+     display: grid;
+     grid-template-columns: 20% 1fr;
+}
+
+#content
+{
+     margin : 25px;
+     display: flex;
+     flex-direction: column;
+     row-gap: 15px;
+}
+

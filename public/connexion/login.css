@@ -1,0 +1,57 @@
+body
+{
+     grid-template-columns: 40% 1fr;
+}
+
+#side_background
+{
+     background-color: var(--accentColorLight);
+}
+
+#side_background div
+{
+     opacity : .75;
+     width : 100%;
+     height : 100%;
+     background-image: url('../../private/src/login_wallpaper.jpg');
+     background-size: cover;
+     background-position: center;
+}
+
+#content
+{
+     justify-content: center;
+}
+
+.form, .form header, .form section form
+{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.form
+{
+     row-gap: 15px;
+}
+
+.form header img
+{
+     height : 150px;
+}
+
+.form *:not(input)
+{
+     text-align: center;
+}
+
+.form h1
+{
+     margin : 10px 0;
+     font-size: 2rem;
+}
+
+.error_message
+{
+     color : rgb(204, 0, 0);
+}

@@ -28,31 +28,31 @@
             <span style="position: relative; left: -300px; text-align: left; ">Bienvenue sur le panneau de la déclaration d'achat</span>
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des personnes</p>
-                <a href="GestionPersonne/AjouterPersonne/" class="Ajouter"><p>Ajouter</p></a>
-                <a href="GestionPersonne/ModifierPersonne/" class="Modifier"><p>Modifier</p> </a>
-                <a href="GestionPersonne/DétailPersonne/" class="Detail"><p>Détails</p></a>
-                <a href="GestionPersonne/SuprimmerPersonnne/" class="Supprimer"><p>Supprimer</p></a>
+                <a href="people/AjouterPersonne/" class="Ajouter"><p>Ajouter</p></a>
+                <a href="people/ModifierPersonne/" class="Modifier"><p>Modifier</p> </a>
+                <a href="people/DétailPersonne/" class="Detail"><p>Détails</p></a>
+                <a href="people/SuprimmerPersonnne/" class="Supprimer"><p>Supprimer</p></a>
             </div>
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des véhicules</p>
-                <a href="GestionVehicule/" class="Ajouter"><p>Ajouter</p></a>
-                <a href="GestionVehicule/ModifierVehicule"   class="Modifier"><p>Modifier</p></a>
-                <a href="GestionVehicule/DetailVehicule"     class="Detail"><p>Détail</p></a>
-                <a href="GestionVehicule/SuprimmerVehicule"  class="Supprimer"><p>Supprimer</p></a>
+                <a href="vehicle/" class="Ajouter"><p>Ajouter</p></a>
+                <a href="vehicle/ModifierVehicule"   class="Modifier"><p>Modifier</p></a>
+                <a href="vehicle/DetailVehicule"     class="Detail"><p>Détail</p></a>
+                <a href="vehicle/SuprimmerVehicule"  class="Supprimer"><p>Supprimer</p></a>
             </div>
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des opérations</p>
-                <a href="GestionOperation/"  class="Ajouter"><p>Ajouter</p></a>
-                <a href="GestionOperation/ModifierOperation/" class="Modifier"><p>Modifier</p></a>
-                <a href="GestionOperation/DetailOperation/" class="Detail"><p>Détail</p></a>
-                <a href="GestionOperation/SupressionOperation/" class="Supprimer"><p>Supprimer</p></a>
+                <a href="deals/"  class="Ajouter"><p>Ajouter</p></a>
+                <a href="deals/ModifierOperation/" class="Modifier"><p>Modifier</p></a>
+                <a href="deals/DetailOperation/" class="Detail"><p>Détail</p></a>
+                <a href="deals/SupressionOperation/" class="Supprimer"><p>Supprimer</p></a>
             </div>
             <br>
             <div class="acheteur">
                 <p style="color: #fff;">Gestion des pdf</p>
-                <a href="GestionFormalite/"  class="Ajouter"><p>Déclaration d'achat</p></a>
-                <a href="GestionFormalite/" class="Modifier"><p>Déclaration de cession</p></a>
-                <a href="GestionFormalite/" class="Supprimer"><p>Demande d'immatriculation </p></a>
+                <a href="pdf/"  class="Ajouter"><p>Déclaration d'achat</p></a>
+                <a href="pdf/" class="Modifier"><p>Déclaration de cession</p></a>
+                <a href="pdf/" class="Supprimer"><p>Demande d'immatriculation </p></a>
             </div>
         </div>
     </div>

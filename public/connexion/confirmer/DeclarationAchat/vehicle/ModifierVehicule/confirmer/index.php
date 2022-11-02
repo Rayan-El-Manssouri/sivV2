@@ -3,8 +3,8 @@ require_once '../../../../../../../private/bdd/connect.php';
 $database = new Database();
 error_reporting(0);
 
-$query1 = "SELECT * FROM vehicule WHERE IdVehicule='".$_GET['id']."' ";
-$data1 = $database->read($query1);
+$query = "SELECT * FROM vehicule WHERE IdVehicule='".$_GET['id']."' ";
+$data = $database->read($query);
 
 
 ?>
@@ -22,7 +22,8 @@ $data1 = $database->read($query1);
     </div>
 <div class="formulaire">
  
-        <?php foreach($data1 as $dataV2):  ?>
+        <?php foreach($data as $dataV2):  ?>
+            <form method="post" >
                 <table style="text-align: left;">
                 <h1>Modification du véhicule</h1>
                 <tr>
@@ -132,14 +133,57 @@ $data1 = $database->read($query1);
                 </div>
                 <br>
                 <div class="envoyer">
+                    <input type="submit" value="Envoyer" name="send">
                     <script>
                         function annuler(){
-                            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/GestionVehicule/DetailVehicule/");
+                            location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/vehicle/ModifierVehicule/");
                         }
                     </script>
                     <input type="button" value="Annuler" id="Annuler" onclick="annuler()">
                 </div>
+            </form>
         <?php endforeach; ?>
     </div>
+
+    <?php 
+        if(isset($_POST['send'])){
+                    $Immatriculation = $_POST['Immatriculation'];
+                    $id = $_GET['id'];
+                    $DateImmatriculation = $_POST['DateImmatriculation'];
+                    $MarqueVehicule = $_POST['MarqueVehicule'];
+                    $TypeVarianteVersion = $_POST['TypeVarianteVersion'];
+                    $DenominationCommerciale = $_POST['DenominationCommerciale'];
+                    $NumeoIdentification = $_POST['NumeoIdentification'];
+                    $GenreNational = $_POST['GenreNational'];
+                    $MotifAbscenceCertificat = $_POST['MotifAbscenceCertificat'];
+                    $PresenceCertificat = $_POST['PresenceCertificat'];
+                    $DateCertificat = $_POST['DateCertificat'];
+                    $NumeroFormule = $_POST['NumeroFormule'];
+                    $Opacite = $_POST['Opacite'];
+
+                    if($_POST['PuissanceDin'] == ""){
+                        $PuissanceDin = "NULL";
+                    }else{
+                        $P = " ".$_POST['PuissanceDin']." ";
+                        $PuissanceDin = " '".$P."' ";
+                    }
+
+                    if($_POST['PuissanceFiscale'] == ""){
+                        $PuissanceFiscale = "NULL";
+                    }else{
+                        $f = " ".$_POST['PuissanceFiscale']." ";
+                        $PuissanceFiscale = " '".$f."' ";
+                    }
+
+                   
+                    $query1 = "UPDATE vehicule SET Opacité='$Opacite', Immatriculation='$Immatriculation' , DateImmatriculation='$DateImmatriculation',  MarqueVehicule='$MarqueVehicule',  TypeVarianteVersion='$TypeVarianteVersion' , DenominationCommerciale='$DenominationCommerciale' , GenreNational='$GenreNational' , MotifAbscenceCertificat='$MotifAbscenceCertificat' , PresenceCertificat='$PresenceCertificat' , DateCertificat='$DateCertificat',  NumeroFormule='$NumeroFormule',  PuissanceDin=$PuissanceDin , PuissanceFiscale=$PuissanceFiscale, NumeoIdentification='$NumeoIdentification' WHERE IdVehicule='".$_GET['id']."'";
+                    $data1 = $database->read($query1);
+                    ?>
+                            <script>
+                                location.replace("")
+                            </script>
+                    <?php
+
+        }?>
 </body>
 </html>
