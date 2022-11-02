@@ -13,7 +13,7 @@
     <span>|</span><span  style="position: relative; left: -2px;">______</span><span style="position: relative; left: -2px;">|</span>
 
 */
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'./vendor/autoload.php';
 use Spipu\Html2Pdf\Html2Pdf;
 $html2pdf = new Html2Pdf();
 
