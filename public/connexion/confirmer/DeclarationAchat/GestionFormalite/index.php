@@ -28,13 +28,17 @@ $data1 = $database->read($query1);
         </select>
 
         <input type="submit" value="Mandat" name="mandat">
-        <input type="submit" value="Certificat de cession">
+        <input type="submit" value="Certificat de cession" name="certificat_de_cession">
         <input type="submit" value="Déclaration achat">
     </form>
 
     <?php 
     if(isset($_POST['mandat'])){
         header("Location: Mandat/traitement.php");
+    }
+
+    if(isset($_POST['certificat_de_cession'])){
+        header("Location: certificat_de_cession/traitement.php");
     }
     
     
