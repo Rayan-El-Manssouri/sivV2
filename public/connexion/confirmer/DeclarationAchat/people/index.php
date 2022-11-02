@@ -20,10 +20,16 @@
         </header>
         <section>
             <article class="quick">
-                <a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/people/AjouterPersonne/index.php">
+                <a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/people/add_moral.php">
                     <div>
-                        <span class="material-symbols-outlined">add</span>
-                        <p>Ajouter</p>
+                        <span class="material-symbols-outlined">domain_add</span>
+                        <p>Ajouter une entreprise</p>
+                    </div>
+                </a>
+                <a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/people/add_physical.php">
+                    <div>
+                        <span class="material-symbols-outlined">person_add</span>
+                        <p>Ajouter une personne</p>
                     </div>
                 </a>
             </article>
