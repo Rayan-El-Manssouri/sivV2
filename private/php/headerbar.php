@@ -24,8 +24,14 @@
      <div class="separator"></div>
      <a href="">
           <div>
-               <span class="material-symbols-outlined">help</span>
+               <span class="material-symbols-outlined">quiz</span>
                <p>Aide</p>
+          </div>
+     </a>
+     <a href="">
+          <div>
+               <span class="material-symbols-outlined">support_agent</span>
+               <p>Contact</p>
           </div>
      </a>
      <div class="space"></div>

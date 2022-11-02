@@ -19,13 +19,43 @@
             <div>
                 <h1>Bienvenue sur Siv</h1>
                 <p>Le gestionnaire pour les loueurs de véhicules qui change la vie.</p>
-                <a href="#">
+                <p>
                     Pourquoi nous choisir ?
                     <span class="material-symbols-outlined">arrow_downward</span>
-                </a>
+                </p>
             </div>
         </div>
-        <p>Message pour Rayan : l'accueil n'est pas terminé !</p>
+        <div class="grid_feat">
+            <img src="http://localhost/sivV2/private/src/complete.jpg">
+            <div>
+                <h2>Avec Siv, vous pouvez tout faire</h2>
+                <p>En nous choisissant, vous n'avez pas besoin d'autres logiciels de gestions.<br>
+                Vous pouvez générer des PDF ; mais aussi gérer vos commandes, vos clients et vos voitures.</p>
+            </div>
+        </div>
+        <div class="grid_feat">
+            <div>
+                <h2>Avec Siv, vous ne perdez pas de temps</h2>
+                <p>Siv a été conçu pour être simple et intuitifs pour les utilisateurs.<br>
+                Avec Siv, vous n'avez pas perdre du temps à comprendre comment utiliser votre outil de travail.</p>
+            </div>
+            <img src="http://localhost/sivV2/private/src/intuitive.jpg">
+        </div>
+        <div class="grid_feat">
+            <img src="http://localhost/sivV2/private/src/assistance.jpg">
+            <div>
+                <h2>Avec Siv, vous n'êtes jamais laissé seul</h2>
+                <p>En choisissant Siv, vous bénéficier d'une assistance afin de vous aider dans tous vos problèmes. </p>
+            </div>
+        </div>
+        <div class="large_container">
+            <h2>Vous êtes convaincu ?</h2>
+            <p>Alors contactez-nous pour signer un contrat !</p>
+            <a href="">
+                Contactez-nous
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </div>
     </section>
     <?php require_once '../private/php/footer.php'; ?>
 </body>

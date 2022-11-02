@@ -25,15 +25,65 @@ body
      text-decoration: none;
 }
 
-.presentation h1
+.presentation h1,
+.large_container h2
 {
      margin : 0 0 20px 0;
 }
 
-.presentation span
+.presentation span, .large_container span
 {
      font-size: 22px !important;
      vertical-align: bottom;
      margin-left : 5px;
+}
+
+.grid_feat
+{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     column-gap: 20px;
+     margin : 20px;
+}
+
+.grid_feat > img
+{
+     border-radius: 20px;
+     width : 100%;
+}
+
+.grid_feat > div
+{
+     margin : 10px;
+}
+
+.grid_feat > div h2
+{
+     margin : 0 0 15px 0;
+}
+
+.grid_feat > div p
+{
+     margin : 0;
+}
+
+.large_container
+{
+     border : 1px solid var(--accentColorDark);
+     background-color: var(--accentColorLight);
+     margin : 30px 20px;
+     padding: 20px;
+     border-radius: 20px;
+}
+
+.large_container *
+{
+     color : var(--accentColorDark);
+     text-decoration: none;
+}
+
+footer
+{
+     margin : 20px 30px;
 }
 
