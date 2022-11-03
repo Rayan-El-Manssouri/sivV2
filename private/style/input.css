@@ -21,7 +21,8 @@ input[type=time],
 input[type=url],
 input[type=week],
 progress,
-textarea
+textarea,
+select
 /* All */
 {
      margin : 10px;
@@ -58,7 +59,8 @@ input[type=text],
 input[type=time],
 input[type=url],
 input[type=week],
-textarea
+textarea,
+select
 {
      height: 40px;
 }
@@ -80,7 +82,8 @@ input[type=text],
 input[type=time],
 input[type=url],
 input[type=week],
-textarea
+textarea,
+select
 {
      padding : 10px 20px;
      border : 1px rgb(191, 191, 191) solid;
@@ -120,7 +123,8 @@ input[type=text],
 input[type=time],
 input[type=url],
 input[type=week],
-textarea
+textarea,
+select
 {
      border-radius: 10px;
 }

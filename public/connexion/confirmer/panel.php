@@ -26,7 +26,8 @@
             <em>Bienvenue dans l'espace central de gestion.</em>
         </header>
         <section>
-            <p>Blablabla</p>
+            <p>Message pour Rayan : il faudra voir quelles données mettre ici. :/</p>
+            <p>Dans tout le projet : penser à finir de relier le back et le front & supprimer les anciens fichiers devenus inutiles que j'ai voulu garder pour toi.</p>
         </section>
         <?php require_once '../../../private/php/footer.php'; ?>
     </div>

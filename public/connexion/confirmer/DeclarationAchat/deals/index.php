@@ -37,7 +37,7 @@ $data6 = $database->read($query6);
         </header>
         <section>
             <article class="quick">
-                <a href="">
+                <a href="add_deal.php">
                     <div>
                         <span class="material-symbols-outlined">add</span>
                         <p>Ajouter</p>
