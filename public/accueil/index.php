@@ -13,7 +13,7 @@
     <title>Bienvenue sur Siv</title>
 </head>
 <body>
-    <?php require_once '../private/php/headerbar.php'; ?>
+    <?php require_once '../../private/php/headerbar.php'; ?>
     <section>
         <div class="presentation">
             <div>
@@ -51,12 +51,12 @@
         <div class="large_container">
             <h2>Vous êtes convaincu ?</h2>
             <p>Alors contactez-nous pour signer un contrat !</p>
-            <a href="">
+            <a href="../contact">
                 Contactez-nous
                 <span class="material-symbols-outlined">arrow_forward</span>
             </a>
         </div>
     </section>
-    <?php require_once '../private/php/footer.php'; ?>
+    <?php require_once '../../private/php/footer.php'; ?>
 </body>
 </html>

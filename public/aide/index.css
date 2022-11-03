@@ -1,0 +1,62 @@
+body
+{
+     display : block;
+}
+
+section > *
+{
+     margin : 20px;
+}
+
+.list h2
+{
+     margin : 0;
+}
+
+.list a
+{
+     color : black;
+}
+
+.list ul
+{
+     margin : 10px 0;
+}
+
+.list li
+{
+     margin : 5px 0;
+}
+
+.large_container
+{
+     border : 1px solid var(--accentColorDark);
+     background-color: var(--accentColorLight);
+     margin : 30px 20px;
+     padding: 20px;
+     border-radius: 20px;
+}
+
+.large_container *
+{
+     color : var(--accentColorDark);
+     text-decoration: none;
+}
+
+.large_container h2
+{
+     margin : 0 0 20px 0;
+}
+
+.large_container span
+{
+     font-size: 22px !important;
+     vertical-align: bottom;
+     margin-left : 5px;
+}
+
+footer
+{
+     margin : 20px 30px;
+}
+

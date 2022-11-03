@@ -9,7 +9,7 @@
                     header("Location: public/connexion/confirmer/panel.php");
                }
                else{
-                    header("Location: public/");
+                    header("Location: public/accueil");
                }     
           ?>
      </body>

@@ -30,9 +30,9 @@
                <p>PDF</p>
           </div>
      </a>
-     <a href="">
+     <a href="http://localhost/sivV2/public/aide">
           <div>
-               <span class="material-symbols-outlined">help</span>
+               <span class="material-symbols-outlined">quiz</span>
                <p>Aide</p>
           </div>
      </a>

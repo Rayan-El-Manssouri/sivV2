@@ -8,7 +8,7 @@ body
      border-radius: 20px;
      margin : 20px;
      overflow: hidden;
-     background-image: url('../private/src/welcome_wallpaper.jpg');
+     background-image: url('http://localhost/sivV2/private/src/welcome_wallpaper.jpg');
      background-size: cover;
      background-position: center;
 }

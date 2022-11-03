@@ -1,6 +1,6 @@
 <?php
      session_start();
-     require_once '../private/GestionSession/auth.php';
+     require_once '../../private/GestionSession/auth.php';
      error_reporting(0);
 ?>
 <header id="headerbar">
@@ -22,13 +22,13 @@
           </div>
      </a>
      <div class="separator"></div>
-     <a href="">
+     <a href="http://localhost/sivV2/public/aide/">
           <div>
                <span class="material-symbols-outlined">quiz</span>
                <p>Aide</p>
           </div>
      </a>
-     <a href="">
+     <a href="http://localhost/sivV2/public/contact">
           <div>
                <span class="material-symbols-outlined">support_agent</span>
                <p>Contact</p>

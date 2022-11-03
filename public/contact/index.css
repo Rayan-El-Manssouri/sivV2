@@ -1,0 +1,15 @@
+body
+{
+     display : block;
+}
+
+section > *
+{
+     margin : 20px;
+}
+
+footer
+{
+     margin : 20px 30px;
+}
+
