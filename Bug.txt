@@ -1,0 +1,15 @@
+------------------ Liste des bugs à régler --------------------
+(Résolu) - Supprimer : redirection une fois ok.
+(Résolu) - Ajouter un acheteur : supprimer la ligne Situation qui figure en double
+(Résolu) - Ajouter un acheteur : ordonner adresse : Numero Voie , Extention Voie , Type Voie Adresse , Nom Voie (personne physique et morale) 
+(Résolu) - Ajouter un acheteur : mettre tout en majuscules dans Extention Voie  et Type Voie Adresse 
+(Résolu) - Ajouter un vendeur : supprimer "---------------Type : ---------------
+(Résolu) - Formulaire pour un vendeur considérer comme personne physique " (personne physique et personne morale) idem pour acheteur
+(Résolu) - Ajouter un vendeur : ordonner adresse : Numero Voie , Extention Voie , Type Voie Adresse , Nom Voie (personne physique et morale) 
+(Résolu) - Ajouter un vendeur : mettre tout en majuscules dans Extention Voie  et Type Voie Adresse 
+(Résolu) - Ajouter un vendeur : supprimer echo (insert into lors de l'envoie)
+(Résolu) - Supprimer vendeur : ajouter la raison social en plus du nom 
+(Résolu) - Liste vendeur : ajouter la raison social en plus du nom 
+(Résolu) - Opération : Supprimer l'echo
+(Résolu) - Pour acheteur et vendeur ajouter liste physique et personne morale pour palier au problème recherche sur Nom et sur Raison sociale
+(Résolu) - Opération : modifier tableau en span

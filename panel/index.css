@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../src/fond.jpg);
+    background-size: cover;
+}
+
+.inscription{
+    position: relative;
+    top: 300px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.inscription input{
+    padding: 10px 10px;
+    text-align: left;
+    
+}
+
+.inscription p{
+    font-size: 20px;
+    color: grey;
+}
+
+.inscription .button{
+    border: none;
+    border: 1px solid grey;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+
+}
+
+.inscription .button:hover{
+    background-color: gray;
+}
+
+.inscription .button::before{
+    background-color: 1px solid grey;
+}
+
+
+.inscription input::placeholder{
+    color: grey;
+    background-color: transparent;
+}

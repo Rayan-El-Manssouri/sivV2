@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../../../src/fond.jpg);
+    width: 100%;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+.perssone{
+    position: relative;
+    left: 800px;
+    width: 1000px;
+}
+
+.perssone button{
+    position: relative;
+    border: none;
+    border: 1px solid grey;
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    top: 230px;
+    left: -50px;
+}
+
+.revenir{
+    position: relative;
+    top: 8px;
+}
+.perssone button:hover{
+    background-color: grey;
+}
+
+.form{
+    position: relative;
+    left: 755px;
+    top: 250px;
+    width: 100%;
+}
+
+
+
+header{
+    position: absolute;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    
+}
+
+header .sticky{
+    background-color: white;
+}
+
+header nav{
+    position: fixed;
+    width: 100%;
+
+    
+}
+
+header nav li{
+    margin: 0 15px;
+
+}
+
+header nav ul{
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    overflow: hidden;
+
+}
+
+
+
+
+
+header nav ul li{
+    display: inline-block;
+    padding: 20px;
+
+
+}
+header nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+
+}
+header nav ul li a:hover{
+    opacity: 1;
+}
+header .symbole{
+    position: fixed;
+    float: left;
+    top: 15px;
+    margin: 16px 36px;
+    font-size: 24px;
+
+}    
+
+.Bouton{
+    position: relative;
+    top: 20px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid grey;
+    background-color: transparent;
+    width: 120px;
+    height: 50px;
+}
+
+.Bouton:hover{
+    background-color: grey;
+}

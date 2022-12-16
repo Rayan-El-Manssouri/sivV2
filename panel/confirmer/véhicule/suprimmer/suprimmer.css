@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../../../../src/fond.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden; 
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Montserrat', sans-serif;
+    background-attachment: fixed;
+
+
+}
+
+header{
+    position: absolute;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    
+}
+
+header .sticky{
+    background-color: white;
+}
+
+header nav{
+    position: fixed;
+    width: 100%;
+
+    
+}
+
+header nav li{
+    margin: 0 15px;
+
+}
+
+header nav ul{
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    overflow: hidden;
+
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 20px;
+
+
+}
+header nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+
+}
+header nav ul li a:hover{
+    opacity: 1;
+}
+header .symbole{
+    position: fixed;
+    float: left;
+    top: 15px;
+    margin: 16px 36px;
+    font-size: 24px;
+}    
+
+
+.affichage{
+    position: absolute;
+    left: 730px;
+    top: 320px;
+}
+
+.search{
+    position: relative;
+    left: 730px;
+    top: 250px;
+}
+
+.search .Bouton{
+    border: none;
+    border: 1px solid grey;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search .Bouton:hover{
+    background-color: grey;
+}
+
+.Bouton_renvoyer{
+    position: relative;
+    left: 1030px;
+    top: 212px;
+    
+}
+
+.search .form-control{
+    background-color: transparent;
+    padding: 10px;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Bouton_renvoyer button{
+    border: none;
+    border: 1px solid grey;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    left: 20px;
+}
+
+.Bouton_renvoyer button:hover{
+    background-color: grey;
+}
+
+

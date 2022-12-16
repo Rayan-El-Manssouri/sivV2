@@ -1,0 +1,218 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../../src/fond.jpg);
+    box-sizing: border-box;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Montserrat', sans-serif;
+    background-attachment: fixed;
+}
+.globale .véhicule{
+    position: relative;
+    top: 140px;
+    right: 50px;
+}
+
+
+.globale h1{
+    position: relative;
+    text-align: center;
+    top: 50px;
+
+}
+
+.globale a{
+    position: relative;
+    text-decoration: none;
+    justify-content: center;
+    margin: 50px;
+    top: 100px;
+}
+
+.globale a button{
+    border: none;
+    border: 1px solid grey;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    height: 50px;
+    
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.globale a button:hover{
+    background-color: gray;
+
+}
+
+.globale .supressionPhysique button{
+    width: 200px;
+}
+
+.globale .supresionMoral button{
+    width: 200px;
+}
+
+
+
+
+.globale a button{
+    position: relative;
+    cursor: pointer;
+  
+}
+
+.globale .véhicule{
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+
+header{
+    position: absolute;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    
+}
+
+header .sticky{
+    background-color: white;
+}
+
+header nav{
+    position: fixed;
+    width: 100%;
+
+    
+}
+
+header nav li{
+    margin: 0 15px;
+
+}
+
+header nav ul{
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    overflow: hidden;
+
+}
+
+
+
+
+
+header nav ul li{
+    display: inline-block;
+    padding: 20px;
+
+
+}
+header nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+
+}
+header nav ul li a:hover{
+    opacity: 1;
+}
+header .symbole{
+    position: fixed;
+    float: left;
+    top: 15px;
+    margin: 16px 36px;
+    font-size: 24px;
+
+}    
+
+
+/*Style footer*/
+.container{
+	max-width: 1170px;
+	margin:auto;
+    
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul{
+
+	list-style: none;
+    position: relative;
+    right: 40px;
+}
+
+
+.footer{
+    position: absolute;
+    width: 100%;
+    top: 1800px;
+    padding: 70px 0;
+    background-color: #24262b;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0px 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500px;
+  position: relative;
+}
+
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box ;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300px;
+    color: #bbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 10px;
+
+}    
+
+

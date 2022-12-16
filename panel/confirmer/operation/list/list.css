@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url(../../../../src/fond.jpg);
+    background-image: cover;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; 
+}
+
+
+
+
+header{
+    position: absolute;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    
+}
+
+header .sticky{
+    background-color: white;
+}
+
+header nav{
+    position: fixed;
+    width: 100%;
+
+    
+}
+
+header nav li{
+    margin: 0 15px;
+
+}
+
+header nav ul{
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    overflow: hidden;
+
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 20px;
+
+
+}
+header nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+
+}
+header nav ul li a:hover{
+    opacity: 1;
+}
+header .symbole{
+    position: fixed;
+    float: left;
+    top: 15px;
+    margin: 16px 36px;
+    font-size: 24px;
+}    
+
+
+
+.search{
+    position: relative;
+    top: 250px;
+    left: 600px;
+    width: 800px;
+}
+
+.search .form-control{
+    width: 190px;
+    background-color: transparent;
+    text-align: left;
+    left: 5px;
+
+}
+
+.search button{
+    width: 200px;
+    height: 50px;
+}
+
+.search input{
+    width: 150px;
+    height: 50px;
+}
+
+.search input[type="submit"],button{
+    border: 1px solid grey;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+.search input:hover{
+    background-color: grey;
+}
+
+.search button:hover{
+    background-color: grey;
+}
+
+.affichage{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    width: 250px;
+}
+
+.Bouton_renvoyer{
+    position: relative;
+    justify-content: center;
+    left: 1000px;
+    top: 195px;
+    width: 150px;
+}
+
+.Bouton_renvoyer button{
+    padding: 20px;
+
+}
+
+.Bouton_renvoyer button:hover{
+    background-color: grey;
+}
