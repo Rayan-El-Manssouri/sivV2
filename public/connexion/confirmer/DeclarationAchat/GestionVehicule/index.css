@@ -1,0 +1,21 @@
+body{
+    background-image: url(../../../../../private//src//fond.png);
+    overflow-x: hidden;
+}
+
+
+.véhicule{
+    color: #fff;
+    position: relative;
+    left: 800px;
+    top: 200px;
+    text-align: left;
+}
+span.carte{
+    color: red;
+}
+
+p{
+    padding: 20px;
+
+}

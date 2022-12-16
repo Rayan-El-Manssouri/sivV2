@@ -9,26 +9,30 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link href="http://localhost/sivV2/private/style/common.css" rel="stylesheet">
-    <link href="http://localhost/sivV2/private/src/logo2.png" rel="icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="panel.css" rel="stylesheet">
+    <link href="../../../private/src/logo2.png" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panneau</title>
+    <?php echo '<link href="http://localhost/sivV2/private/style/headerConnexion/header.css" rel="stylesheet" type="text/css" />';?>
 </head>
 <body>
-    <?php require_once '../../../private/php/sidebar.php'; ?>
-    <div id="content">
-        <header>
-            <h1>Panneau</h1>
-            <em>Bienvenue dans l'espace central de gestion.</em>
-        </header>
-        <section>
-            <p>Blablabla</p>
-        </section>
-        <?php require_once '../../../private/php/footer.php'; ?>
+    <div class="contenu">
+        <?php require_once '../../../private/style/headerConnexion/header.php'; ?>
+        <div>
+            <h1 style="position: relative; left: 750px; top: 250px; color: #fff;">Choisissez votre formalité :</h1>
+            <div class="choix">
+                <a href="DeclarationAchat/">
+                    <button>Déclaration d'achat</button>
+                </a>
+                <a href="">
+                    <button>Déclaration de cession</button>
+                </a>
+                <a href="">
+                    <button>Demande d'immatriculation</button>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
