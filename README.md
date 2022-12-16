@@ -1,11 +1,15 @@
+<p align="center">
+  <a href="https://github.com/Rayan-El-Manssouri/sivV2#readme">
+    <img src="./private/src/logo2.png" alt="SivV2 logo" width="200" height="165">
+  </a>
+</p>
+
+
 # Siv V2
 
 Siv est un gestionnaire de déclarations de véhicules. 
 Créé en 2022, le projet est actuellement à sa deuxième version, qui optimise la sécurité et l'intuitivité. 
 Le but de Siv est de faciliter les déclarations (d'achat, de cession et d'immatriculation).
-
-<img src="private/src/sivV2.png">
-
 
 ### Structure
 
