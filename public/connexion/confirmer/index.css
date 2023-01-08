@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url(http://localhost/sivV2/private/src/fond.png);
+    background-size: cover;
+}
+
+.global {
+    position: relative;
+    top: 20px;
+    left: 450px;
+}
+
+.global span {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    right: 150px;
+}
+
+.global .Connexion {
+    position: relative;
+    left: 1250px;
+}
+
+.acheteur {
+    position: relative;
+    text-align: center;
+    top: 40px;
+    font-size: 30px;
+}
+
+.global .acheteur a {
+    text-decoration: none;
+    padding: 30px;
+}
+
+.global .acheteur .Ajouter,
+.global .acheteur .Supprimer,
+.global .acheteur .Modifier,
+.global .acheteur .Detail {
+    position: relative;
+}
+
+.global .acheteur .Ajouter {
+    left: -100px;
+}
+
+.global .acheteur .Supprimer {
+    left: 100px;
+}
+
+.global .acheteur .Modifier {
+    left: -40px;
+}
+
+.global .acheteur .Detail {
+    left: 20px;
+}
+
+.acheteur {
+    padding: 40px;
+    position: relative;
+    left: 70px;
+    width: 1100px;
+}
+
+.acheteur a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.acheteur a {
+    border: none;
+    border-radius: 30px;
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(35, 55, 77);
+    transition: all 500ms ease 0s;
+    cursor: pointer;
+    position: relative;
+    top: 50px;
+    height: 5px;
+}
+
+.acheteur p {
+    position: relative;
+    top: -5px;
+}
+
+.acheteur a:hover {
+    background-color: #fff;
+    color: black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

@@ -33,7 +33,7 @@
                         <?php 
                           if(est_connecte()){
                             ?>
-                                <a href="connexion/confirmer/panel.php" style="text-decoration : none;" class="button">Aller au panelle</a>
+                                <a href="connexion/confirmer/" style="text-decoration : none;" class="button">Aller au panelle</a>
                             <?php
                          }else{
                             ?>

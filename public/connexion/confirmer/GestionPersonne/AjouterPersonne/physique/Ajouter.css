@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM sans', sans-serif;
+}
+
+body {
+    background-image: url(../../../../../../private/src/fond.png);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.personnePhysique h1 {
+    position: absolute;
+    text-align: center;
+    left: -100px;
+}
+
+.personnePhysique {
+    color: #fff;
+    width: 1400px;
+    position: relative;
+    left: 750px;
+    top: 50px;
+}
+
+.personnePhysique .Formulaire {
+    position: relative;
+    left: 100px;
+    top: 100px;
+}

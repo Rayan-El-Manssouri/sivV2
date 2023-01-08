@@ -215,6 +215,11 @@
                     </div>
                     <div class="Bouton2">
                         <input type="submit" name="send" id="personne" class="Bouton" ></input>
-                        <button class="Bouton"><a href="http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/">Annuler</a> </button>
+                        <script>
+                            function revenir(){
+                                location.replace("http://localhost/sivV2/public/connexion/confirmer/")
+                            }
+                        </script>
+                        <button class="Bouton" onclick="revenir()">Annuler </button>
                     </div>
 </form>

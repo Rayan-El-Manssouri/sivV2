@@ -1,0 +1,17 @@
+body {
+    color: #fff;
+    background-image: url(../../../../../../private/src//fond.png);
+    overflow-x: hidden;
+}
+
+
+.formulaire {
+    position: relative;
+    left: 800px;
+    top: 100px;
+    text-align: left;
+}
+
+.formulaire td {
+    padding: 20px;
+}
