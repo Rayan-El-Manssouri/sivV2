@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morale</title>
+    <title>Siv - Personne - Ajouter - Morale</title>
     <link href="morale.css" rel="stylesheet">
     <link href="../../../../../../private/src/logo2.png" rel="icon">
 </head>

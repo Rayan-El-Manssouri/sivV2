@@ -188,7 +188,7 @@ if(!empty($_POST['send'])){
     print_r($query3);
     ?>
     <script>
-        location.replace("http://localhost/sivV2/public/connexion/confirmer/ModifierPersonne/confirmation/physique/confirmation.php?id=<?=$_GET['id']?>")
+        location.replace("http://localhost/sivV2/public/connexion/confirmer/GestionPersonne/ModifierPersonne/confirmation/physique/confirmation.php?id=<?=$_GET['id']?>")
     </script>
     <?php
    

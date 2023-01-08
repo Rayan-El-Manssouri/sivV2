@@ -10,97 +10,70 @@ body {
     background-size: cover;
 }
 
+:root {
+    --Color: rgb(35, 55, 77);
+    --Color-1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .global {
     position: relative;
-    top: 20px;
-    left: 450px;
-}
-
-.global span {
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 20px;
-    right: 150px;
-}
-
-.global .Connexion {
-    position: relative;
-    left: 1250px;
-}
-
-.acheteur {
-    position: relative;
-    text-align: center;
-    top: 40px;
+    top: 10px;
+    left: 400px;
     font-size: 30px;
+    color: #fff;
+    top: 40px;
 }
 
-.global .acheteur a {
-    text-decoration: none;
-    padding: 30px;
-}
 
-.global .acheteur .Ajouter,
-.global .acheteur .Supprimer,
-.global .acheteur .Modifier,
-.global .acheteur .Detail {
+.global p {
     position: relative;
+    left: 400px;
 }
 
-.global .acheteur .Ajouter {
-    left: -100px;
-}
-
-.global .acheteur .Supprimer {
-    left: 100px;
-}
-
-.global .acheteur .Modifier {
-    left: -40px;
-}
-
-.global .acheteur .Detail {
-    left: 20px;
-}
-
-.acheteur {
-    padding: 40px;
+.global h1 {
+    font-size: 35px;
     position: relative;
-    left: 70px;
-    width: 1100px;
+    top: 40px;
+    border-bottom: 2px solid white;
+    width: 60%;
+    padding: 10px;
 }
 
-.acheteur a {
+
+.global ul {
+    list-style: none;
+    position: relative;
+    top: 70px;
+    padding: 10px;
+    width: 30%;
+    outline: none;
+
+
+}
+
+.global ul li {
+    display: inline-block;
+    margin: 10px;
+    outline: none;
+}
+
+.global ul li a {
     text-decoration: none;
     color: #fff;
+    background-color: var(--Color);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.35s ease;
+
 }
 
-.acheteur a {
-    border: none;
-    border-radius: 30px;
-    display: inline-flex;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    line-height: 1;
-    color: rgb(255, 255, 255);
-    background-color: rgb(35, 55, 77);
-    transition: all 500ms ease 0s;
-    cursor: pointer;
-    position: relative;
-    top: 50px;
-    height: 5px;
-}
-
-.acheteur p {
-    position: relative;
-    top: -5px;
-}
-
-.acheteur a:hover {
+.global ul li a:hover {
     background-color: #fff;
     color: black;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: var(--Color-1);
+}
+
+.global div {
+    padding: 30px;
 }

@@ -16,45 +16,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="index.css" rel="stylesheet">
-    <link href="../../../../private/src/logo2.png" rel="icon">
+    <link href="../../../private/src/logo2.png" rel="icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Panneau d'achat</title>
+    <title>Siv - Panneau</title>
 </head>
 <body>
     <div class="contenu">
         <?php require_once '../../../private/style/headerformalitees/header.php';?>
-        <div class="global" style="color: #fff;">
-            <p class="Connexion">Connecté en tant que : <?php echo  $email ?></p>
-            <span style="position: relative; left: -300px; text-align: left; ">Bienvenue sur le panneau de la déclaration d'achat</span>
-            <div class="acheteur">
-                <p style="color: #fff;">Gestion des personnes</p>
-                <a href="GestionPersonne/AjouterPersonne/" class="Ajouter"><p>Ajouter</p></a>
-                <a href="GestionPersonne/ModifierPersonne/" class="Modifier"><p>Modifier</p> </a>
-                <a href="GestionPersonne/DétailPersonne/" class="Detail"><p>Détails</p></a>
-                <a href="GestionPersonne/SuprimmerPersonnne/" class="Supprimer"><p>Supprimer</p></a>
+        <div class="global" style="">
+            <p>Bienvenue sur le panneau de la déclaration d'achat</p>
+            <div>
+                <h1>Géré les personnes</h1>
+                <ul>
+                    <li><a href="./GestionPersonne/AjouterPersonne">Ajouter</a></li>
+                    <li><a href="./GestionPersonne/ModifierPersonne/">Modifier</a></li>
+                    <li><a href="./GestionPersonne/DétailPersonne/">Détail</a></li>
+                    <li><a href="./GestionOperation/SupressionOperation/">Suprimmer</a></li>
+                </ul>
             </div>
-            <div class="acheteur">
-                <p style="color: #fff;">Gestion des véhicules</p>
-                <a href="GestionVehicule/" class="Ajouter"><p>Ajouter</p></a>
-                <a href="GestionVehicule/ModifierVehicule"   class="Modifier"><p>Modifier</p></a>
-                <a href="GestionVehicule/DetailVehicule"     class="Detail"><p>Détail</p></a>
-                <a href="GestionVehicule/SuprimmerVehicule"  class="Supprimer"><p>Supprimer</p></a>
+            <div>
+                <h1>Géré les véhicules</h1>
+                <ul>
+                    <li><a href="./GestionVehicule/">Ajouter</a></li>
+                    <li><a href="./GestionVehicule/ModifierVehicule/">Modifier</a></li>
+                    <li><a href="./GestionVehicule/DetailVehicule/">Détail</a></li>
+                    <li><a href="./GestionVehicule/SuprimmerVehicule/">Suprimmer</a></li>
+                </ul>
             </div>
-            <div class="acheteur">
-                <p style="color: #fff;">Gestion des opérations</p>
-                <a href="GestionOperation/"  class="Ajouter"><p>Ajouter</p></a>
-                <a href="GestionOperation/ModifierOperation/" class="Modifier"><p>Modifier</p></a>
-                <a href="GestionOperation/DetailOperation/" class="Detail"><p>Détail</p></a>
-                <a href="GestionOperation/SupressionOperation/" class="Supprimer"><p>Supprimer</p></a>
+            <div>
+                <h1>Géré les opérations</h1>
+                <ul>
+                    <li><a href="./GestionOperation/">Ajouter</a></li>
+                    <li><a href="./GestionOperation/ModifierOperation">Modifier</a></li>
+                    <li><a href="./GestionOperation/DetailOperation/">Détail</a></li>
+                    <li><a href="./GestionOperation/SupressionOperation/">Suprimmer</a></li>
+                </ul>
             </div>
-            <br>
-            <div class="acheteur">
-                <p style="color: #fff;">Gestion des opérations</p>
-                <a href="GestionOperation/"  class="Ajouter"><p>Mandat</p></a>
-                <a href="GestionOperation/ModifierOperation/" class="Modifier"><p>Déclaration de cession</p></a>
-                <a href="GestionOperation/DetailOperation/" class="Detail"><p>Déclaration d'immatriculation</p></a>
-                <a href="GestionOperation/SupressionOperation/" class="Supprimer"><p>Déclaration d'achat</p></a>
+            <div>
+                <h1>Générer les pdf</h1>
+                <ul>
+                    <li><a href="./GestionFormalite/Mandat/Mandat.php">Mandat</a></li>
+                    <li><a href="">Déclaration achat</a></li>
+                    <li><a href="">Déclaration de cession</a></li>
+                    <li><a href="">Déclaration d'immatriculation</a></li>
+                </ul>
             </div>
+
+        
         </div>
     </div>
 </body>

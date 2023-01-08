@@ -6,7 +6,7 @@
                  <span>Vente</span>
     </p>
     <br>
-    <p>Nom de l'Operation : <input type="text" name="NomOperation" placeholder="NomOperation" required></p>
+    <p>Nom de l'Operation : <input type="text" name="NomOperation" placeholder="Nom Operation" required></p>
     <br>
     <div>
                         <br>
