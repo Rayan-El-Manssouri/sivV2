@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 28 oct. 2022 à 10:59
+-- Généré le : lun. 09 jan. 2023 à 11:54
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -27,6 +27,11 @@ SET time_zone = "+00:00";
 -- Structure de la table `adresse`
 --
 
+
+CREATE DATABASE siv;
+
+USE siv;
+
 DROP TABLE IF EXISTS `adresse`;
 CREATE TABLE IF NOT EXISTS `adresse` (
   `IdVille` smallint(9) DEFAULT NULL,
@@ -39,7 +44,18 @@ CREATE TABLE IF NOT EXISTS `adresse` (
   `IdAdresse` mediumint(9) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`IdAdresse`),
   KEY `IdVille` (`IdVille`)
-) ENGINE=MyISAM AUTO_INCREMENT=134 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=139 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `adresse`
+--
+
+INSERT INTO `adresse` (`IdVille`, `NomVoie`, `ComplementAdresse1`, `NumeroVoie`, `ExtentionVoie`, `TypeVoieAdresse`, `ComplementAdresse2`, `IdAdresse`) VALUES
+(2, '456465', '444', '6666', '1', '15', '654', 138),
+(4, '4561', '6512', '2365132', '2', '18', '6512', 137),
+(2, '4561', '651', '451', '2', '16', '2165', 136),
+(2, '456', '6512', '5612', '1', '15', '6512', 135),
+(2, '13 Rue Caristie', '6512', '5612', '1', '15', '6512', 134);
 
 -- --------------------------------------------------------
 
@@ -190,7 +206,14 @@ CREATE TABLE IF NOT EXISTS `mandataire` (
   `IdUtilisateur` smallint(6) NOT NULL,
   `PhysiqueMoral` smallint(6) NOT NULL,
   PRIMARY KEY (`IdMandataire`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `mandataire`
+--
+
+INSERT INTO `mandataire` (`IdMandataire`, `Nom`, `NomUsage`, `Prenom`, `RaisonSociale`, `Siret`, `IdUtilisateur`, `PhysiqueMoral`) VALUES
+(3, '[value-2]', 'Sinara', '[value-4]', '[value-5]', '49994704200028', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -218,9 +241,18 @@ CREATE TABLE IF NOT EXISTS `operation` (
   `Vendeur` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
   `IdVehicule` int(11) NOT NULL,
   `NomOperation` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `formaliter` int(11) NOT NULL,
   PRIMARY KEY (`IdOperation`),
   KEY `IdVille` (`IdVille`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `operation`
+--
+
+INSERT INTO `operation` (`IdOperation`, `Kilometrage`, `DateVente`, `DateDeclaration`, `PresenceCertificat`, `InformationAssurance`, `CederDestruction`, `CertifieSituationAdministrative`, `Transformation`, `OppositionUtilisationDonnees`, `Destruction`, `CertifieAchat`, `IdVille`, `Nature`, `Acheteur`, `Vendeur`, `IdVehicule`, `NomOperation`, `formaliter`) VALUES
+(22, 561230, '2023-01-18 11:50:00', '2022-12-28', 0, 1, 1, 0, 1, 0, 0, 1, 2, 'Vente', '1,79', '2,78', 22, '465132', 2),
+(21, 456123, '2023-01-11 11:50:00', '2023-01-10', 0, 0, 1, 0, 1, 0, 0, 1, 1, 'Achat', '1,79', '1,80', 22, '12345', 2);
 
 -- --------------------------------------------------------
 
@@ -257,7 +289,18 @@ CREATE TABLE IF NOT EXISTS `personne` (
   `Mail` varchar(60) DEFAULT NULL,
   `IdAdresse` int(11) NOT NULL,
   PRIMARY KEY (`IdPersonne`)
-) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=109 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `personne`
+--
+
+INSERT INTO `personne` (`IdPersonne`, `ProAuto`, `Assureur`, `NumeroDeTelephone`, `Mail`, `IdAdresse`) VALUES
+(107, 0, 1, '654123', '65', 134),
+(106, 0, 1, '6541  ', '651  ', 136),
+(105, 0, 0, '454564', '4545456', 135),
+(104, 0, 0, '454564', '4545456', 134),
+(108, 1, 0, '0632523615       ', 'alex@gmail.co   ', 138);
 
 -- --------------------------------------------------------
 
@@ -272,7 +315,14 @@ CREATE TABLE IF NOT EXISTS `personnemoral` (
   `RaisonSocial` varchar(100) DEFAULT NULL,
   `Siret` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`IdPersonneMoral`)
-) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=79 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `personnemoral`
+--
+
+INSERT INTO `personnemoral` (`IdPersonneMoral`, `Idpersonne`, `RaisonSocial`, `Siret`) VALUES
+(78, 107, '4651RaisonSocial', '654123555');
 
 -- --------------------------------------------------------
 
@@ -290,7 +340,15 @@ CREATE TABLE IF NOT EXISTS `personnephysique` (
   `DateDenaissance` date DEFAULT NULL,
   `Idpersonne` smallint(9) DEFAULT NULL,
   PRIMARY KEY (`IdPersonnePhysique`)
-) ENGINE=MyISAM AUTO_INCREMENT=79 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `personnephysique`
+--
+
+INSERT INTO `personnephysique` (`IdPersonnePhysique`, `Sexe`, `Nom`, `Nomdusage`, `Prenom`, `DateDenaissance`, `Idpersonne`) VALUES
+(80, 0, 'Alex', 'Deguy', 'Alex', '2000-03-05', 108),
+(79, 0, '5555', '6444', '654123', '2023-06-06', 106);
 
 -- --------------------------------------------------------
 
@@ -379,7 +437,14 @@ CREATE TABLE IF NOT EXISTS `vehicule` (
   `IdCouleur` tinyint(4) NOT NULL,
   PRIMARY KEY (`IdVehicule`),
   KEY `IdUtilisateur` (`IdUtilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `vehicule`
+--
+
+INSERT INTO `vehicule` (`IdVehicule`, `Immatriculation`, `DateImmatriculation`, `MarqueVehicule`, `TypeVarianteVersion`, `DenominationCommerciale`, `NumeoIdentification`, `GenreNational`, `MotifAbscenceCertificat`, `PresenceCertificat`, `DateCertificat`, `NumeroFormule`, `Opacité`, `PuissanceDin`, `PuissanceFiscale`, `IdUtilisateur`, `IdCouleur`) VALUES
+(22, 'AA-BB-CC', '2023-04-06', '9845612', '555', '5461', '12345678912345123', '5412', '6857342', 1, '2023-01-03', '87542', 1, 6451, 6513, 1, 5);
 
 -- --------------------------------------------------------
 
