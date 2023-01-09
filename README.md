@@ -45,7 +45,7 @@ Afin de pouvoir génerer les pdf nous utilison la libraires html2pdf .
 
 Vous pouver soit télécherger directement le fichier vendor mis dans un site web nommer mega ou
 
-l'installer en suivant la document : https://github.com/spipu/html2pdf.
+l'installer en suivant la documentation : https://github.com/spipu/html2pdf.
 
 Afin de faciliter ceci vous pouvez executer le fichier vendor.bat est vous serez automatiquement rediriger 
 
