@@ -55,10 +55,8 @@
             <div>
                 <h1>Générer les pdf</h1>
                 <ul>
-                    <li><a href="./GestionFormalite/Mandat/Mandat.php">Mandat</a></li>
-                    <li><a href="">Déclaration achat</a></li>
-                    <li><a href="">Déclaration de cession</a></li>
-                    <li><a href="">Déclaration d'immatriculation</a></li>
+                    <li><a href="./GestionFormalite/Formalites/Formalites.php">Générer pdf Formalites</a></li>
+
                 </ul>
             </div>
 

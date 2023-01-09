@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../../../../../private/src/fond.png);
+}
+
+.formaliter {
+    color: aliceblue;
+    position: relative;
+    left: 20%;
+    top: 50px;
+    border-bottom: 2px solid white;
+    width: 40%;
+}
+
+
+.td_operation {
+    position: relative;
+    top: 150px;
+    border-bottom: 1px solid white;
+    width: 90%;
+}
+
+.td_operation p {
+    position: relative;
+    left: 50px;
+    font-size: 20px;
+    top: 40px;
+}
+
+.td_operation a {
+    position: relative;
+    left: 55%;
+    padding: 10px;
+    background-color: rgb(35, 55, 77);
+    border: 1px solid rgb(35, 55, 77);
+    width: 100px;
+    border-radius: 5px;
+    color: aliceblue;
+    transition: all 0.35s ease-in-out;
+    width: 30%;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.td_operation a:hover {
+    background-color: aliceblue;
+    border: 1px solid #fff;
+    color: black;
+}

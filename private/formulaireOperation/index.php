@@ -183,7 +183,7 @@
                             <select name="acheteur">
                                 <option value="">Personne Physique</option>
                                 <?php foreach($data5 as $dataV2): ?>
-                                <option value="1, <?=$dataV2['IdPersonnePhysique']?>">
+                                <option value="1,<?=$dataV2['IdPersonnePhysique']?>">
                                     <?= $dataV2['Nom'] ?>
                                     </option><?php
                                     endforeach?>
@@ -200,7 +200,7 @@
                             <select name="vendeur">
                                 <option value="">Personne Physique</option>
                                 <?php foreach($data5 as $dataV2): ?>
-                                <option value="1, <?=$dataV2['IdPersonnePhysique']?>">
+                                <option value="1,<?=$dataV2['IdPersonnePhysique']?>">
                                     <?= $dataV2['Nom'] ?>
                                     </option><?php
                                     endforeach?>
