@@ -384,6 +384,8 @@ $html = "
     }
 
 
+
+
 </style>
 <page>
     <link rel='icon' href='./src/fleche.png' >
@@ -411,6 +413,7 @@ $html = "
                 |<div style='border-bottom: 1px solid black; width: 400px; position: absolute; top: 14px; left: 109.7px; '></div>
                 <span style='position: absolute; left: 508px; top: 0.44px;'>|</span> <br>
                 <span style='font-size: 10px; top: 20px; left: 110px; position: absolute;'>NOM, NOM D’USAGE le cas échéant et PRÉNOM ou RAISON SOCIALE</span>
+                <span style='font-size: 10px; top: 20px; left: 514px; position: absolute;'>N° SIREN, le cas échéant</span>
                 </div>
                 <div style='position: absolute; top: -149.9px; left: -80px;'>
                     <span style='position: absolute; top: 151px; left: 765px;'>|</span>
@@ -457,7 +460,7 @@ $html = "
                 <span style='font-weight: none; font-size: 10px; position: absolute; top: 18px; left: 105px;'>Nom de la voie</span>   
             </div>
 
-            <!-- Deuciéme parti -->
+            <!-- Deuxiéme parti -->
             <div style='position: absolute; left: -438px; top: 120px;'>
                 <div style='width: 104px; position: absolute; top: 164.4px; left: 570px; border-bottom: 1px solid black;'></div>
                 <span style='position: absolute; top: 151px; left: 568px;'>|</span>
@@ -511,15 +514,15 @@ $html = "
                 </div> 
                 <span style='position: absolute; left: 458.5px; top: 20px; font-size: 10px;'>N° SIRET, le cas échéant</span>
             </div>
-            <div style='position: absolute; top: 400px; left: 20px;'>
+            <div style='position: absolute; top: 370px; left: 20px;'>
                 <h5> pour effectuer pour mon compte les formalités administratives liées à l’opération d’immatriculation suivante :</h5>
-                <div style=' position: absolute; top: 50px;'>
+                <div style=' position: absolute; top: 28px;'>
                     <span  style='position: absolute; left: 108px; top: 0;'>|</span>
                     <div style='border-bottom: 1px solid black; width: 440px; position: absolute; left: 109.2px; top: 14px;' ></div>
                     <span style='position: absolute; left: 548px; top: 0.4px;'>|</span> 
                 </div>
             </div>
-            <div style='position: absolute; top: 500px; left: 20px;' >
+            <div style='position: absolute; top: 430px; left: 20px;' >
                 <div style='border-bottom: 1px solid black; width: 115px; padding: 2px;'>
                     <h5  >Véhicule concerné :</h5>
                 </div>
@@ -581,8 +584,8 @@ $html = "
                     sanctions pénales.</span>
                 </div>
             </div>
-            <div style='position: absolute; top: 900px; left: 40px;'>
-                <span>Fait à :</span>
+            <div style='position: absolute; top: 800px; left: 20px;'>
+                <span>Fait à</span>
                 <div style='border-bottom: 1px solid black;  width: 300px; position: absolute; left: 50px; top: 10px;' ></div>
                 <div style='position: absolute; border-bottom: 1px solid black; width: 43.8px; left: 400px; top: 10px;'></div>
                 <div style='position: absolute; border-bottom: 1px solid black; width: 41px; left: 450px; top: 10px;'></div>
@@ -607,23 +610,23 @@ $html = "
         
         
         >
-        <div style='border: 1px solid #0B368C; padding: 30px; position: absolute; top: 990px; left: -10px; width: 700px; background-color: #CFE6F5;'></div>
-        <span style='position: absolute; top: 1000px; font-weight: bold; font-size: 10px; '>La loi n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, garantit un droit d’accès et de rectification des données auprès d’une préfecture
-        de son choix. <br> <br>
-        Je m’oppose à la réutilisation de mes données personnelles à des fins de prospection commerciale <input  type='checkbox' checked='checked'></span>
+        <div style='border: 1px solid #0B368C; padding: 30px; position: absolute; top: 990px;  width: 690px; background-color: #CFE6F5;'></div>
+        <span style='position: absolute; top: 1000px; font-weight: bold; font-size: 10px; left: 13px; '> La loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, garantit un droit d'accès et de rectification des données auprès d'une</span>
+        <span style='position: absolute; top: 1010px; font-weight: bold; font-size: 10px; left: 13px; '>préfecture de son choix.</span>
+        <span style='position: absolute; top: 1030px; font-weight: bold; font-size: 10px; left: 13px; '>Je m'oppose à la réutilisation de mes données personnelles à des fins de prospection commerciale <input type='checkbox' class='checkbox'   checked='checked' ></span>
     </div>
 
 
 
     <!-- Parti full php  -->
-    <span style='position: absolute; top: 165px; left: 145px; font-size: 15px;'> ".$Nom." ".$NomUsage." ".$Prenom."</span>
-    <span style='position: absolute; top: 235px; left: 145px; font-size: 15px;'>$NumeroVoie</span>
-    <span style='position: absolute; top: 235px; left: 235px; font-size: 15px;'>".$data4[0]['Nom']."</span>
-    <span style='position: absolute; top: 235px; left: 315px; font-size: 14px;'>".$data5[0]['Nom']."</span>
-    <div style='position: absolute; top: 235px; left: 525px; font-size: 14px; text-align: center; width: 150px;'>
+    <span style='position: absolute; top: 169px; left: 145px; font-size: 15px;'> ".$Nom." ".$NomUsage." ".$Prenom."</span>
+    <span style='position: absolute; top: 239px; left: 145px; font-size: 15px;'>$NumeroVoie</span>
+    <span style='position: absolute; top: 239px; left: 235px; font-size: 15px;'>".$data4[0]['Nom']."</span>
+    <span style='position: absolute; top: 239px; left: 315px; font-size: 14px;'>".$data5[0]['Nom']."</span>
+    <div style='position: absolute; top: 239px; left: 525px; font-size: 14px; text-align: center; width: 150px;'>
         <span >".$data3[0]['NomVoie']."</span>
     </div>
-    <div style='position: absolute; top: 285px; left: 70px; font-size: 14px; text-align: center; width: 180px;'>
+    <div style='position: absolute; top: 289px; left: 70px; font-size: 14px; text-align: center; width: 180px;'>
         <span style='position: absolute; left: 70px;'>".$CodePostal[0]."</span>
         <span style='position: absolute; left: 85px;'>".$CodePostal[1]."</span>
         <span style='position: absolute; left: 105px;'>".$CodePostal[2]."</span>
@@ -631,72 +634,70 @@ $html = "
         <span style='position: absolute; left: 145px;'>".$CodePostal[4]."</span>
     </div>
 
-    <div style='position: absolute; top: 285px; left: 520px; font-size: 14px; text-align: center; width: 180px;'>
+    <div style='position: absolute; top: 289px; left: 520px; font-size: 14px; text-align: center; width: 180px;'>
         <span>".$data7[0]['Nom']."</span>
     </div>
 
     <!--Numéro de siret  -->
-    <span style='position: absolute; top: 165px; left: 544px; font-size: 15px;'>".$Nsiret1[0]."</span>
-    <span style='position: absolute; top: 165px; left: 555px; font-size: 15px;'>".$Nsiret1[1]."</span>
-    <span style='position: absolute; top: 165px; left: 570px; font-size: 15px;'>".$Nsiret1[2]."</span>
-    <span style='position: absolute; top: 165px; left: 585px; font-size: 15px;'>".$Nsiret1[3]."</span>
-    <span style='position: absolute; top: 165px; left: 600px; font-size: 15px;'>".$Nsiret1[4]."</span>
-    <span style='position: absolute; top: 165px; left: 615px; font-size: 15px;'>".$Nsiret1[5]."</span>
-    <span style='position: absolute; top: 165px; left: 630px; font-size: 15px;'>".$Nsiret1[6]."</span>
-    <span style='position: absolute; top: 165px; left: 645px; font-size: 15px;'>".$Nsiret1[7]."</span>
-    <span style='position: absolute; top: 165px; left: 660px; font-size: 15px;'>".$Nsiret1[8]."</span>
-    <span style='position: absolute; top: 165px; left: 675px; font-size: 15px;'>".$Nsiret1[9]."</span>
-    <span style='position: absolute; top: 165px; left: 690px; font-size: 15px;'>".$Nsiret1[10]."</span>
-    <span style='position: absolute; top: 165px; left: 705px; font-size: 15px;'>".$Nsiret1[11]."</span>
-    <span style='position: absolute; top: 165px; left: 720px; font-size: 15px;'>".$Nsiret1[12]."</span>
-    <span style='position: absolute; top: 165px; left: 735px; font-size: 15px;'>".$Nsiret1[13]."</span>
+    <span style='position: absolute; top: 170px; left: 544px; font-size: 15px;'>".$Nsiret1[0]."</span>
+    <span style='position: absolute; top: 170px; left: 555px; font-size: 15px;'>".$Nsiret1[1]."</span>
+    <span style='position: absolute; top: 170px; left: 570px; font-size: 15px;'>".$Nsiret1[2]."</span>
+    <span style='position: absolute; top: 170px; left: 585px; font-size: 15px;'>".$Nsiret1[3]."</span>
+    <span style='position: absolute; top: 170px; left: 600px; font-size: 15px;'>".$Nsiret1[4]."</span>
+    <span style='position: absolute; top: 170px; left: 615px; font-size: 15px;'>".$Nsiret1[5]."</span>
+    <span style='position: absolute; top: 170px; left: 630px; font-size: 15px;'>".$Nsiret1[6]."</span>
+    <span style='position: absolute; top: 170px; left: 645px; font-size: 15px;'>".$Nsiret1[7]."</span>
+    <span style='position: absolute; top: 170px; left: 660px; font-size: 15px;'>".$Nsiret1[8]."</span>
+    <span style='position: absolute; top: 170px; left: 675px; font-size: 15px;'>".$Nsiret1[9]."</span>
+    <span style='position: absolute; top: 170px; left: 690px; font-size: 15px;'>".$Nsiret1[10]."</span>
+    <span style='position: absolute; top: 170px; left: 705px; font-size: 15px;'>".$Nsiret1[11]."</span>
+    <span style='position: absolute; top: 170px; left: 720px; font-size: 15px;'>".$Nsiret1[12]."</span>
+    <span style='position: absolute; top: 170px; left: 735px; font-size: 15px;'>".$Nsiret1[13]."</span>
 
 
     <!-- véhicule  -->
-    <div  style='position: absolute; top: 570px; left: 270px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 505px; left: 270px; text-align: center; width: 150px; '>
         <span>".$data8[0]['MarqueVehicule']."</span>
     </div>
 
-    <div  style='position: absolute; top: 710px; left: 400px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 646px; left: 400px; text-align: center; width: 150px; '>
         <span>".$data8[0]['Immatriculation']."</span>
     </div>
 
-    <div  style='position: absolute; top: 910px; left: 375px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 817px; left: 355px; text-align: center; width: 150px; '>
         <span>". $DateDeclaration[8]."</span>
     </div>
-    <div  style='position: absolute; top: 910px; left: 400px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 817px; left: 380px; text-align: center; width: 150px; '>
         <span>". $DateDeclaration[9]."</span>
     </div>
-    <div  style='position: absolute; top: 910px; left: 425px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 817px; left: 405px; text-align: center; width: 150px; '>
         <span>". $DateDeclaration[5]."</span>
     </div>
-    <div  style='position: absolute; top: 910px; left: 445px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 817px; left: 425px; text-align: center; width: 150px; '>
         <span>". $DateDeclaration[6]."</span>
     </div>
 
-    <div  style='position: absolute; top: 910px; left: 474px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 817px; left: 454px; text-align: center; width: 150px; '>
         <span>". $DateDeclaration[0]."</span>
     </div>
 
-    <div  style='position: absolute; top: 910px; left: 494px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 817px; left: 474px; text-align: center; width: 150px; '>
         <span>". $DateDeclaration[1]."</span>
     </div>
-
-    
-    <div  style='position: absolute; top: 910px; left: 517px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 817px; left: 494px; text-align: center; width: 150px; '>
         <span>". $DateDeclaration[2]."</span>
     </div>
 
         
-    <div  style='position: absolute; top: 910px; left: 537px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 817px; left: 517px; text-align: center; width: 150px; '>
         <span>". $DateDeclaration[3]."</span>
     </div>
 
-    <div  style='position: absolute; top: 910px; left: 167px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 815px; left: 155px; text-align: center; width: 150px; '>
         <span>".$data9[0]['Nom']."</span>
     </div>
 
-    <div  style='position: absolute; top: 640px; left: 127px; text-align: center; width: 150px; '>
+    <div  style='position: absolute; top: 577px; left: 127px; text-align: center; width: 150px; '>
          <span style='position: absolute; left: 20px;'>".$NumeoIdentification[0]."</span>
          <span style='position: absolute; left: 35px;'>".$NumeoIdentification[1]."</span>
          <span style='position: absolute; left: 55px;'>".$NumeoIdentification[2]."</span>
@@ -715,10 +716,10 @@ $html = "
         <span style='position: absolute; left: 315px;'>".$NumeoIdentification[15]."</span>
         <span style='position: absolute; left: 335px;'>".$NumeoIdentification[16]."</span>
     </div>
-   <span style='position: absolute; top: 340px; left: 280px;' >SINARA</span>
-   <div style='position: absolute; top: 345px; left: 455px;'>
+   <span style='position: absolute; top: 349px; left: 280px;' >SINARA</span>
+   <div style='position: absolute; top: 349px; left: 455px;'>
         <span style='position: absolute; left: 18px;'>".$Siret[0]."</span>
-        <span style='position: absolute; left: 40px;'>".$Siret[1]."</span>
+        <span style='position: absolute; left: 36px;'>".$Siret[1]."</span>
         <span style='position: absolute; left: 60px;'>".$Siret[2]."</span>
         <span style='position: absolute; left: 80px;'>".$Siret[3]."</span>
         <span style='position: absolute; left: 100px;'>".$Siret[4]."</span>
@@ -733,13 +734,18 @@ $html = "
         <span style='position: absolute; left: 280px;'>".$Siret[13]."</span>
    </div> 
 
-   <div style='position: absolute; top: 285px; left: 310px;'>
+   <div style='position: absolute; top: 289px; left: 310px;'>
         <span style='position: absolute; left: 18px;'>".$data9[0]['Nom']."</span>
     </div>
 
-    <div style='position: absolute; top: 460px; left: 310px;'>
+    <div style='position: absolute; top: 415px; left: 310px;'>
         <span style='position: absolute; left: 18px;'>".$data11[0]['Nom']."</span>
     </div>
+
+
+    <span style='font-weight: bold; position: absolute; top: 840px; left: 620px; font-size: 13px;'>Signature</span>
+    <span style=' position: absolute; top: 850px; left: 618px; font-size: 8px;'>Pour les sociétés, nom et qualité</span>
+    <span style=' position: absolute; top: 860px; left: 618px; font-size: 8px;'>du signataire et cachet</span>
 </page>
 ";
 
