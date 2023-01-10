@@ -29,6 +29,9 @@
                     <div class="td_operation">
                         <p><?= $dataV2['NomOperation'] ?></p>
                             <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>">mandat</a>
+                            <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>">Déclaration d'immatriculation</a>
+                            <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>">Déclaration de cession</a>
+                            <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>">Déclaration d'achat</a>
                     </div>
                 <?php endforeach; ?>
 
