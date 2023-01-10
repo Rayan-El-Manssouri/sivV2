@@ -47,6 +47,11 @@ html2pdf.
 
 Documentation : https://github.com/spipu/html2pdf
 
+## Branch explanation
+- `main` It is the development branch.
+- `al-capitain main` It is the development branch for Al capitain.
+- `reorganisation` It is the development branch for reorganization.
+
 ## Download and use SIV (with Git)
 Make sure you are in the right directory to make these manipulations.
 ### - Beta branch  (quite stable but without the latest changes)
