@@ -28,7 +28,7 @@ and registration easier.
 - ```/private/style``` : All CSS files.
 
 
-### Installation du projet
+# Installation du projet
 
 Dependencies :
 - Apache
