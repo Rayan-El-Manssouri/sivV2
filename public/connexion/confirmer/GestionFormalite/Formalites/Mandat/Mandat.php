@@ -1,5 +1,6 @@
 <?php 
-require '../../../../../../vendor/autoload.php';
+
+
 require_once '../../../../../../private/bdd/connect.php';
 $database = new Database();
 
@@ -306,7 +307,6 @@ if($vendeur[0] == "1"){
     $data11 = $database->read($query11);
 
 }
-use Spipu\Html2Pdf\Html2Pdf;
 
 
 
@@ -748,6 +748,9 @@ $html = "
     <span style=' position: absolute; top: 860px; left: 618px; font-size: 8px;'>du signataire et cachet</span>
 </page>
 ";
+require '../../../../../../vendor/autoload.php';
+use Spipu\Html2Pdf\Html2Pdf;
+
 
 $html2pdf = new Html2Pdf();
 $html2pdf->writeHTML($html);

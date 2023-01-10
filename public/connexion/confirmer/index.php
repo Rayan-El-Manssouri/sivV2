@@ -23,7 +23,7 @@
 <body>
     <div class="contenu">
         <?php require_once '../../../private/style/headerformalitees/header.php';?>
-        <div class="global" style="">
+        <div class="global" >
             <p>Bienvenue sur le panneau de la déclaration d'achat</p>
             <div>
                 <h1>Géré les personnes</h1>

@@ -24,24 +24,13 @@
             require_once '../../../../../private/style/headerFormalitees/header.php';
         ?>
         <div class="formaliter">
-        <form method="POST" target="_blank">
             <h1>Choisiser une opération</h1>
-            <?php foreach($data5 as $dataV2): ?>
-                <div class="td_operation">
-                    <p><?= $dataV2['NomOperation'] ?></p>
-                        <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>">mandat</a>
+                <?php foreach($data5 as $dataV2): ?>
+                    <div class="td_operation">
+                        <p><?= $dataV2['NomOperation'] ?></p>
+                            <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>">mandat</a>
+                    </div>
+                <?php endforeach; ?>
 
-                </div>
-            <?php endforeach; ?>
-
-        </form>
-
-
-        </div>
-        <?php 
-        if(isset($_POST['mandat'])){
-            header("Location: Mandat/Mandat.php?id=".$_POST['IdOperation']." ");
-        }        
-        ?>
 </body>
 </html>
