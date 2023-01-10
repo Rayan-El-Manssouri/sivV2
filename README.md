@@ -32,6 +32,7 @@ Dependencies :
 - PHP
 - MySQL
 - PhpMyAdmin
+- composer
 - spipu/html2pdf
 
 Please ensure to add a first user in PhpMyAdmin.
@@ -70,6 +71,9 @@ All versions of php supported.
 | 5.1.x   | :white_check_mark: |
 | 5.0.x   | :x:                |
 
+# Website use
+- icon : <a href="https://fonts.google.com/icons">Google icon</a>.
+- image : <a href="https://www.canva.com/">Canva</a>.
 
 ## Contact us
 
