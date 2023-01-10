@@ -15,7 +15,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="../../../../../private/src/logo2.png" >
+    <link rel="icon" href="../../../../../private/src/logo.png" >
     <link rel="stylesheet" href="./Formalites.css" >
     <title>Siv - Formaliter </title>
 </head>

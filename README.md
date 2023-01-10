@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Rayan-El-Manssouri/sivV2#readme">
-    <img src="./private/src/logo2.png" alt="SivV2 logo" style="max-width: 100%;" >
+    <img src="./private/src/logo.png" alt="SivV2 logo" style="max-width: 100%;" >
   </a>
 </p>
 

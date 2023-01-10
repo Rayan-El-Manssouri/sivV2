@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siv - Personne - Ajouter - Physique</title>
     <link href="Ajouter.css" rel="stylesheet" />
-    <link href="../../../../../../private/src/logo2.png" rel="icon" />
+    <link href="../../../../../../private/src/logo.png" rel="icon" />
     <link href="../../../../../../private/style/footer/footer.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../../../../../private/javascript/sticky.js"></script>

@@ -14,7 +14,7 @@ $data = $database->read($query);
 <head>
     <meta charset="UTF-8">
     <link href="index.css" rel="stylesheet" >
-    <link href="../../../../../../private/src/logo2.png" rel="icon" >
+    <link href="../../../../../../private/src/logo.png" rel="icon" >
     <title>Siv - confirmer - Modifier</title>
 </head>
 <body>

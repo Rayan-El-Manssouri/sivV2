@@ -17,7 +17,7 @@ $data1 = $database->read($query1);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="index.css" rel="stylesheet" >
-    <link href="../../../../private/src/logo2.png" rel="icon" >
+    <link href="../../../../private/src/logo.png" rel="icon" >
 </head>
 <body>
     <?php 

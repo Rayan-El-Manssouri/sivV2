@@ -1,7 +1,7 @@
 <header class="header">
     <div>
         <nav class="navigation">
-            <span class="logo"><img src="http://localhost/sivV2/private/src/logo2.png" style="position: relative; top: -20px;"  height="70" alt=""></span>
+            <span class="logo"><img src="http://localhost/sivV2/private/src/logo.png" style="position: relative; top: -20px;"  height="70" alt=""></span>
             <li class="hover"><a href="#">Home</a></li>
             <li><a href="#">Signaler</a></li>
             <li><a href="#">Nous contacter</a></li>

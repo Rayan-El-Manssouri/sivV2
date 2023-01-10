@@ -21,7 +21,7 @@ $data6 = $database->read($query6);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="index.css" >
-    <link rel="icon" href="../../../../private/src/logo2.png" >
+    <link rel="icon" href="../../../../private/src/logo.png" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>

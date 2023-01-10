@@ -77,7 +77,7 @@ $data9 = $database->read($query9);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifications</title>
     <link href="confirmation.css" rel="stylesheet">
-    <link href="../../../../../../../private/src/logo2.png" rel="icon">
+    <link href="../../../../../../../private/src/logo.png" rel="icon">
     <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
 </head>
 <body>
