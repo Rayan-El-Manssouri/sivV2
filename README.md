@@ -47,6 +47,17 @@ contient html2pdf.
 
 Documentation : https://github.com/spipu/html2pdf
 
+# Secrutiter section
+
+## Version supporter
+
+Toute les version de php suporter.
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 5.1.x   | :white_check_mark: |
+| 5.0.x   | :x:                |
+
 
 ## Nous contacter
 
