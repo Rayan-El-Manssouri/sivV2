@@ -41,7 +41,7 @@
                     <input type="submit" width="80px">
                     <script>
                         function revenir(){
-                            location.replace("http://localhost/sivV2/public/connexion/confirmer/")
+                            location.replace("http://localhost/siv/public/connexion/confirmer/")
                         }
                     </script>
                     <input type="button" value="Revenir en arriére" width="80px" onclick="revenir()">
@@ -71,7 +71,7 @@
         $("#personne")
             .on("change", function(e){
                 e.preventDefault();
-                window.location.href = "http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/ModifierPersonne/situation/" + $(this).val();
+                window.location.href = "http://localhost/siv/public/connexion/confirmer/DeclarationAchat/ModifierPersonne/situation/" + $(this).val();
         })
     </script>
 </body>

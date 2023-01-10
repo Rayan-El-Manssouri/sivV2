@@ -16,9 +16,9 @@
           <div class="bloc footer-reseaux">
                <h3>Nos réseaux</h3>
                <ul class="listes-services">
-                    <li><a href=""><img src="http://localhost/sivV2/private/src/fb.png" style="width: 30px; position: relative; top: 5px;"> Facebook </a></li>
-                    <li><a href=""><img src="http://localhost/sivV2/private/src/insta.png" style="width: 30px; position: relative; top: 5px;"> Instagram </a></li>
-                    <li><a href=""><img src="http://localhost/sivV2/private/src/tw.png" style="width: 30px; position: relative; top: 5px;"> Tweeter </a></li>
+                    <li><a href=""><img src="http://localhost/siv/private/src/fb.png" style="width: 30px; position: relative; top: 5px;"> Facebook </a></li>
+                    <li><a href=""><img src="http://localhost/siv/private/src/insta.png" style="width: 30px; position: relative; top: 5px;"> Instagram </a></li>
+                    <li><a href=""><img src="http://localhost/siv/private/src/tw.png" style="width: 30px; position: relative; top: 5px;"> Tweeter </a></li>
                </ul>
           </div>
      </div>

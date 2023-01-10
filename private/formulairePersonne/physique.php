@@ -18,7 +18,7 @@ error_reporting(0);
     
 <form method="POST" class="formulaire">
     <?php 
-    echo '<link href="http://localhost/sivV2/private/style/formulaire/formulaire.css" rel="stylesheet">';
+    echo '<link href="http://localhost/siv/private/style/formulaire/formulaire.css" rel="stylesheet">';
     ?>    
 <div>
 
@@ -93,7 +93,7 @@ error_reporting(0);
         <input type="submit" name="send" value="Envoyer">
         <script>
             function revenir(){
-                location.replace("http://localhost/sivV2/public/connexion/confirmer/GestionPersonne/AjouterPersonne/")
+                location.replace("http://localhost/siv/public/connexion/confirmer/GestionPersonne/AjouterPersonne/")
             }
         </script>
         <input type="button" name="Annuler" onclick="revenir()" value="Annuler">
@@ -166,7 +166,7 @@ error_reporting(0);
 
         <script>
             alert("Personne physique bien ajoutée !")
-            location.replace("http://localhost/sivV2/public/connexion/confirmer/GestionPersonne/AjouterPersonne/physique/Ajouter.php")
+            location.replace("http://localhost/siv/public/connexion/confirmer/GestionPersonne/AjouterPersonne/physique/Ajouter.php")
         </script>
         <?php
         

@@ -134,7 +134,7 @@ $data1 = $database->read($query1);
                 <div class="envoyer">
                     <script>
                         function annuler(){
-                            location.replace("http://localhost/sivV2/public/connexion/confirmer/GestionVehicule/DetailVehicule/");
+                            location.replace("http://localhost/siv/public/connexion/confirmer/GestionVehicule/DetailVehicule/");
                         }
                     </script>
                     <input type="button" value="Annuler" id="Annuler" onclick="annuler()">

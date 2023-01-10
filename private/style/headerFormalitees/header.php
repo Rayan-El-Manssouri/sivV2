@@ -1,4 +1,4 @@
-<?php echo '<link href="http://localhost/sivV2/private/style/headerformalitees/header.css" rel="stylesheet" type="text/css" />';  ?>
+<?php echo '<link href="http://localhost/siv/private/style/headerformalitees/header.css" rel="stylesheet" type="text/css" />';  ?>
 <?php echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />';  ?>
 <?php 
 
@@ -27,13 +27,13 @@ $totaloperation = $operation1[0]['COUNT(*)'];
         <h1>Website Logo</h1>
         <nav>
             <ul>
-                <li><a href="http://localhost/sivV2/public"> <button> <span  class="material-symbols-outlined">home</span>Accueil</button> </a></li>
-                <li><a href="http://localhost/sivV2/public/connexion/confirmer/GestionPersonne/AjouterPersonne/"> <button> <span class="material-symbols-outlined">groups</span>Personnes <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $total?></span></button> </a></li>
-                <li><a href="http://localhost/sivV2/public/connexion/confirmer/GestionVehicule/"><button> <span class="material-symbols-outlined">directions_car</span>Véhicules <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $countRecive[0]['COUNT(*)']?></span></button> </a></li>
-                <li><a href="http://localhost/sivV2/public/connexion/confirmer/GestionOperation/index.php?r=Operation"><button><span class="material-symbols-outlined">local_shipping</span>Opérations  <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $totaloperation?></span></button> </a></li>
+                <li><a href="http://localhost/siv/public"> <button> <span  class="material-symbols-outlined">home</span>Accueil</button> </a></li>
+                <li><a href="http://localhost/siv/public/connexion/confirmer/GestionPersonne/AjouterPersonne/"> <button> <span class="material-symbols-outlined">groups</span>Personnes <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $total?></span></button> </a></li>
+                <li><a href="http://localhost/siv/public/connexion/confirmer/GestionVehicule/"><button> <span class="material-symbols-outlined">directions_car</span>Véhicules <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $countRecive[0]['COUNT(*)']?></span></button> </a></li>
+                <li><a href="http://localhost/siv/public/connexion/confirmer/GestionOperation/index.php?r=Operation"><button><span class="material-symbols-outlined">local_shipping</span>Opérations  <span style="position: relative; left: 15px; top: 0px;  padding: 5px; border-radius: 9px"><?php echo $totaloperation?></span></button> </a></li>
                 <li><a href=""><button><span class="material-symbols-outlined">picture_as_pdf</span>Générer les PDF</button> </a></li>
-                <li><a href="http://localhost/sivV2/public/connexion/confirmer/"><button><span class="material-symbols-outlined">chevron_left</span>Revenir au panneau</button> </a></li>
-                <li><a style="top: 80px; position: relative" href="http://localhost/sivV2/private/GestionSession/logout.php"><button><span class="material-symbols-outlined">Logout</span>Se déconnecter</button></a></li>
+                <li><a href="http://localhost/siv/public/connexion/confirmer/"><button><span class="material-symbols-outlined">chevron_left</span>Revenir au panneau</button> </a></li>
+                <li><a style="top: 80px; position: relative" href="http://localhost/siv/private/GestionSession/logout.php"><button><span class="material-symbols-outlined">Logout</span>Se déconnecter</button></a></li>
             </ul>
         </nav>
     </div>

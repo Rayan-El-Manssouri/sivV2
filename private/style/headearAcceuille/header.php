@@ -10,7 +10,7 @@
             <?php 
             if(est_connecter()){
             ?>
-                <a href="http://localhost/sivV2/private/GestionSession/logout.php" style="text-decoration : none;" class="connexion">Se déconnecter</a>
+                <a href="http://localhost/siv/private/GestionSession/logout.php" style="text-decoration : none;" class="connexion">Se déconnecter</a>
             <?php
             }else{
             ?>
@@ -20,5 +20,5 @@
             ?>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="http://localhost/sivV2/private/javascript/main.js" ></script>
+    <script type="text/javascript" src="http://localhost/siv/private/javascript/main.js" ></script>
 </header>

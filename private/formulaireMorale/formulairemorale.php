@@ -12,7 +12,7 @@ error_reporting(0);
 ?>
 
 <form method="POST">
- <?php echo '<link href="http://localhost/sivV2/private/style/formulaire/formulaire.css" rel="stylesheet">'; ?>
+ <?php echo '<link href="http://localhost/siv/private/style/formulaire/formulaire.css" rel="stylesheet">'; ?>
 
     <div>
         <h3>Situation :</h3>
@@ -75,7 +75,7 @@ error_reporting(0);
 </form>
 <script>
     function annuler(){
-        location.replace("http://localhost/sivV2/public/connexion/confirmer/GestionPersonne/AjouterPersonne/")
+        location.replace("http://localhost/siv/public/connexion/confirmer/GestionPersonne/AjouterPersonne/")
     }
 </script>
 <?php 
@@ -128,7 +128,7 @@ if(isset($_POST['submit'])){
     ?>
     <script>
         alert("Personne morale bien ajoutée !")
-        location.replace("http://localhost/sivV2/public/connexion/confirmer/GestionPersonne/AjouterPersonne")
+        location.replace("http://localhost/siv/public/connexion/confirmer/GestionPersonne/AjouterPersonne")
     </script>
     <?php
 }

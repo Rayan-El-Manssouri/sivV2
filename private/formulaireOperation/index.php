@@ -217,7 +217,7 @@
                         <input type="submit" name="send" id="personne" class="Bouton" ></input>
                         <script>
                             function revenir(){
-                                location.replace("http://localhost/sivV2/public/connexion/confirmer/")
+                                location.replace("http://localhost/siv/public/connexion/confirmer/")
                             }
                         </script>
                         <button class="Bouton" onclick="revenir()">Annuler </button>

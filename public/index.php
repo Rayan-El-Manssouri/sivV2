@@ -11,9 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet">
     <link href="../private/src/logo.png" rel="icon">
-    <link href="http://localhost/sivV2/private/style/headerAcceuil/header.css" rel="stylesheet">
-    <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
-    <link href="http://localhost/sivV2/private/style/FlecheRemonter/fleche.css" rel="stylesheet">
+    <link href="http://localhost/siv/private/style/headerAcceuil/header.css" rel="stylesheet">
+    <link href="http://localhost/siv/private/style/footer/footer.css" rel="stylesheet">
+    <link href="http://localhost/siv/private/style/FlecheRemonter/fleche.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
@@ -45,7 +45,7 @@
                 <script>
                         function MessageDisplay(){
                             $("#Message").hide()
-                            location.replace("http://localhost/sivV2/public/")
+                            location.replace("http://localhost/siv/public/")
                         }
                 </script>
 

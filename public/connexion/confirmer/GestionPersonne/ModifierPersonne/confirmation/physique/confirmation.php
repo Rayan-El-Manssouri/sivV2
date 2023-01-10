@@ -78,7 +78,7 @@ $data9 = $database->read($query9);
     <title>Modifications</title>
     <link href="confirmation.css" rel="stylesheet">
     <link href="../../../../../../../private/src/logo.png" rel="icon">
-    <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
+    <link href="http://localhost/siv/private/style/footer/footer.css" rel="stylesheet">
 </head>
 <body>
     <form name="form1" id="form1"  method="post">
@@ -188,7 +188,7 @@ if(!empty($_POST['send'])){
     print_r($query3);
     ?>
     <script>
-        location.replace("http://localhost/sivV2/public/connexion/confirmer/GestionPersonne/ModifierPersonne/confirmation/physique/confirmation.php?id=<?=$_GET['id']?>")
+        location.replace("http://localhost/siv/public/connexion/confirmer/GestionPersonne/ModifierPersonne/confirmation/physique/confirmation.php?id=<?=$_GET['id']?>")
     </script>
     <?php
    

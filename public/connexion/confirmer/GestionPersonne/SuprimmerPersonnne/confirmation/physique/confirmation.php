@@ -78,7 +78,7 @@ $data9 = $database->read($query9);
     <title>Modifications</title>
     <link href="confirmation.css" rel="stylesheet">
     <link href="../../../../../../../private/src/logo.png" rel="icon">
-    <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
+    <link href="http://localhost/siv/private/style/footer/footer.css" rel="stylesheet">
 </head>
 <body>
     <form name="form1" id="form1"  method="post">
@@ -149,7 +149,7 @@ $data9 = $database->read($query9);
                 $data13 = $database->read($query13);
                 $query14 = "DELETE FROM `personnephysique` WHERE IdPersonnePhysique='".$_GET['id']."' ";
                 $data14 = $database->read($query14);
-                header("Location: http://localhost/sivV2/public/connexion/confirmer/SuprimmerPersonnne/index.php");
+                header("Location: http://localhost/siv/public/connexion/confirmer/SuprimmerPersonnne/index.php");
             }
             
             

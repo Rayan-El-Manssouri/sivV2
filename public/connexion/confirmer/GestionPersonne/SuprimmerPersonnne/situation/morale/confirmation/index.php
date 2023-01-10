@@ -159,7 +159,7 @@ $data7 = $database->read($query7);
             ?>
             <script>
                 alert("Personne moral bien suprimmer !")
-                location.replace("http://localhost/sivV2/public/connexion/confirmer/DeclarationAchat/SuprimmerPersonnne/situation/morale/")
+                location.replace("http://localhost/siv/public/connexion/confirmer/DeclarationAchat/SuprimmerPersonnne/situation/morale/")
             </script>
             <?php
 

@@ -35,7 +35,7 @@ if(est_connecte()){
                     $_SESSION['connecte'] = 1;
                     ?>
                     <script>
-                        location.replace("http://localhost/sivV2/public/index.php?status=ok");
+                        location.replace("http://localhost/siv/public/index.php?status=ok");
                     </script>
                     <?php
                     die();

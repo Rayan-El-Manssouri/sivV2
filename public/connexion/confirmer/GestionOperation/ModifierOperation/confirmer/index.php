@@ -97,7 +97,7 @@ $data9 = $database->read($query9);
     <div class="modification_confirmation">
     <script>
                             function revenir(){
-                                location.replace("http://localhost/sivV2/public/connexion/confirmer/")
+                                location.replace("http://localhost/siv/public/connexion/confirmer/")
                             }
                         </script>
                         <button class="Bouton" onclick="revenir()">Annuler</button>

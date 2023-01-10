@@ -78,7 +78,7 @@ $data9 = $database->read($query9);
     <title>Modifications</title>
     <link href="confirmation.css" rel="stylesheet">
     <link href="../../../../../../../private/src/logo.png" rel="icon">
-    <link href="http://localhost/sivV2/private/style/footer/footer.css" rel="stylesheet">
+    <link href="http://localhost/siv/private/style/footer/footer.css" rel="stylesheet">
 </head>
 <body>
     <?php require_once '../../../../../../../private/style/headerFormalitees/header.php'; ?>
