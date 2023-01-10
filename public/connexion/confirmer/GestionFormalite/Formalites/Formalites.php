@@ -30,7 +30,7 @@
                         <p><?= $dataV2['NomOperation'] ?></p>
                             <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>" target="_blank">mandat</a>
                             <a href="./Declaration_de_immatriculation/Declaration_de_immatriculation.php" target="_blank">Déclaration d'immatriculation</a>
-                            <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>" target="_blank">Déclaration de cession</a>
+                            <a href="./Declaration_de_cession/Declaration_de_cession.php" target="_blank">Déclaration de cession</a>
                             <a href="Mandat/Mandat.php?id=<?=$dataV2['IdOperation']?>&formaliter=<?=$dataV2['formaliter']?>" target="_blank">Déclaration d'achat</a>
                     </div>
                 <?php endforeach; ?>
