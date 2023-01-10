@@ -7,51 +7,52 @@
 <h3 align="center">siv V2</h3>
 
 <p align="center">
-  Faites vos déclaration de véhicule avec notre site web siv ! Gagnez du temps et de l'efficacité !
+  Make your vehicle declaration with our SIV website! Save time and increase efficiency!
 </p>
 
 
 # Siv V2
 
-Siv est un gestionnaire de déclarations de véhicules. 
-Créé en 2022, le projet est actuellement à sa deuxième version, qui optimise la sécurité et l'intuitivité. 
-Le but de Siv est de faciliter les déclarations (d'achat, de cession et d'immatriculation).
+SIV is a vehicle declaration manager. Created in 2022, the project is currently in its second version, 
+which optimizes security and ease of use. The goal of SIV is to make declaration of purchase, transfer, 
+and registration easier.
 
 ### Structure
 
-- ```/public``` : contient les composants des interfaces des pages web.
-- ```/private/bdd``` : gestion de la base de données.
-- ```/private/formulairePersonne``` : formulaire pour l'utilisateur.
-- ```/private/GestionSession``` : gestion du compte sur la machine.
-- ```/private/javascript``` : tout les fichiers JavaScript.
-- ```/private/src``` : toutes les images.
-- ```/private/style``` : tout les fichiers CSS.
+- ```/public``` : Contains the components of web page interfaces.
+- ```/private/bdd``` : Database management.
+- ```/private/formulairePersonne``` : User form.
+- ```/private/GestionSession``` : Account management on the machine.
+- ```/private/javascript``` : All JavaScript files.
+- ```/private/src``` : All images.
+- ```/private/style``` : All CSS files..
 
 
 ## Installation du projet
 
-Dépendances :
+Dependencies :
 - Apache
 - PHP
 - MySQL
 - PhpMyAdmin
 - spipu/html2pdf
 
-Veuillez à ajouter un premier utilisateur dans PhpMyAdmin.
+Please ensure to add a first user in PhpMyAdmin.
 
-# Installer vendor
+# Install vendor
 
-Pour pouvoir installer le projet il vous faudras installer composer est le fichier spipu qui 
+In order to install the project, you will need to install Composer and the spipu file which contains 
 
-contient html2pdf.
+html2pdf.
 
 Documentation : https://github.com/spipu/html2pdf
 
-# Secrutiter section
+# Security section
 
-## Version supporter
+## Supporter version
 
-Toute les version de php suporter.
+All versions of php supported.
+
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -59,7 +60,7 @@ Toute les version de php suporter.
 | 5.0.x   | :x:                |
 
 
-## Nous contacter
+## Contact us
 
-Contacter le développeur principal : ```liviackerman69@gmail.com```
+Contact the main developer : ```liviackerman69@gmail.com```
 
