@@ -25,7 +25,7 @@ and registration easier.
 - ```/private/GestionSession``` : Account management on the machine.
 - ```/private/javascript``` : All JavaScript files.
 - ```/private/src``` : All images.
-- ```/private/style``` : All CSS files..
+- ```/private/style``` : All CSS files.
 
 
 ## Installation du projet
