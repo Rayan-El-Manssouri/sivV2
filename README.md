@@ -47,6 +47,15 @@ html2pdf.
 
 Documentation : https://github.com/spipu/html2pdf
 
+## Download and use SIV (with Git)
+Make sure you are in the right directory to make these manipulations.
+### - Beta branch  (quite stable but without the latest changes)
+```git clone https://github.com/Rayan-El-Manssouri/sivV2.git -b beta```
+### - Dev branch  (can be unstable but contains the latest changes)
+```git clone https://github.com/Rayan-El-Manssouri/sivV2.git -b dev```
+### - Update SIV on your computer
+```git pull```
+
 # Security section
 
 ## Supporter version
