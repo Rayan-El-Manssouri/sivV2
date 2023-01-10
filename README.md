@@ -41,17 +41,11 @@ Veuillez à ajouter un premier utilisateur dans PhpMyAdmin.
 
 # Installer vendor
 
-Afin de pouvoir génerer les pdf nous utilison la libraires html2pdf . 
+Pour pouvoir installer le projet il vous faudras installer composer est le fichier spipu qui 
 
-Vous pouver soit télécherger directement le fichier vendor mis dans un site web nommer mega ou
+contient html2pdf.
 
-l'installer en suivant la documentation : https://github.com/spipu/html2pdf.
-
-Afin de faciliter ceci vous pouvez executer le fichier vendor.bat est vous serez automatiquement rediriger 
-
-vers le fichier mega vendor.
-
-Si vous vous demander où le placer ça seras directement a la racine.
+Documentation : https://github.com/spipu/html2pdf
 
 
 ## Nous contacter
