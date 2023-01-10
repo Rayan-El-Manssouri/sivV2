@@ -5,11 +5,8 @@
 </p>
 
 <h3 align="center">siv V2</h3>
-
-<p align="center">
-  Make your vehicle declaration with our SIV website! Save time and increase efficiency!
-</p>
-
+<h3 align="center">SIV (systéme d'immatriculation de véhicule)</h3>
+<p align="center"><i>  Make your vehicle declaration with our SIV website! Save time and increase efficiency!</i></p>
 
 # Siv V2
 
