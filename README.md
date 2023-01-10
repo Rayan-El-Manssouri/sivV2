@@ -39,7 +39,7 @@ Dependencies :
 
 Please ensure to add a first user in PhpMyAdmin.
 
-# Install vendor
+## Install vendor
 
 In order to install the project, you will need to install Composer and the spipu file which contains 
 
